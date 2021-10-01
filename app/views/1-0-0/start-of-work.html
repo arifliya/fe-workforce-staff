@@ -1,0 +1,68 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-m">Jay Jay</span>
+        <h1 class="govuk-heading-xl">When did they start working for the organisation?</h1>
+        <form method="post" id="radio-group" action="length-of-work">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                    name="StaffId" value="3049">
+                <fieldset class="govuk-fieldset">
+
+                    <div id="dob-hint" class="govuk-hint">
+                        For example, 4 10 2012
+                    </div>
+
+                    <div class="govuk-date-input" id="dob">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateDay">
+                                    Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="startDateDay" type="text" pattern="[0-9]*" inputmode="numeric"
+                                    name="EmploymentStartDate.StartDateDay" value="">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateMonth">
+                                    Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="startDateMonth" type="text" pattern="[0-9]*" inputmode="numeric"
+                                    name="EmploymentStartDate.StartDateMonth" value="">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateYear">
+                                    Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govsuk-input--width-4"
+                                    id="startDateYear" type="text" pattern="[0-9]*" inputmode="numeric"
+                                    name="EmploymentStartDate.StartDateYear" value="">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq2yuy9fZ6tuq6dHNx4E4-YixyVu1whHwhk96wTebm7w8ujWBxlKtHt11O6qI4TxKIRdvlLpFgCYDl0kf0S3NjdXQZ3SE1RD2r-gFwByqeoNnuYnSCSwgdFMaZCfNV5eSHdSLqJOScjjScUzuCPqdYxi_9hlwIa8TXLS8-R3vaRQAA">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

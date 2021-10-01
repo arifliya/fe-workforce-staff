@@ -1,0 +1,97 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row flex">
+    <!--<div class="govuk-grid-column-fullgovuk-grid-column-two-thirds"> -->
+    <div class="govuk-grid-column-three-quarters">
+
+        <h1 class="govuk-heading-xl">Upload XML file: staff data collection</h1>
+
+        <p class="govuk-body-l">Only error free staff records will be included in your return.</p>
+
+        <h2 class="govuk-heading-m">After uploading</h2>
+
+        <p>You must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>check submission reports for file errors</li>
+            <li>correct any errors and upload a new file</li>
+        </ul>
+
+        <form method="post" enctype="multipart/form-data" id="fewform" action="">
+
+            <div class="govuk-form-group" id="controls">
+                <label class="govuk-label govuk-label--m" for="file">
+                    Upload XML file
+                </label>
+
+                <input class="govuk-file-upload" name="file" id="file" type="file" accept=".xml">
+
+            </div>
+
+            <button class="govuk-button">
+                Upload file
+            </button>
+
+            <h2 class="govuk-heading-m">Before you start</h2>
+            <p>Make sure the file is:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>accurate</li>
+                <li>complete</li>
+                <li>in XML format</li>
+                <li>using the specified file name format</li>
+            </ul>
+           </form>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+        <aside class="app-related-items" role="complementary">
+            <h2 class="govuk-heading-m" id="subsection-title-help">
+                Help and support
+            </h2>
+
+
+            <h3 class="govuk-heading-s">ESFA support desk</h3>
+            <p class="govuk-!-font-size-16">
+                Telephone: 0370 267 0001<br>
+                Monday to Thursday, 9:00am to 5:00pm<br>
+                Friday, 9:00am to 4:00pm<br>
+            </p>
+            <p class="govuk-!-font-size-16">Email: <a
+                    href="mailto:sde.servicedesk@education.gov.uk">sde.servicedesk@education.gov.uk</a></p>
+
+
+
+
+
+            <h2 class="govuk-heading-m" id="subsection-title-related-content">
+                Related content
+            </h2>
+            <nav role="navigation" aria-labelledby="subsection-title-related-content">
+                <ul class="govuk-list govuk-!-font-size-16">
+                    <li>
+                        <a href="https://www.gov.uk/government/publications/further-education-workforce-data-collection"
+                            target="_blank">
+                            Further education (FE) workforce staff record specification: 2020 to 2021
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+        </aside>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

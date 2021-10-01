@@ -1,0 +1,692 @@
+
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+  FE Workforce - Check your answers
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+        
+
+    <h1 class="govuk-heading-l">Check your answers</h1>
+
+    <h2 class="govuk-heading-m">Board details 
+      <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-02.html">
+          Change<span class="govuk-visually-hidden"> Total board members</span>
+        </a>
+    </h2>
+    <!-- <p>Total number of board members allowed by your corporation's instrument and articles of association</p>
+    <p>{{ data['board-size'] }}</p> -->
+
+      
+          <div class="govuk-heading-s inline-block">Status</div>
+          <strong id="boardSizeComplete" class="govuk-tag float-right">
+           Completed
+          </strong>
+          <strong id="boardSizeIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+          </strong>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+              Total number of board members allowed by your corporation's instrument and articles of association
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__header--numeric">
+              <div id="boardSize">{{ data['board-size'] }}</div>
+          </dd>
+        </div>
+        
+        <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-two-thirds govuk-visually-hidden">
+              Edit total board members
+            </dt>
+            <dd class="govuk-summary-list__actions no-border-bottom">
+              
+            </dd>
+          </div> -->
+      </dl>
+
+
+
+
+    <h2 class="govuk-heading-m">How the board is represented 
+     
+      <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-03.html">
+          Change<span class="govuk-visually-hidden"> Board</span>
+        </a>
+      </h2>
+
+      <div class="govuk-heading-s inline-block">Status</div>
+          <strong id="boardRepComplete" class="govuk-tag float-right">
+           Completed
+          </strong>
+          <strong id="boardRepIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+          </strong>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+              Staff governors
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__header--numeric">
+              <span id="staffGovernors">{{ data['staff-governors'] }}</span>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+              Student governors
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__header--numeric">
+              <span id="studentGovernors">{{ data['student-governors'] }}</span>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+              Independent governors
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__header--numeric">
+              <span id="independantGovernors">{{ data['independent-governors'] }}</span>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+              Parent governor
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__header--numeric">
+              <span id="parentGovernors">{{ data['parent-governors'] }}</span>
+          </dd>
+        </div>
+        <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-two-thirds govuk-visually-hidden">
+              Edit board
+            </dt>
+            <dd class="govuk-summary-list__actions no-border-bottom">
+              
+            </dd>
+          </div> -->
+      </dl>
+
+
+  <div id="genderGroup">  
+    <h2 class="govuk-heading-m">Gender 
+      <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-05.html">
+        Change<span class="govuk-visually-hidden"> Gender</span>
+      </a>
+    </h2>
+    <div class="govuk-heading-s inline-block">Status</div>
+    <strong id="genderComplete" class="govuk-tag float-right">
+     Completed
+    </strong>
+    <strong id="genderIncomplete" class="govuk-tag govuk-tag--purple float-right">
+     Awaiting
+    </strong>
+    <strong id="genderNotStarted" class="govuk-tag govuk-tag--grey float-right">
+     Not started
+    </strong>
+   
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+           Male
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+          <div id="maleHtml"> {{ data['male'] }} </div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Female
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+           <div id="femaleHtml"> {{ data['female'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          How many identify in another way?
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+           <div id="anotherHtml"> {{ data['another'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          How many prefer not to say?
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+           <div id="pntsHtml">{{ data['pnts'] }}
+        </dd>
+      </div>
+      
+    </dl>
+  </div>
+
+  
+
+  <div id="ageRangesGroup">  
+    <h2 class="govuk-heading-m">Age ranges 
+        <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-06.html">
+            Change<span class="govuk-visually-hidden"> Age ranges</span>
+          </a>
+    </h2>
+
+    <div class="govuk-heading-s inline-block">Status</div>
+    <strong id="ageComplete" class="govuk-tag float-right">
+      Completed
+    </strong>
+    <strong id="ageIncomplete" class="govuk-tag govuk-tag--purple float-right">
+      Awaiting
+    </strong>
+    <strong id="ageNotStarted" class="govuk-tag govuk-tag--grey float-right">
+      Not started
+    </strong>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          16 to 18
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="16Html"> {{ data['16'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          19 to 24
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="19Html"> {{ data['19'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          25 to 34
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="25Html"> {{ data['25'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          35 to 44
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="35Html"> {{ data['35'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          45 to 54
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="45Html"> {{ data['45'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          55 to 64
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="55Html"> {{ data['55'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          65 to 74
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="65Html"> {{ data['65'] }}</div>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          75 or over
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="76Html"> {{ data['76'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Prefer not to say
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="agePntsHtml"> {{ data['age-pnts'] }}</div>
+        </dd>
+      </div>
+        
+    </dl>
+  </div>
+
+  <div id="disabilityGroup">
+    <h2 class="govuk-heading-m">Disability 
+        <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-07.html">
+          Change<span class="govuk-visually-hidden"> Disability</span>
+        </a>
+      </h2>
+  
+      <div class="govuk-heading-s inline-block">Status</div>
+      <strong id="disabilityComplete" class="govuk-tag float-right">
+       Completed
+      </strong>
+      <strong id="disabilityIncomplete" class="govuk-tag govuk-tag--purple float-right">
+        Awaiting
+      </strong>
+      <strong id="disabilityNotStarted" class="govuk-tag govuk-tag--grey float-right">
+        Not started
+      </strong>
+  
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            How many board members consider themselves to have a disability?
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+             <div id="disabilityHtml"> {{ data['disability'] }}</div>
+          </dd>
+         
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+              How many board members do not identify themselves as having a disability?
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+              <div id="noDisabilityHtml"> {{ data['no-disability'] }} </div>
+          </dd>
+         
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            How many prefer not to say?
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+              <div id="disabilityPntsHtml"> {{ data['disability-pnts'] }} </div>
+          </dd>
+        </div>
+        
+      </dl>
+    </div>
+
+    <div id="ethnicityGroup">
+    <h2 class="govuk-heading-m">Ethnicity 
+      <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-08.html">
+          Change<span class="govuk-visually-hidden"> Ethnicity</span>
+        </a>
+    </h2>
+    
+    <div class="govuk-heading-s inline-block">Status</div>
+    <strong id="ethnicityComplete" class="govuk-tag float-right">
+      Completed
+    </strong>
+    <strong id="ethnicityIncomplete" class="govuk-tag govuk-tag--purple float-right">
+      Awaiting
+    </strong>
+    <strong id="ethnicityNotStarted" class="govuk-tag govuk-tag--grey float-right">
+      Not started
+    </strong>
+    
+    <h3 class="govuk-heading-s">White</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          English / Welsh / Scottish / Northern Irish / British Irish
+        </dt>
+        <dd class="govuk-summary-list__value govuk-table__header--numeric">
+         <div id="ewsnbHtml"> {{ data['ewsnb'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Irish
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="irishHtml"> {{ data['irish'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Gypsy or Irish Traveller
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="gypsyHtml"> {{ data['gypsy'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Roma
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="romaHtml"> {{ data['roma'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Any other White background
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="otherWhiteHtml"> {{ data['other-white'] }}</div>
+        </dd>
+      </div>
+      
+    </dl>
+    
+    
+    <h3 class="govuk-heading-s">Mixed / Multiple ethnic groups</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          White and Black Caribbean
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+         <div id="wbcHtml"> {{ data['wbc'] }}</div>
+        </dd>
+      </div>       
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          White and Black African
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="wbaHtml"> {{ data['wba'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          White and Asian
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="waHtml"> {{ data['wa'] }}</div>        
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Any Other Mixed / multiple ethnic background
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="otherMixedHtml"> {{ data['other-mixed'] }}</div>
+        </dd>
+      </div>       
+    </dl>
+
+
+    <h3 class="govuk-heading-s">Asian / Asian British</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Indian
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+         <div id="indianHtml">{{ data['indian'] }}</div>
+        </dd>
+      </div>       
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Pakistani
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+          <div id="pakistaniHtml">{{ data['pakistani'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Bangladeshi
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+         <div id="bangladeshiHtml">{{ data['bangladeshi'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Chinese
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+         <div id="chineseHtml">{{ data['chinese'] }}</div>
+        </dd>
+      </div>       
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Any other Asian background
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+         <div id="otherAsianHtml"> {{ data['other-asian'] }}</div>
+        </dd>
+      </div>       
+    </dl>
+    
+    
+    <h3 class="govuk-heading-s">Black / African / Caribbean / Black British</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            African background
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+             <div id="africanHtml"> {{ data['african'] }}</div>
+          </dd>
+        </div>       
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            Caribbean
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="caribbeanHtml"> {{ data['caribbean'] }}</div>
+          </dd>
+        </div>       
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            Any other Black, Black British or Caribbean background
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="otherBlackHtml"> {{ data['other-black'] }}</div>
+          </dd>
+          
+        </div>       
+  
+      </dl>
+
+
+    <h3 class="govuk-heading-s">Other</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Arab
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="arabHtml"> {{ data['arab'] }}</div>
+        </dd>
+        
+      </div>       
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Any other ethnic group
+
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="otherEthnicHtml"> {{ data['other-ethnic'] }}</div>
+        </dd>
+        
+      </div>       
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Prefer not to say
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="ethnicityPntsHtml"> {{ data['ethnicity-pnts'] }}</div>
+        </dd>
+        
+      </div>       
+    </dl>
+  </div>
+
+    
+
+
+<div id="timeServedGroup">
+    <h2 class="govuk-heading-m">Time served 
+      <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-09.html">
+        Change<span class="govuk-visually-hidden"> Time served</span>
+      </a>
+    </h2>
+
+    <div class="govuk-heading-s inline-block">Status</div>
+    
+    <strong id="timeServedComplete" class="govuk-tag float-right">
+      Completed
+    </strong>
+    <strong id="timeServedIncomplete" class="govuk-tag govuk-tag--purple float-right">
+      Awaiting
+    </strong>
+    <strong id="timeServedNotStarted" class="govuk-tag govuk-tag--grey float-right">
+      Not started
+    </strong>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            Less than 1 year served
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+         <div id="ltoyHtml"> {{ data['ltoy'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            1 to 4 years served
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="1to4Html"> {{ data['1to4'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            5 to 8 years served
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="5to8Html"> {{ data['5to8'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            9 to 12 years served
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="9to12Html"> {{ data['9to12'] }}</div>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            Over 12 years served
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+           <div id="over12Html"> {{ data['over12'] }} </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+
+<div id="vacanciesGroup">
+    <h2 class="govuk-heading-m">Vacancies 
+      <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="gov-10.html">
+          Change<span class="govuk-visually-hidden"> Vacancies</span>
+        </a>
+    </h2>
+
+      <div class="govuk-heading-s inline-block">Status</div>
+      <strong id="vacancyComplete" class="govuk-tag float-right">
+         Completed
+        </strong>
+      <strong id="vacancyIncomplete" class="govuk-tag govuk-tag--grey float-right">
+       Not started
+      </strong>
+      <strong id="vacancyInProgress" class="govuk-tag govuk-tag--yellow float-right">
+       In progress
+      </strong>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+              Were there any board member vacancies during the last academic year?
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+              <div id="open-vacancies">{{ data['open-vacancies'] }}</div>
+          </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row summaries hide">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          How many board member vacancies were there over the last academic year?
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+          {{ data['vacancies'] }}
+        </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row summaries hide">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          How many were filled?
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+          {{ data['filled'] }}
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row summaries hide">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          How many took 6 months or longer to fill?
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+          {{ data['6months'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row summaries hide">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+            How many vacancies have been open for 6 months or longer and are still unfilled?
+        </dt>
+        <dd class="govuk-summary-list__value  govuk-table__header--numeric">
+          {{ data['unfilled'] }}
+        </dd>
+      </div>
+    
+    </dl>
+  </div>
+
+    <div class="govuk-button-group">
+      <a href="gov-13.html" class="govuk-button" data-module="govuk-button">
+        Finish
+      </a>
+    
+      <!-- <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Edit
+      </a> -->
+    </div>
+
+    </form>
+    <div id="journeyPath">{{ data['journeys'] }}</div>
+  </div>
+</div>
+
+
+{% endblock %}

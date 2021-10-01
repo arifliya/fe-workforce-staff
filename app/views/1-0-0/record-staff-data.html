@@ -1,0 +1,64 @@
+
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+<h1 class="govuk-heading-l">Record staff data: select method</h1>
+
+<p class="govuk-body">
+    Submissions must use either the online form or an XML file.
+</p>
+
+<p class="govuk-body">
+    Overview
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>Use the online form service to record staff member data individually</li>
+    <li>XML file data can be prepared and generated <a class="govuk-link" href="/publicdownloads/FEWorkforceStaffentrytool">using our desktop application</a> or your own system for bulk uploading of staff data</li>
+</ul>
+
+<form method="get" action="">
+     <div class="govuk-form-group">
+        
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Select an option
+            </legend>
+            <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="option-1" type="radio" value="yes~online-staff-list" aria-describedby="option-1-item-hint" name="SelectedOption">
+                    <label class="govuk-label govuk-radios__label" for="option-1">
+                        Use the online form service
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="option-3" type="radio" value="yes~upload-xml" aria-describedby="option-3-item-hint" name="SelectedOption">
+                    <label class="govuk-label govuk-radios__label" for="option-3">
+                        Upload an XML file
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <br>
+        <br>
+        <button class="govuk-button" type="submit">
+            Continue
+        </button>
+    </div>
+</form>
+</div>
+</div>
+
+    
+
+{% endblock %}

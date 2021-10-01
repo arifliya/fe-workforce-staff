@@ -1,0 +1,85 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form method="post" action="length-in-fe">
+            <span class="govuk-caption-m">Jay Jay</span>
+
+            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                name="StaffId" value="3049">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">
+                            How long have they worked in their current role in the organisation? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        Select an option
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId183" name="SingleOption.Selection" value="183"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId183" class="govuk-label govuk-radios__label">
+                                Less than one year
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId184" name="SingleOption.Selection" value="184"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId184" class="govuk-label govuk-radios__label">
+                                1 to 3 years
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId185" name="SingleOption.Selection" value="185"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId185" class="govuk-label govuk-radios__label">
+                                4 to 10 years
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId186" name="SingleOption.Selection" value="186"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId186" class="govuk-label govuk-radios__label">
+                                11 to 20 years
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId187" name="SingleOption.Selection" value="187"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId187" class="govuk-label govuk-radios__label">
+                                Over 20 years
+                            </label>
+                        </div>
+                        <input type="hidden" data-val="true" data-val-required="The StartDate field is required."
+                            id="Collection_StartDate" name="Collection.StartDate" value="">
+                        <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                            id="Collection_EndDate" name="Collection.EndDate" value="">
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
