@@ -1,0 +1,1286 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+       
+<form method="post" id="form" action="difficulty-recruiting-for-teaching">
+    <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="8/1/2020 12:00:00 AM">
+    <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="7/31/2021 12:00:00 AM">
+    <div class="govuk-grid-full">
+        <span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+        <h1 class="govuk-heading-l">Vacancy and recruitment for teaching</h1>
+
+        <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-m">Show</h3>
+            <div class="govuk-hint">
+                Select all that apply to your organisation.
+            </div>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="academicFilter" name="academicFilter" type="checkbox" value="true">
+                    <label class="govuk-label govuk-checkboxes__label" for="academicFilter">
+                        Academic subjects
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="vocationalFilter" name="vocationalFilter" type="checkbox" value="true">
+                    <label class="govuk-label govuk-checkboxes__label" for="vocationalFilter">
+                        Vocational programmes
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="otherFilter" name="otherFilter" type="checkbox" value="true">
+                    <label class="govuk-label govuk-checkboxes__label" for="otherFilter">
+                        Other learning programmes
+                    </label>
+                </div>
+            </div>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="filterAction" type="submit" name="action" value="Filter">
+                Apply
+            </button>
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <h2 class="govuk-heading-m">
+                        Subjects and programmes list
+                    </h2>
+                    
+
+                        <table class="govuk-table ">
+
+                                <thead class="govuk-table__head">
+                                    <tr class="govuk-table__row">
+                                        <th scope="col" class="govuk-table__header">
+                                            Academic subjects
+                                        </th>
+                                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                                            How many vacancies?
+                                            <div class="govuk-hint">
+                                                Leave empty for subjects with no vacancies
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                                            How many filled vacancies?
+                                            <div class="govuk-hint">
+                                                Where there are vacancies, enter 0 if none have been filled. Leave empty where there are no vacancies
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                            <tbody class="govuk-table__body">
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Ancient Languages</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-47" class="govuk-visually-hidden">How many vacancies for Ancient Languages?</label>
+                                                    <input aria-labelledby="vacancies-label-47" class="govuk-input govuk-input--width-3" id="Subject_47" type="text" maxlength="3" name="VacancyBySubjects[0].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-47" class="govuk-visually-hidden">How many vacancies were filled for Ancient Languages?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-47" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_0__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[0].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_0__CategoryCode" name="VacancyBySubjects[0].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_0__IsFilteredOut" name="VacancyBySubjects[0].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_0__Subject" name="VacancyBySubjects[0].Subject" value="Ancient Languages">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_0__SubjectId" name="VacancyBySubjects[0].SubjectId" value="47">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_0__Ukprn" name="VacancyBySubjects[0].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Archaeology</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-48" class="govuk-visually-hidden">How many vacancies for Archaeology?</label>
+                                                    <input aria-labelledby="vacancies-label-48" class="govuk-input govuk-input--width-3" id="Subject_48" type="text" maxlength="3" name="VacancyBySubjects[1].NoOfTeacherVacancies" value="11">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-48" class="govuk-visually-hidden">How many vacancies were filled for Archaeology?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-48" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_1__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[1].NoOfTeacherVacanciesFilled" value="3">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_1__CategoryCode" name="VacancyBySubjects[1].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_1__IsFilteredOut" name="VacancyBySubjects[1].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_1__Subject" name="VacancyBySubjects[1].Subject" value="Archaeology">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_1__SubjectId" name="VacancyBySubjects[1].SubjectId" value="48">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_1__Ukprn" name="VacancyBySubjects[1].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Astronomy</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-49" class="govuk-visually-hidden">How many vacancies for Astronomy?</label>
+                                                    <input aria-labelledby="vacancies-label-49" class="govuk-input govuk-input--width-3" id="Subject_49" type="text" maxlength="3" name="VacancyBySubjects[2].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-49" class="govuk-visually-hidden">How many vacancies were filled for Astronomy?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-49" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_2__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[2].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_2__CategoryCode" name="VacancyBySubjects[2].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_2__IsFilteredOut" name="VacancyBySubjects[2].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_2__Subject" name="VacancyBySubjects[2].Subject" value="Astronomy">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_2__SubjectId" name="VacancyBySubjects[2].SubjectId" value="49">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_2__Ukprn" name="VacancyBySubjects[2].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Art and Design, History of Art</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-50" class="govuk-visually-hidden">How many vacancies for Art and Design, History of Art?</label>
+                                                    <input aria-labelledby="vacancies-label-50" class="govuk-input govuk-input--width-3" id="Subject_50" type="text" maxlength="3" name="VacancyBySubjects[3].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-50" class="govuk-visually-hidden">How many vacancies were filled for Art and Design, History of Art?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-50" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_3__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[3].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_3__CategoryCode" name="VacancyBySubjects[3].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_3__IsFilteredOut" name="VacancyBySubjects[3].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_3__Subject" name="VacancyBySubjects[3].Subject" value="Art and Design, History of Art">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_3__SubjectId" name="VacancyBySubjects[3].SubjectId" value="50">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_3__Ukprn" name="VacancyBySubjects[3].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Biology</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-51" class="govuk-visually-hidden">How many vacancies for Biology?</label>
+                                                    <input aria-labelledby="vacancies-label-51" class="govuk-input govuk-input--width-3" id="Subject_51" type="text" maxlength="3" name="VacancyBySubjects[4].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-51" class="govuk-visually-hidden">How many vacancies were filled for Biology?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-51" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_4__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[4].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_4__CategoryCode" name="VacancyBySubjects[4].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_4__IsFilteredOut" name="VacancyBySubjects[4].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_4__Subject" name="VacancyBySubjects[4].Subject" value="Biology">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_4__SubjectId" name="VacancyBySubjects[4].SubjectId" value="51">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_4__Ukprn" name="VacancyBySubjects[4].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Chemistry</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-52" class="govuk-visually-hidden">How many vacancies for Chemistry?</label>
+                                                    <input aria-labelledby="vacancies-label-52" class="govuk-input govuk-input--width-3" id="Subject_52" type="text" maxlength="3" name="VacancyBySubjects[5].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-52" class="govuk-visually-hidden">How many vacancies were filled for Chemistry?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-52" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_5__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[5].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_5__CategoryCode" name="VacancyBySubjects[5].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_5__IsFilteredOut" name="VacancyBySubjects[5].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_5__Subject" name="VacancyBySubjects[5].Subject" value="Chemistry">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_5__SubjectId" name="VacancyBySubjects[5].SubjectId" value="52">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_5__Ukprn" name="VacancyBySubjects[5].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Citizenship studies</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-53" class="govuk-visually-hidden">How many vacancies for Citizenship studies?</label>
+                                                    <input aria-labelledby="vacancies-label-53" class="govuk-input govuk-input--width-3" id="Subject_53" type="text" maxlength="3" name="VacancyBySubjects[6].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-53" class="govuk-visually-hidden">How many vacancies were filled for Citizenship studies?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-53" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_6__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[6].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_6__CategoryCode" name="VacancyBySubjects[6].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_6__IsFilteredOut" name="VacancyBySubjects[6].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_6__Subject" name="VacancyBySubjects[6].Subject" value="Citizenship studies">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_6__SubjectId" name="VacancyBySubjects[6].SubjectId" value="53">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_6__Ukprn" name="VacancyBySubjects[6].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Classical studies</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-54" class="govuk-visually-hidden">How many vacancies for Classical studies?</label>
+                                                    <input aria-labelledby="vacancies-label-54" class="govuk-input govuk-input--width-3" id="Subject_54" type="text" maxlength="3" name="VacancyBySubjects[7].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-54" class="govuk-visually-hidden">How many vacancies were filled for Classical studies?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-54" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_7__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[7].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_7__CategoryCode" name="VacancyBySubjects[7].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_7__IsFilteredOut" name="VacancyBySubjects[7].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_7__Subject" name="VacancyBySubjects[7].Subject" value="Classical studies">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_7__SubjectId" name="VacancyBySubjects[7].SubjectId" value="54">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_7__Ukprn" name="VacancyBySubjects[7].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Computer science</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-55" class="govuk-visually-hidden">How many vacancies for Computer science?</label>
+                                                    <input aria-labelledby="vacancies-label-55" class="govuk-input govuk-input--width-3" id="Subject_55" type="text" maxlength="3" name="VacancyBySubjects[8].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-55" class="govuk-visually-hidden">How many vacancies were filled for Computer science?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-55" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_8__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[8].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_8__CategoryCode" name="VacancyBySubjects[8].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_8__IsFilteredOut" name="VacancyBySubjects[8].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_8__Subject" name="VacancyBySubjects[8].Subject" value="Computer science">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_8__SubjectId" name="VacancyBySubjects[8].SubjectId" value="55">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_8__Ukprn" name="VacancyBySubjects[8].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Dance, drama and theatre</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-56" class="govuk-visually-hidden">How many vacancies for Dance, drama and theatre?</label>
+                                                    <input aria-labelledby="vacancies-label-56" class="govuk-input govuk-input--width-3" id="Subject_56" type="text" maxlength="3" name="VacancyBySubjects[9].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-56" class="govuk-visually-hidden">How many vacancies were filled for Dance, drama and theatre?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-56" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_9__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[9].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_9__CategoryCode" name="VacancyBySubjects[9].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_9__IsFilteredOut" name="VacancyBySubjects[9].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_9__Subject" name="VacancyBySubjects[9].Subject" value="Dance, drama and theatre">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_9__SubjectId" name="VacancyBySubjects[9].SubjectId" value="56">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_9__Ukprn" name="VacancyBySubjects[9].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Design, technology and engineering</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-57" class="govuk-visually-hidden">How many vacancies for Design, technology and engineering?</label>
+                                                    <input aria-labelledby="vacancies-label-57" class="govuk-input govuk-input--width-3" id="Subject_57" type="text" maxlength="3" name="VacancyBySubjects[10].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-57" class="govuk-visually-hidden">How many vacancies were filled for Design, technology and engineering?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-57" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_10__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[10].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_10__CategoryCode" name="VacancyBySubjects[10].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_10__IsFilteredOut" name="VacancyBySubjects[10].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_10__Subject" name="VacancyBySubjects[10].Subject" value="Design, technology and engineering">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_10__SubjectId" name="VacancyBySubjects[10].SubjectId" value="57">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_10__Ukprn" name="VacancyBySubjects[10].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Electronics</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-58" class="govuk-visually-hidden">How many vacancies for Electronics?</label>
+                                                    <input aria-labelledby="vacancies-label-58" class="govuk-input govuk-input--width-3" id="Subject_58" type="text" maxlength="3" name="VacancyBySubjects[11].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-58" class="govuk-visually-hidden">How many vacancies were filled for Electronics?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-58" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_11__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[11].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_11__CategoryCode" name="VacancyBySubjects[11].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_11__IsFilteredOut" name="VacancyBySubjects[11].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_11__Subject" name="VacancyBySubjects[11].Subject" value="Electronics">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_11__SubjectId" name="VacancyBySubjects[11].SubjectId" value="58">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_11__Ukprn" name="VacancyBySubjects[11].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">English</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-59" class="govuk-visually-hidden">How many vacancies for English?</label>
+                                                    <input aria-labelledby="vacancies-label-59" class="govuk-input govuk-input--width-3" id="Subject_59" type="text" maxlength="3" name="VacancyBySubjects[12].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-59" class="govuk-visually-hidden">How many vacancies were filled for English?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-59" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_12__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[12].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_12__CategoryCode" name="VacancyBySubjects[12].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_12__IsFilteredOut" name="VacancyBySubjects[12].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_12__Subject" name="VacancyBySubjects[12].Subject" value="English">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_12__SubjectId" name="VacancyBySubjects[12].SubjectId" value="59">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_12__Ukprn" name="VacancyBySubjects[12].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Environmental science</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-60" class="govuk-visually-hidden">How many vacancies for Environmental science?</label>
+                                                    <input aria-labelledby="vacancies-label-60" class="govuk-input govuk-input--width-3" id="Subject_60" type="text" maxlength="3" name="VacancyBySubjects[13].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-60" class="govuk-visually-hidden">How many vacancies were filled for Environmental science?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-60" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_13__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[13].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_13__CategoryCode" name="VacancyBySubjects[13].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_13__IsFilteredOut" name="VacancyBySubjects[13].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_13__Subject" name="VacancyBySubjects[13].Subject" value="Environmental science">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_13__SubjectId" name="VacancyBySubjects[13].SubjectId" value="60">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_13__Ukprn" name="VacancyBySubjects[13].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Film and media studies</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-61" class="govuk-visually-hidden">How many vacancies for Film and media studies?</label>
+                                                    <input aria-labelledby="vacancies-label-61" class="govuk-input govuk-input--width-3" id="Subject_61" type="text" maxlength="3" name="VacancyBySubjects[14].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-61" class="govuk-visually-hidden">How many vacancies were filled for Film and media studies?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-61" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_14__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[14].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_14__CategoryCode" name="VacancyBySubjects[14].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_14__IsFilteredOut" name="VacancyBySubjects[14].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_14__Subject" name="VacancyBySubjects[14].Subject" value="Film and media studies">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_14__SubjectId" name="VacancyBySubjects[14].SubjectId" value="61">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_14__Ukprn" name="VacancyBySubjects[14].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Food preparation and nutrition</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-62" class="govuk-visually-hidden">How many vacancies for Food preparation and nutrition?</label>
+                                                    <input aria-labelledby="vacancies-label-62" class="govuk-input govuk-input--width-3" id="Subject_62" type="text" maxlength="3" name="VacancyBySubjects[15].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-62" class="govuk-visually-hidden">How many vacancies were filled for Food preparation and nutrition?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-62" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_15__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[15].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_15__CategoryCode" name="VacancyBySubjects[15].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_15__IsFilteredOut" name="VacancyBySubjects[15].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_15__Subject" name="VacancyBySubjects[15].Subject" value="Food preparation and nutrition">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_15__SubjectId" name="VacancyBySubjects[15].SubjectId" value="62">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_15__Ukprn" name="VacancyBySubjects[15].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Geography</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-63" class="govuk-visually-hidden">How many vacancies for Geography?</label>
+                                                    <input aria-labelledby="vacancies-label-63" class="govuk-input govuk-input--width-3" id="Subject_63" type="text" maxlength="3" name="VacancyBySubjects[16].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-63" class="govuk-visually-hidden">How many vacancies were filled for Geography?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-63" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_16__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[16].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_16__CategoryCode" name="VacancyBySubjects[16].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_16__IsFilteredOut" name="VacancyBySubjects[16].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_16__Subject" name="VacancyBySubjects[16].Subject" value="Geography">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_16__SubjectId" name="VacancyBySubjects[16].SubjectId" value="63">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_16__Ukprn" name="VacancyBySubjects[16].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Geology</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-64" class="govuk-visually-hidden">How many vacancies for Geology?</label>
+                                                    <input aria-labelledby="vacancies-label-64" class="govuk-input govuk-input--width-3" id="Subject_64" type="text" maxlength="3" name="VacancyBySubjects[17].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-64" class="govuk-visually-hidden">How many vacancies were filled for Geology?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-64" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_17__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[17].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_17__CategoryCode" name="VacancyBySubjects[17].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_17__IsFilteredOut" name="VacancyBySubjects[17].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_17__Subject" name="VacancyBySubjects[17].Subject" value="Geology">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_17__SubjectId" name="VacancyBySubjects[17].SubjectId" value="64">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_17__Ukprn" name="VacancyBySubjects[17].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">History</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-65" class="govuk-visually-hidden">How many vacancies for History?</label>
+                                                    <input aria-labelledby="vacancies-label-65" class="govuk-input govuk-input--width-3" id="Subject_65" type="text" maxlength="3" name="VacancyBySubjects[18].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-65" class="govuk-visually-hidden">How many vacancies were filled for History?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-65" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_18__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[18].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_18__CategoryCode" name="VacancyBySubjects[18].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_18__IsFilteredOut" name="VacancyBySubjects[18].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_18__Subject" name="VacancyBySubjects[18].Subject" value="History">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_18__SubjectId" name="VacancyBySubjects[18].SubjectId" value="65">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_18__Ukprn" name="VacancyBySubjects[18].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Mathematics</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-66" class="govuk-visually-hidden">How many vacancies for Mathematics?</label>
+                                                    <input aria-labelledby="vacancies-label-66" class="govuk-input govuk-input--width-3" id="Subject_66" type="text" maxlength="3" name="VacancyBySubjects[19].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-66" class="govuk-visually-hidden">How many vacancies were filled for Mathematics?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-66" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_19__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[19].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_19__CategoryCode" name="VacancyBySubjects[19].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_19__IsFilteredOut" name="VacancyBySubjects[19].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_19__Subject" name="VacancyBySubjects[19].Subject" value="Mathematics">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_19__SubjectId" name="VacancyBySubjects[19].SubjectId" value="66">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_19__Ukprn" name="VacancyBySubjects[19].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Modern foreign languages</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-67" class="govuk-visually-hidden">How many vacancies for Modern foreign languages?</label>
+                                                    <input aria-labelledby="vacancies-label-67" class="govuk-input govuk-input--width-3" id="Subject_67" type="text" maxlength="3" name="VacancyBySubjects[20].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-67" class="govuk-visually-hidden">How many vacancies were filled for Modern foreign languages?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-67" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_20__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[20].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_20__CategoryCode" name="VacancyBySubjects[20].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_20__IsFilteredOut" name="VacancyBySubjects[20].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_20__Subject" name="VacancyBySubjects[20].Subject" value="Modern foreign languages">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_20__SubjectId" name="VacancyBySubjects[20].SubjectId" value="67">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_20__Ukprn" name="VacancyBySubjects[20].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Music</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-68" class="govuk-visually-hidden">How many vacancies for Music?</label>
+                                                    <input aria-labelledby="vacancies-label-68" class="govuk-input govuk-input--width-3" id="Subject_68" type="text" maxlength="3" name="VacancyBySubjects[21].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-68" class="govuk-visually-hidden">How many vacancies were filled for Music?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-68" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_21__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[21].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_21__CategoryCode" name="VacancyBySubjects[21].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_21__IsFilteredOut" name="VacancyBySubjects[21].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_21__Subject" name="VacancyBySubjects[21].Subject" value="Music">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_21__SubjectId" name="VacancyBySubjects[21].SubjectId" value="68">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_21__Ukprn" name="VacancyBySubjects[21].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Physical education</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-69" class="govuk-visually-hidden">How many vacancies for Physical education?</label>
+                                                    <input aria-labelledby="vacancies-label-69" class="govuk-input govuk-input--width-3" id="Subject_69" type="text" maxlength="3" name="VacancyBySubjects[22].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-69" class="govuk-visually-hidden">How many vacancies were filled for Physical education?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-69" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_22__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[22].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_22__CategoryCode" name="VacancyBySubjects[22].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_22__IsFilteredOut" name="VacancyBySubjects[22].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_22__Subject" name="VacancyBySubjects[22].Subject" value="Physical education">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_22__SubjectId" name="VacancyBySubjects[22].SubjectId" value="69">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_22__Ukprn" name="VacancyBySubjects[22].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Philosophy</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-70" class="govuk-visually-hidden">How many vacancies for Philosophy?</label>
+                                                    <input aria-labelledby="vacancies-label-70" class="govuk-input govuk-input--width-3" id="Subject_70" type="text" maxlength="3" name="VacancyBySubjects[23].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-70" class="govuk-visually-hidden">How many vacancies were filled for Philosophy?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-70" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_23__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[23].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_23__CategoryCode" name="VacancyBySubjects[23].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_23__IsFilteredOut" name="VacancyBySubjects[23].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_23__Subject" name="VacancyBySubjects[23].Subject" value="Philosophy">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_23__SubjectId" name="VacancyBySubjects[23].SubjectId" value="70">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_23__Ukprn" name="VacancyBySubjects[23].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Physics</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-71" class="govuk-visually-hidden">How many vacancies for Physics?</label>
+                                                    <input aria-labelledby="vacancies-label-71" class="govuk-input govuk-input--width-3" id="Subject_71" type="text" maxlength="3" name="VacancyBySubjects[24].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-71" class="govuk-visually-hidden">How many vacancies were filled for Physics?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-71" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_24__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[24].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_24__CategoryCode" name="VacancyBySubjects[24].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_24__IsFilteredOut" name="VacancyBySubjects[24].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_24__Subject" name="VacancyBySubjects[24].Subject" value="Physics">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_24__SubjectId" name="VacancyBySubjects[24].SubjectId" value="71">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_24__Ukprn" name="VacancyBySubjects[24].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Politics</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-72" class="govuk-visually-hidden">How many vacancies for Politics?</label>
+                                                    <input aria-labelledby="vacancies-label-72" class="govuk-input govuk-input--width-3" id="Subject_72" type="text" maxlength="3" name="VacancyBySubjects[25].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-72" class="govuk-visually-hidden">How many vacancies were filled for Politics?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-72" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_25__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[25].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_25__CategoryCode" name="VacancyBySubjects[25].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_25__IsFilteredOut" name="VacancyBySubjects[25].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_25__Subject" name="VacancyBySubjects[25].Subject" value="Politics">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_25__SubjectId" name="VacancyBySubjects[25].SubjectId" value="72">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_25__Ukprn" name="VacancyBySubjects[25].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Psychology</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-73" class="govuk-visually-hidden">How many vacancies for Psychology?</label>
+                                                    <input aria-labelledby="vacancies-label-73" class="govuk-input govuk-input--width-3" id="Subject_73" type="text" maxlength="3" name="VacancyBySubjects[26].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-73" class="govuk-visually-hidden">How many vacancies were filled for Psychology?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-73" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_26__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[26].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_26__CategoryCode" name="VacancyBySubjects[26].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_26__IsFilteredOut" name="VacancyBySubjects[26].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_26__Subject" name="VacancyBySubjects[26].Subject" value="Psychology">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_26__SubjectId" name="VacancyBySubjects[26].SubjectId" value="73">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_26__Ukprn" name="VacancyBySubjects[26].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Religious studies</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-74" class="govuk-visually-hidden">How many vacancies for Religious studies?</label>
+                                                    <input aria-labelledby="vacancies-label-74" class="govuk-input govuk-input--width-3" id="Subject_74" type="text" maxlength="3" name="VacancyBySubjects[27].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-74" class="govuk-visually-hidden">How many vacancies were filled for Religious studies?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-74" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_27__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[27].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_27__CategoryCode" name="VacancyBySubjects[27].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_27__IsFilteredOut" name="VacancyBySubjects[27].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_27__Subject" name="VacancyBySubjects[27].Subject" value="Religious studies">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_27__SubjectId" name="VacancyBySubjects[27].SubjectId" value="74">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_27__Ukprn" name="VacancyBySubjects[27].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Sociology</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-75" class="govuk-visually-hidden">How many vacancies for Sociology?</label>
+                                                    <input aria-labelledby="vacancies-label-75" class="govuk-input govuk-input--width-3" id="Subject_75" type="text" maxlength="3" name="VacancyBySubjects[28].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-75" class="govuk-visually-hidden">How many vacancies were filled for Sociology?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-75" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_28__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[28].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_28__CategoryCode" name="VacancyBySubjects[28].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_28__IsFilteredOut" name="VacancyBySubjects[28].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_28__Subject" name="VacancyBySubjects[28].Subject" value="Sociology">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_28__SubjectId" name="VacancyBySubjects[28].SubjectId" value="75">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_28__Ukprn" name="VacancyBySubjects[28].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Other</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-76" class="govuk-visually-hidden">How many vacancies for Other?</label>
+                                                    <input aria-labelledby="vacancies-label-76" class="govuk-input govuk-input--width-3" id="Subject_76" type="text" maxlength="3" name="VacancyBySubjects[29].NoOfTeacherVacancies" value="5">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-76" class="govuk-visually-hidden">How many vacancies were filled for Other?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-76" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_29__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[29].NoOfTeacherVacanciesFilled" value="1">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_29__CategoryCode" name="VacancyBySubjects[29].CategoryCode" value="14">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_29__IsFilteredOut" name="VacancyBySubjects[29].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_29__Subject" name="VacancyBySubjects[29].Subject" value="Other">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_29__SubjectId" name="VacancyBySubjects[29].SubjectId" value="76">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_29__Ukprn" name="VacancyBySubjects[29].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table class="govuk-table ">
+
+                                <thead class="govuk-table__head">
+                                    <tr class="govuk-table__row">
+                                        <th scope="col" class="govuk-table__header">
+                                            Vocational programmes
+                                        </th>
+                                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                                            How many vacancies?
+                                            <div class="govuk-hint">
+                                                Leave empty for programmes with no vacancies
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                                            How many filled vacancies?
+                                            <div class="govuk-hint">
+                                                Where there are vacancies, enter 0 if none have been filled. Leave empty where there are no vacancies
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                            <tbody class="govuk-table__body">
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Accounting and Finance</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-77" class="govuk-visually-hidden">How many vacancies for Accounting and Finance?</label>
+                                                    <input aria-labelledby="vacancies-label-77" class="govuk-input govuk-input--width-3" id="Subject_77" type="text" maxlength="3" name="VacancyBySubjects[30].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-77" class="govuk-visually-hidden">How many vacancies were filled for Accounting and Finance?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-77" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_30__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[30].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_30__CategoryCode" name="VacancyBySubjects[30].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_30__IsFilteredOut" name="VacancyBySubjects[30].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_30__Subject" name="VacancyBySubjects[30].Subject" value="Accounting and Finance">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_30__SubjectId" name="VacancyBySubjects[30].SubjectId" value="77">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_30__Ukprn" name="VacancyBySubjects[30].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Agriculture and Horticulture</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-78" class="govuk-visually-hidden">How many vacancies for Agriculture and Horticulture?</label>
+                                                    <input aria-labelledby="vacancies-label-78" class="govuk-input govuk-input--width-3" id="Subject_78" type="text" maxlength="3" name="VacancyBySubjects[31].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-78" class="govuk-visually-hidden">How many vacancies were filled for Agriculture and Horticulture?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-78" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_31__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[31].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_31__CategoryCode" name="VacancyBySubjects[31].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_31__IsFilteredOut" name="VacancyBySubjects[31].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_31__Subject" name="VacancyBySubjects[31].Subject" value="Agriculture and Horticulture">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_31__SubjectId" name="VacancyBySubjects[31].SubjectId" value="78">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_31__Ukprn" name="VacancyBySubjects[31].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Animal Care</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-79" class="govuk-visually-hidden">How many vacancies for Animal Care?</label>
+                                                    <input aria-labelledby="vacancies-label-79" class="govuk-input govuk-input--width-3" id="Subject_79" type="text" maxlength="3" name="VacancyBySubjects[32].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-79" class="govuk-visually-hidden">How many vacancies were filled for Animal Care?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-79" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_32__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[32].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_32__CategoryCode" name="VacancyBySubjects[32].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_32__IsFilteredOut" name="VacancyBySubjects[32].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_32__Subject" name="VacancyBySubjects[32].Subject" value="Animal Care">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_32__SubjectId" name="VacancyBySubjects[32].SubjectId" value="79">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_32__Ukprn" name="VacancyBySubjects[32].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Business Management and Administration</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-80" class="govuk-visually-hidden">How many vacancies for Business Management and Administration?</label>
+                                                    <input aria-labelledby="vacancies-label-80" class="govuk-input govuk-input--width-3" id="Subject_80" type="text" maxlength="3" name="VacancyBySubjects[33].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-80" class="govuk-visually-hidden">How many vacancies were filled for Business Management and Administration?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-80" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_33__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[33].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_33__CategoryCode" name="VacancyBySubjects[33].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_33__IsFilteredOut" name="VacancyBySubjects[33].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_33__Subject" name="VacancyBySubjects[33].Subject" value="Business Management and Administration">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_33__SubjectId" name="VacancyBySubjects[33].SubjectId" value="80">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_33__Ukprn" name="VacancyBySubjects[33].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Catering and Hospitality</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-81" class="govuk-visually-hidden">How many vacancies for Catering and Hospitality?</label>
+                                                    <input aria-labelledby="vacancies-label-81" class="govuk-input govuk-input--width-3" id="Subject_81" type="text" maxlength="3" name="VacancyBySubjects[34].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-81" class="govuk-visually-hidden">How many vacancies were filled for Catering and Hospitality?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-81" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_34__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[34].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_34__CategoryCode" name="VacancyBySubjects[34].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_34__IsFilteredOut" name="VacancyBySubjects[34].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_34__Subject" name="VacancyBySubjects[34].Subject" value="Catering and Hospitality">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_34__SubjectId" name="VacancyBySubjects[34].SubjectId" value="81">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_34__Ukprn" name="VacancyBySubjects[34].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Construction, Planning and the Built Environment</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-82" class="govuk-visually-hidden">How many vacancies for Construction, Planning and the Built Environment?</label>
+                                                    <input aria-labelledby="vacancies-label-82" class="govuk-input govuk-input--width-3" id="Subject_82" type="text" maxlength="3" name="VacancyBySubjects[35].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-82" class="govuk-visually-hidden">How many vacancies were filled for Construction, Planning and the Built Environment?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-82" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_35__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[35].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_35__CategoryCode" name="VacancyBySubjects[35].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_35__IsFilteredOut" name="VacancyBySubjects[35].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_35__Subject" name="VacancyBySubjects[35].Subject" value="Construction, Planning and the Built Environment">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_35__SubjectId" name="VacancyBySubjects[35].SubjectId" value="82">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_35__Ukprn" name="VacancyBySubjects[35].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Crafts, Creative Arts and Design</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-83" class="govuk-visually-hidden">How many vacancies for Crafts, Creative Arts and Design?</label>
+                                                    <input aria-labelledby="vacancies-label-83" class="govuk-input govuk-input--width-3" id="Subject_83" type="text" maxlength="3" name="VacancyBySubjects[36].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-83" class="govuk-visually-hidden">How many vacancies were filled for Crafts, Creative Arts and Design?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-83" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_36__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[36].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_36__CategoryCode" name="VacancyBySubjects[36].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_36__IsFilteredOut" name="VacancyBySubjects[36].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_36__Subject" name="VacancyBySubjects[36].Subject" value="Crafts, Creative Arts and Design">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_36__SubjectId" name="VacancyBySubjects[36].SubjectId" value="83">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_36__Ukprn" name="VacancyBySubjects[36].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Design, Engineering and Manufacturing</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-84" class="govuk-visually-hidden">How many vacancies for Design, Engineering and Manufacturing?</label>
+                                                    <input aria-labelledby="vacancies-label-84" class="govuk-input govuk-input--width-3" id="Subject_84" type="text" maxlength="3" name="VacancyBySubjects[37].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-84" class="govuk-visually-hidden">How many vacancies were filled for Design, Engineering and Manufacturing?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-84" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_37__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[37].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_37__CategoryCode" name="VacancyBySubjects[37].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_37__IsFilteredOut" name="VacancyBySubjects[37].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_37__Subject" name="VacancyBySubjects[37].Subject" value="Design, Engineering and Manufacturing">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_37__SubjectId" name="VacancyBySubjects[37].SubjectId" value="84">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_37__Ukprn" name="VacancyBySubjects[37].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Digital / ICT</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-85" class="govuk-visually-hidden">How many vacancies for Digital / ICT?</label>
+                                                    <input aria-labelledby="vacancies-label-85" class="govuk-input govuk-input--width-3" id="Subject_85" type="text" maxlength="3" name="VacancyBySubjects[38].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-85" class="govuk-visually-hidden">How many vacancies were filled for Digital / ICT?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-85" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_38__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[38].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_38__CategoryCode" name="VacancyBySubjects[38].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_38__IsFilteredOut" name="VacancyBySubjects[38].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_38__Subject" name="VacancyBySubjects[38].Subject" value="Digital / ICT">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_38__SubjectId" name="VacancyBySubjects[38].SubjectId" value="85">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_38__Ukprn" name="VacancyBySubjects[38].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Education and Childcare</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-86" class="govuk-visually-hidden">How many vacancies for Education and Childcare?</label>
+                                                    <input aria-labelledby="vacancies-label-86" class="govuk-input govuk-input--width-3" id="Subject_86" type="text" maxlength="3" name="VacancyBySubjects[39].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-86" class="govuk-visually-hidden">How many vacancies were filled for Education and Childcare?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-86" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_39__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[39].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_39__CategoryCode" name="VacancyBySubjects[39].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_39__IsFilteredOut" name="VacancyBySubjects[39].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_39__Subject" name="VacancyBySubjects[39].Subject" value="Education and Childcare">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_39__SubjectId" name="VacancyBySubjects[39].SubjectId" value="86">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_39__Ukprn" name="VacancyBySubjects[39].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Education and Training</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-87" class="govuk-visually-hidden">How many vacancies for Education and Training?</label>
+                                                    <input aria-labelledby="vacancies-label-87" class="govuk-input govuk-input--width-3" id="Subject_87" type="text" maxlength="3" name="VacancyBySubjects[40].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-87" class="govuk-visually-hidden">How many vacancies were filled for Education and Training?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-87" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_40__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[40].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_40__CategoryCode" name="VacancyBySubjects[40].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_40__IsFilteredOut" name="VacancyBySubjects[40].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_40__Subject" name="VacancyBySubjects[40].Subject" value="Education and Training">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_40__SubjectId" name="VacancyBySubjects[40].SubjectId" value="87">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_40__Ukprn" name="VacancyBySubjects[40].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Environmental</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-88" class="govuk-visually-hidden">How many vacancies for Environmental?</label>
+                                                    <input aria-labelledby="vacancies-label-88" class="govuk-input govuk-input--width-3" id="Subject_88" type="text" maxlength="3" name="VacancyBySubjects[41].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-88" class="govuk-visually-hidden">How many vacancies were filled for Environmental?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-88" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_41__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[41].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_41__CategoryCode" name="VacancyBySubjects[41].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_41__IsFilteredOut" name="VacancyBySubjects[41].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_41__Subject" name="VacancyBySubjects[41].Subject" value="Environmental">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_41__SubjectId" name="VacancyBySubjects[41].SubjectId" value="88">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_41__Ukprn" name="VacancyBySubjects[41].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Hair, Beauty and Aesthetics</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-89" class="govuk-visually-hidden">How many vacancies for Hair, Beauty and Aesthetics?</label>
+                                                    <input aria-labelledby="vacancies-label-89" class="govuk-input govuk-input--width-3" id="Subject_89" type="text" maxlength="3" name="VacancyBySubjects[42].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-89" class="govuk-visually-hidden">How many vacancies were filled for Hair, Beauty and Aesthetics?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-89" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_42__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[42].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_42__CategoryCode" name="VacancyBySubjects[42].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_42__IsFilteredOut" name="VacancyBySubjects[42].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_42__Subject" name="VacancyBySubjects[42].Subject" value="Hair, Beauty and Aesthetics">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_42__SubjectId" name="VacancyBySubjects[42].SubjectId" value="89">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_42__Ukprn" name="VacancyBySubjects[42].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Health, Public Services and Care</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-90" class="govuk-visually-hidden">How many vacancies for Health, Public Services and Care?</label>
+                                                    <input aria-labelledby="vacancies-label-90" class="govuk-input govuk-input--width-3" id="Subject_90" type="text" maxlength="3" name="VacancyBySubjects[43].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-90" class="govuk-visually-hidden">How many vacancies were filled for Health, Public Services and Care?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-90" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_43__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[43].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_43__CategoryCode" name="VacancyBySubjects[43].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_43__IsFilteredOut" name="VacancyBySubjects[43].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_43__Subject" name="VacancyBySubjects[43].Subject" value="Health, Public Services and Care">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_43__SubjectId" name="VacancyBySubjects[43].SubjectId" value="90">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_43__Ukprn" name="VacancyBySubjects[43].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Law and Legal Services</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-91" class="govuk-visually-hidden">How many vacancies for Law and Legal Services?</label>
+                                                    <input aria-labelledby="vacancies-label-91" class="govuk-input govuk-input--width-3" id="Subject_91" type="text" maxlength="3" name="VacancyBySubjects[44].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-91" class="govuk-visually-hidden">How many vacancies were filled for Law and Legal Services?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-91" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_44__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[44].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_44__CategoryCode" name="VacancyBySubjects[44].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_44__IsFilteredOut" name="VacancyBySubjects[44].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_44__Subject" name="VacancyBySubjects[44].Subject" value="Law and Legal Services">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_44__SubjectId" name="VacancyBySubjects[44].SubjectId" value="91">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_44__Ukprn" name="VacancyBySubjects[44].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Media, Broadcast and Production</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-92" class="govuk-visually-hidden">How many vacancies for Media, Broadcast and Production?</label>
+                                                    <input aria-labelledby="vacancies-label-92" class="govuk-input govuk-input--width-3" id="Subject_92" type="text" maxlength="3" name="VacancyBySubjects[45].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-92" class="govuk-visually-hidden">How many vacancies were filled for Media, Broadcast and Production?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-92" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_45__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[45].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_45__CategoryCode" name="VacancyBySubjects[45].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_45__IsFilteredOut" name="VacancyBySubjects[45].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_45__Subject" name="VacancyBySubjects[45].Subject" value="Media, Broadcast and Production">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_45__SubjectId" name="VacancyBySubjects[45].SubjectId" value="92">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_45__Ukprn" name="VacancyBySubjects[45].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Performing Arts</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-93" class="govuk-visually-hidden">How many vacancies for Performing Arts?</label>
+                                                    <input aria-labelledby="vacancies-label-93" class="govuk-input govuk-input--width-3" id="Subject_93" type="text" maxlength="3" name="VacancyBySubjects[46].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-93" class="govuk-visually-hidden">How many vacancies were filled for Performing Arts?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-93" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_46__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[46].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_46__CategoryCode" name="VacancyBySubjects[46].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_46__IsFilteredOut" name="VacancyBySubjects[46].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_46__Subject" name="VacancyBySubjects[46].Subject" value="Performing Arts">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_46__SubjectId" name="VacancyBySubjects[46].SubjectId" value="93">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_46__Ukprn" name="VacancyBySubjects[46].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Retail and Commercial Enterprise</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-94" class="govuk-visually-hidden">How many vacancies for Retail and Commercial Enterprise?</label>
+                                                    <input aria-labelledby="vacancies-label-94" class="govuk-input govuk-input--width-3" id="Subject_94" type="text" maxlength="3" name="VacancyBySubjects[47].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-94" class="govuk-visually-hidden">How many vacancies were filled for Retail and Commercial Enterprise?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-94" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_47__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[47].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_47__CategoryCode" name="VacancyBySubjects[47].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_47__IsFilteredOut" name="VacancyBySubjects[47].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_47__Subject" name="VacancyBySubjects[47].Subject" value="Retail and Commercial Enterprise">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_47__SubjectId" name="VacancyBySubjects[47].SubjectId" value="94">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_47__Ukprn" name="VacancyBySubjects[47].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Science</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-95" class="govuk-visually-hidden">How many vacancies for Science?</label>
+                                                    <input aria-labelledby="vacancies-label-95" class="govuk-input govuk-input--width-3" id="Subject_95" type="text" maxlength="3" name="VacancyBySubjects[48].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-95" class="govuk-visually-hidden">How many vacancies were filled for Science?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-95" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_48__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[48].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_48__CategoryCode" name="VacancyBySubjects[48].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_48__IsFilteredOut" name="VacancyBySubjects[48].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_48__Subject" name="VacancyBySubjects[48].Subject" value="Science">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_48__SubjectId" name="VacancyBySubjects[48].SubjectId" value="95">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_48__Ukprn" name="VacancyBySubjects[48].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Sport, Leisure and Recreation</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-96" class="govuk-visually-hidden">How many vacancies for Sport, Leisure and Recreation?</label>
+                                                    <input aria-labelledby="vacancies-label-96" class="govuk-input govuk-input--width-3" id="Subject_96" type="text" maxlength="3" name="VacancyBySubjects[49].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-96" class="govuk-visually-hidden">How many vacancies were filled for Sport, Leisure and Recreation?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-96" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_49__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[49].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_49__CategoryCode" name="VacancyBySubjects[49].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_49__IsFilteredOut" name="VacancyBySubjects[49].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_49__Subject" name="VacancyBySubjects[49].Subject" value="Sport, Leisure and Recreation">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_49__SubjectId" name="VacancyBySubjects[49].SubjectId" value="96">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_49__Ukprn" name="VacancyBySubjects[49].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Transport and Logistics</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-97" class="govuk-visually-hidden">How many vacancies for Transport and Logistics?</label>
+                                                    <input aria-labelledby="vacancies-label-97" class="govuk-input govuk-input--width-3" id="Subject_97" type="text" maxlength="3" name="VacancyBySubjects[50].NoOfTeacherVacancies" value="1">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-97" class="govuk-visually-hidden">How many vacancies were filled for Transport and Logistics?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-97" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_50__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[50].NoOfTeacherVacanciesFilled" value="0">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_50__CategoryCode" name="VacancyBySubjects[50].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_50__IsFilteredOut" name="VacancyBySubjects[50].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_50__Subject" name="VacancyBySubjects[50].Subject" value="Transport and Logistics">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_50__SubjectId" name="VacancyBySubjects[50].SubjectId" value="97">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_50__Ukprn" name="VacancyBySubjects[50].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Travel and Tourism</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-98" class="govuk-visually-hidden">How many vacancies for Travel and Tourism?</label>
+                                                    <input aria-labelledby="vacancies-label-98" class="govuk-input govuk-input--width-3" id="Subject_98" type="text" maxlength="3" name="VacancyBySubjects[51].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-98" class="govuk-visually-hidden">How many vacancies were filled for Travel and Tourism?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-98" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_51__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[51].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_51__CategoryCode" name="VacancyBySubjects[51].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_51__IsFilteredOut" name="VacancyBySubjects[51].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_51__Subject" name="VacancyBySubjects[51].Subject" value="Travel and Tourism">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_51__SubjectId" name="VacancyBySubjects[51].SubjectId" value="98">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_51__Ukprn" name="VacancyBySubjects[51].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Other</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-99" class="govuk-visually-hidden">How many vacancies for Other?</label>
+                                                    <input aria-labelledby="vacancies-label-99" class="govuk-input govuk-input--width-3" id="Subject_99" type="text" maxlength="3" name="VacancyBySubjects[52].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-99" class="govuk-visually-hidden">How many vacancies were filled for Other?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-99" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_52__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[52].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_52__CategoryCode" name="VacancyBySubjects[52].CategoryCode" value="15">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_52__IsFilteredOut" name="VacancyBySubjects[52].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_52__Subject" name="VacancyBySubjects[52].Subject" value="Other">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_52__SubjectId" name="VacancyBySubjects[52].SubjectId" value="99">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_52__Ukprn" name="VacancyBySubjects[52].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table class="govuk-table ">
+
+                                <thead class="govuk-table__head">
+                                    <tr class="govuk-table__row">
+                                        <th scope="col" class="govuk-table__header">
+                                            Other learning programmes
+                                        </th>
+                                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                                            How many vacancies?
+                                            <div class="govuk-hint">
+                                                Leave empty for programmes with no vacancies
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                                            How many filled vacancies?
+                                            <div class="govuk-hint">
+                                                Where there are vacancies, enter 0 if none have been filled. Leave empty where there are no vacancies
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                            <tbody class="govuk-table__body">
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Functional Skills English</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-100" class="govuk-visually-hidden">How many vacancies for Functional Skills English?</label>
+                                                    <input aria-labelledby="vacancies-label-100" class="govuk-input govuk-input--width-3" id="Subject_100" type="text" maxlength="3" name="VacancyBySubjects[53].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-100" class="govuk-visually-hidden">How many vacancies were filled for Functional Skills English?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-100" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_53__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[53].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_53__CategoryCode" name="VacancyBySubjects[53].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_53__IsFilteredOut" name="VacancyBySubjects[53].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_53__Subject" name="VacancyBySubjects[53].Subject" value="Functional Skills English">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_53__SubjectId" name="VacancyBySubjects[53].SubjectId" value="100">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_53__Ukprn" name="VacancyBySubjects[53].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Functional Skills Maths</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-101" class="govuk-visually-hidden">How many vacancies for Functional Skills Maths?</label>
+                                                    <input aria-labelledby="vacancies-label-101" class="govuk-input govuk-input--width-3" id="Subject_101" type="text" maxlength="3" name="VacancyBySubjects[54].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-101" class="govuk-visually-hidden">How many vacancies were filled for Functional Skills Maths?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-101" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_54__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[54].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_54__CategoryCode" name="VacancyBySubjects[54].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_54__IsFilteredOut" name="VacancyBySubjects[54].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_54__Subject" name="VacancyBySubjects[54].Subject" value="Functional Skills Maths">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_54__SubjectId" name="VacancyBySubjects[54].SubjectId" value="101">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_54__Ukprn" name="VacancyBySubjects[54].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Functional Skills IT</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-102" class="govuk-visually-hidden">How many vacancies for Functional Skills IT?</label>
+                                                    <input aria-labelledby="vacancies-label-102" class="govuk-input govuk-input--width-3" id="Subject_102" type="text" maxlength="3" name="VacancyBySubjects[55].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-102" class="govuk-visually-hidden">How many vacancies were filled for Functional Skills IT?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-102" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_55__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[55].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_55__CategoryCode" name="VacancyBySubjects[55].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_55__IsFilteredOut" name="VacancyBySubjects[55].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_55__Subject" name="VacancyBySubjects[55].Subject" value="Functional Skills IT">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_55__SubjectId" name="VacancyBySubjects[55].SubjectId" value="102">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_55__Ukprn" name="VacancyBySubjects[55].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Life Skills</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-103" class="govuk-visually-hidden">How many vacancies for Life Skills?</label>
+                                                    <input aria-labelledby="vacancies-label-103" class="govuk-input govuk-input--width-3" id="Subject_103" type="text" maxlength="3" name="VacancyBySubjects[56].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-103" class="govuk-visually-hidden">How many vacancies were filled for Life Skills?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-103" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_56__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[56].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_56__CategoryCode" name="VacancyBySubjects[56].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_56__IsFilteredOut" name="VacancyBySubjects[56].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_56__Subject" name="VacancyBySubjects[56].Subject" value="Life Skills">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_56__SubjectId" name="VacancyBySubjects[56].SubjectId" value="103">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_56__Ukprn" name="VacancyBySubjects[56].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Preparation for Work</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-104" class="govuk-visually-hidden">How many vacancies for Preparation for Work?</label>
+                                                    <input aria-labelledby="vacancies-label-104" class="govuk-input govuk-input--width-3" id="Subject_104" type="text" maxlength="3" name="VacancyBySubjects[57].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-104" class="govuk-visually-hidden">How many vacancies were filled for Preparation for Work?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-104" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_57__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[57].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_57__CategoryCode" name="VacancyBySubjects[57].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_57__IsFilteredOut" name="VacancyBySubjects[57].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_57__Subject" name="VacancyBySubjects[57].Subject" value="Preparation for Work">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_57__SubjectId" name="VacancyBySubjects[57].SubjectId" value="104">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_57__Ukprn" name="VacancyBySubjects[57].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Supported Learning or Special Educational Needs learning provision</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-105" class="govuk-visually-hidden">How many vacancies for Supported Learning or Special Educational Needs learning provision?</label>
+                                                    <input aria-labelledby="vacancies-label-105" class="govuk-input govuk-input--width-3" id="Subject_105" type="text" maxlength="3" name="VacancyBySubjects[58].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-105" class="govuk-visually-hidden">How many vacancies were filled for Supported Learning or Special Educational Needs learning provision?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-105" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_58__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[58].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_58__CategoryCode" name="VacancyBySubjects[58].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_58__IsFilteredOut" name="VacancyBySubjects[58].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_58__Subject" name="VacancyBySubjects[58].Subject" value="Supported Learning or Special Educational Needs learning provision">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_58__SubjectId" name="VacancyBySubjects[58].SubjectId" value="105">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_58__Ukprn" name="VacancyBySubjects[58].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">ESOL</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-106" class="govuk-visually-hidden">How many vacancies for ESOL?</label>
+                                                    <input aria-labelledby="vacancies-label-106" class="govuk-input govuk-input--width-3" id="Subject_106" type="text" maxlength="3" name="VacancyBySubjects[59].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-106" class="govuk-visually-hidden">How many vacancies were filled for ESOL?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-106" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_59__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[59].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_59__CategoryCode" name="VacancyBySubjects[59].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_59__IsFilteredOut" name="VacancyBySubjects[59].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_59__Subject" name="VacancyBySubjects[59].Subject" value="ESOL">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_59__SubjectId" name="VacancyBySubjects[59].SubjectId" value="106">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_59__Ukprn" name="VacancyBySubjects[59].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Community Learning</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-107" class="govuk-visually-hidden">How many vacancies for Community Learning?</label>
+                                                    <input aria-labelledby="vacancies-label-107" class="govuk-input govuk-input--width-3" id="Subject_107" type="text" maxlength="3" name="VacancyBySubjects[60].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-107" class="govuk-visually-hidden">How many vacancies were filled for Community Learning?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-107" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_60__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[60].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_60__CategoryCode" name="VacancyBySubjects[60].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_60__IsFilteredOut" name="VacancyBySubjects[60].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_60__Subject" name="VacancyBySubjects[60].Subject" value="Community Learning">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_60__SubjectId" name="VacancyBySubjects[60].SubjectId" value="107">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_60__Ukprn" name="VacancyBySubjects[60].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Family Learning</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-108" class="govuk-visually-hidden">How many vacancies for Family Learning?</label>
+                                                    <input aria-labelledby="vacancies-label-108" class="govuk-input govuk-input--width-3" id="Subject_108" type="text" maxlength="3" name="VacancyBySubjects[61].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-108" class="govuk-visually-hidden">How many vacancies were filled for Family Learning?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-108" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_61__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[61].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_61__CategoryCode" name="VacancyBySubjects[61].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_61__IsFilteredOut" name="VacancyBySubjects[61].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_61__Subject" name="VacancyBySubjects[61].Subject" value="Family Learning">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_61__SubjectId" name="VacancyBySubjects[61].SubjectId" value="108">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_61__Ukprn" name="VacancyBySubjects[61].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell">Other</td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="vacancies-label-109" class="govuk-visually-hidden">How many vacancies for Other?</label>
+                                                    <input aria-labelledby="vacancies-label-109" class="govuk-input govuk-input--width-3" id="Subject_109" type="text" maxlength="3" name="VacancyBySubjects[62].NoOfTeacherVacancies" value="">
+                                                </td>
+                                                <td class="govuk-table__cell govuk-table__cell--numeric">
+                                                    <label id="filled-vacancies-label-109" class="govuk-visually-hidden">How many vacancies were filled for Other?</label>
+                                                    <input aria-labelledby="filled-vacancies-label-109" class="govuk-input govuk-input--width-3" type="text" maxlength="3" id="VacancyBySubjects_62__NoOfTeacherVacanciesFilled" name="VacancyBySubjects[62].NoOfTeacherVacanciesFilled" value="">
+                                                </td>
+                                            <td hidden="">
+                                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_62__CategoryCode" name="VacancyBySubjects[62].CategoryCode" value="16">
+                                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_62__IsFilteredOut" name="VacancyBySubjects[62].IsFilteredOut" value="False">
+                                                <input type="hidden" id="VacancyBySubjects_62__Subject" name="VacancyBySubjects[62].Subject" value="Other">
+                                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_62__SubjectId" name="VacancyBySubjects[62].SubjectId" value="109">
+                                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_62__Ukprn" name="VacancyBySubjects[62].Ukprn" value="10009688">
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" id="submitAction" name="action" value="Submit">
+                Save and continue
+            </button>
+        </div>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8KK5pQ8LLh1EhGP30JpsGq37d8REU4_Yj9hQb1a6KPSc_N68H7_uPlqwPMXW_-xBALYegZVmRsyReX7y1dLHTNwZ5Z2OVlESXoTDtc3YLhJ0ltGapC0tvWeUO-u02rOIGuWWdFCzIRc1YcCLSWiEoJQuPhomXMh38ZyHiRjSJe500RzCiMng7Uh6NK6p_IQytg"></form>
+
+                    
+                
+            
+
+    </div>
+</div>
+
+
+
+{% endblock %}

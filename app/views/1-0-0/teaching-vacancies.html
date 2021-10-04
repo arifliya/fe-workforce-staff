@@ -1,0 +1,66 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <form method="post" action="teaching-vacancies-recruitment">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Teaching vacancies
+                        </h1>
+                    </legend>
+                        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                
+    
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" 0="">
+                        <h2 class="govuk-fieldset__heading">
+    Were there any teaching vacancies during the academic year?                    </h2>
+                    </legend>
+                <div class="govuk-hint">
+                    You can add teaching vacancy numbers on the next page if applicable. Providers might use different phrasing for teaching vacancies, such as lecturer, trainer, instructor or tutor vacancies
+                </div>
+    
+                <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input id="LookupItemId207" name="SingleOption.Selection" value="207" checked="" class="govuk-radios__input" type="radio">
+                                <label for="LookupItemId207" class="govuk-label govuk-radios__label">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input id="LookupItemId208" name="SingleOption.Selection" value="208" class="govuk-radios__input" type="radio">
+                                <label for="LookupItemId208" class="govuk-label govuk-radios__label">
+                                    No
+                                </label>
+                            </div>
+                    <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="8/1/2020 12:00:00 AM">
+                    <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="7/31/2021 12:00:00 AM">
+                </div>
+                <br>
+            </fieldset>
+        </div>
+    
+                
+            
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KK5pQ8LLh1EhGP30JpsGq3lABJYXWxWfMliSrKYHsFYkfRWfVHSp3gDmZ0GABkNvDWnb2qNpaGjH24LP7Fi2F7B8E2tKSiPyyD-4x-suRAMy8FsVWMeWWW8erUoF-9i-FJjDg0N9_VyOxAKDqjrtwANwJHeTAo_bqOlv2o2BAtmBt7U7cdDTUpUdYOVtQHXgA"></form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

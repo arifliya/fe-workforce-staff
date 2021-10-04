@@ -1,0 +1,50 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Apprentices
+                        </h1>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">How many apprentices worked for the organisation?</h1>
+                        </legend>
+                        <p>
+                            Include employed apprentices who started before, or during the year, and any who left.<br>Enter 0 if not applicable.
+                        </p>
+                        
+                        <input class="govuk-input govuk-input--width-4" id="number" type="text" maxlength="3" name="Apprentices.Number" value="1">
+                    </div>
+                    <br>
+                    <br>
+                    <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="8/1/2020 12:00:00 AM">
+                    <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="7/31/2021 12:00:00 AM">
+
+                    <button class="govuk-button" type="submit" formaction="staff-councelling-services">
+                        Save and continue
+                    </button>
+                </fieldset>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KK5pQ8LLh1EhGP30JpsGq0CnUT3U-qVJ7eOxedE1gdBuEEW5c1BsGTBlRft1PLJffdVhQz7xvDdLZAxiAbC2XSQEEmA2_Ran27jyCovWxSxtXpYZJd_ZyYRGAJ6CHzGIWy49Wr2Gj9-6qMthD9J5kk1cfejoyJHoli6ijQdnF050IHth6nYNI6s4YkLc7vKcg"></form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

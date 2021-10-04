@@ -1,0 +1,101 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FE Workforce - Start
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form method="post" id="form" action="apprentices">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Why was it difficult to recruit for these subjects?
+                        </h1>
+                    </legend>
+
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <h2 class="govuk-fieldset__heading">
+                                    Academic  subjects
+                                </h2>
+                            </legend>
+                            <div class="govuk-hint">
+                                Select at least 1 reason for each subject
+                            </div>
+
+<div id="subject_48">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                        <h3 class="govuk-fieldset__heading">
+                                            Archaeology
+                                        </h3>
+                                    </legend>
+                                    
+                                    <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" type="Checkbox" id="subject_48_LookupItemId219" name="DifficultToRecruitReasons[0].ReasonIds" value="219">
+                                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="subject_48_LookupItemId219">
+                                                    No applicants
+                                                </label>
+                                            </div>
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" type="Checkbox" id="subject_48_LookupItemId220" name="DifficultToRecruitReasons[0].ReasonIds" value="220">
+                                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="subject_48_LookupItemId220">
+                                                    A lack of teaching experience or skills
+                                                </label>
+                                            </div>
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" type="Checkbox" id="subject_48_LookupItemId221" name="DifficultToRecruitReasons[0].ReasonIds" value="221">
+                                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="subject_48_LookupItemId221">
+                                                    A lack of relevant industry experience
+                                                </label>
+                                            </div>
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" type="Checkbox" id="subject_48_LookupItemId222" name="DifficultToRecruitReasons[0].ReasonIds" value="222">
+                                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="subject_48_LookupItemId222">
+                                                    Did not have the right qualifications
+                                                </label>
+                                            </div>
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" type="Checkbox" id="subject_48_LookupItemId223" name="DifficultToRecruitReasons[0].ReasonIds" value="223">
+                                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="subject_48_LookupItemId223">
+                                                    Looking for more pay than we could offer
+                                                </label>
+                                            </div>
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" type="Checkbox" id="subject_48_LookupItemId224" name="DifficultToRecruitReasons[0].ReasonIds" value="224">
+                                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="subject_48_LookupItemId224">
+                                                    Another reason
+                                                </label>
+                                            </div>
+                                    </div>
+                                    <br>
+                                    <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="DifficultToRecruitReasons_0__CategoryCode" name="DifficultToRecruitReasons[0].CategoryCode" value="14">
+                                    <input type="hidden" id="DifficultToRecruitReasons_0__CategoryName" name="DifficultToRecruitReasons[0].CategoryName" value="Academic">
+                                    <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="DifficultToRecruitReasons_0__SubjectId" name="DifficultToRecruitReasons[0].SubjectId" value="48">
+                                    <input type="hidden" id="DifficultToRecruitReasons_0__Subject" name="DifficultToRecruitReasons[0].Subject" value="Archaeology">
+                                    <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="DifficultToRecruitReasons_0__Ukprn" name="DifficultToRecruitReasons[0].Ukprn" value="10009688">
+                                    <input type="hidden" id="DifficultToRecruitReasons_0__HtmlElementId" name="DifficultToRecruitReasons[0].HtmlElementId" value="subject_48">
+                                </div>
+                        </fieldset>
+                </fieldset>
+            </div>
+            <br>
+            <button class="govuk-button" type="submit" id="submitAction" name="action" value="Submit">
+                Save and continue
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KK5pQ8LLh1EhGP30JpsGq14TsauIX6qykFgJjFg8MrlPidS7YQ-NSQnAtoKJUz-oI9VW1B4scRhft5RQuk22Ztsekw8zuq-r5oNMCrTPrfwavT5d1LfQi8EagOGQN11XdUP3K6r4tJ6GegpZhwbfpZe1t4ReuKaHaJOf0caR1vJlj6D-hsNcX-pDIV84Vbeig"></form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
