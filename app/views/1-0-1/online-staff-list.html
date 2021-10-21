@@ -1,0 +1,164 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Online staff
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+
+        <h1 class="govuk-heading-xl">Staff list</h1>
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+            <ul class="govuk-tabs__list" role="tablist">
+                <li class="govuk-tabs__list-item" role="presentation">
+                    <label class="govuk-visually-hidden" id="completedstaffmembers">List of completed staff
+                        members</label>
+                    <a class="govuk-tabs__tab" href="#completed" aria-labelledby="completedstaffmembers"
+                        id="tab_completed" role="tab" aria-controls="completed" aria-selected="false" tabindex="-1">
+                        Completed staff members
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+                    <label class="govuk-visually-hidden" id="incompletestaffmembers">List of incomplete staff
+                        members</label>
+                    <a class="govuk-tabs__tab" href="#incomplete" aria-labelledby="incompletestaffmembers"
+                        id="tab_incomplete" role="tab" aria-controls="incomplete" aria-selected="true" tabindex="0">
+                        Incomplete staff members
+                    </a>
+                </li>
+            </ul>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" role="tabpanel"
+                aria-labelledby="tab_completed">
+                <p class="govuk-body">
+                    There are 2 completed staff members recorded
+                </p>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Name</th>
+                            <th scope="col" class="govuk-table__header">Date of birth</th>
+                            <th scope="col" class="govuk-table__header"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="govuk-table__body">
+
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Jo Bloggs</td>
+                            <td class="govuk-table__cell">01 January 1950</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff
+                                    member Jo Bloggs 01 January 1950</label>
+                                <a class="govuk-link" aria-labelledby="changestaffmember"
+                                    href="member-data">Change</a>
+                                <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record
+                                    Jo Bloggs 01 January 1950</label>
+                                <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember"
+                                    href="delete-data">Delete</a>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">John Smith</td>
+                            <td class="govuk-table__cell">01 January 2000</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff
+                                    member John Smith 01 January 2000</label>
+                                <a class="govuk-link" aria-labelledby="changestaffmember"
+                                    href="member-data">Change</a>
+                                <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record
+                                    John Smith 01 January 2000</label>
+                                <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember"
+                                    href="delete-data">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+
+            </div>
+            <div class="govuk-tabs__panel" id="incomplete" role="tabpanel" aria-labelledby="tab_incomplete">
+                <p class="govuk-body">
+                    <span>There are 2 incomplete staff members recorded</span>
+
+                </p>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Name</th>
+                            <th scope="col" class="govuk-table__header">Date of birth</th>
+                            <th scope="col" class="govuk-table__header"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="govuk-table__body">
+
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Jo Bloggs</td>
+                            <td class="govuk-table__cell">01 January 1990</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff
+                                    member Jo Bloggs 01 January 1990</label>
+                                <a class="govuk-link" aria-labelledby="changestaffmember"
+                                    href="member-data-incomplete">Change</a>
+                                <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record
+                                    Jo Bloggs 01 January 1990</label>
+                                <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember"
+                                    href="delete-data">Delete</a>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Joseph Bloggs</td>
+                            <td class="govuk-table__cell">01 May 2000</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff
+                                    member Joseph Bloggs 01 May 2000</label>
+                                <a class="govuk-link" aria-labelledby="changestaffmember"
+                                    href="member-data-incomplete">Change</a>
+                                <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record
+                                    Joseph Bloggs 01 May 2000</label>
+                                <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember"
+                                    href="delete-data">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+        <p class="govuk-body">
+        </p>
+        <div class="govuk-button-group">
+            <label class="govuk-visually-hidden" id="addstaffmember">Add a member of staff not already recorded </label>
+            <a class="govuk-button" aria-labelledby="addstaffmember" href="add-a-member-of-staff">Add another
+                staff member</a>
+            <label class="govuk-visually-hidden" id="returntodashboard">Exit from this collection and return to
+                dashboard tile page </label>
+            <a class="govuk-link" aria-labelledby="returntodashboard" href="dashboard.html">Return to dashboard</a>
+        </div>
+        <p></p>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

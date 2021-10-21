@@ -1,0 +1,79 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Job outside FE
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="member-data-incomplete">
+            
+                
+                    <span class="govuk-caption-m">Jo Bloggs</span>
+
+                    <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                        name="StaffId" value="3033">
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+
+
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                                <h1 class="govuk-fieldset__heading">
+                                    Do they still have a job outside of FE relevant to the subject they teach? </h1>
+                            </legend>
+                            <div class="govuk-hint">
+                                Select an option
+                            </div>
+
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId173" name="SingleOption.Selection" value="173"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId173" class="govuk-label govuk-radios__label">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId174" name="SingleOption.Selection" value="174"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId174" class="govuk-label govuk-radios__label">
+                                        No
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId175" name="SingleOption.Selection" value="175" checked=""
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId175" class="govuk-label govuk-radios__label">
+                                        Not known
+                                    </label>
+                                </div>
+                                <input type="hidden" data-val="true"
+                                    data-val-required="The StartDate field is required." id="Collection_StartDate"
+                                    name="Collection.StartDate" value="">
+                                <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                                    id="Collection_EndDate" name="Collection.EndDate" value="">
+                            </div>
+                            <br>
+                        </fieldset>
+                    </div>
+
+                
+            
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq1r6pKk6mNTNX4Wlrc1zbmNJNGOoqNDctFYdUmvxiw_TekvJCAZ8FCG5WYasZwlSmO2DYVO8iWtFcOfSyIHLASsITgCY2pcVbkJ6l1SHPemvvNxES6P8fpubWUFMAX75BYRl1zSP6jY0kiRyk36QkRY1oUle5vGw9QL10RtWuLpdg">
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

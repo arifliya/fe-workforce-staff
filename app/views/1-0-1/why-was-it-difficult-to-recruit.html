@@ -1,0 +1,552 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Why was it difficult to recruit
+{% endblock %}
+
+var firstName = req.session.data['academic-subjects'][0]
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+        <h1 class="govuk-heading-l">Why was it difficult to recruit for these subjects?</h1>
+
+
+        <form method="post" id="form" action="apprentices">
+            <div class="aca-reasons-group">
+                <h2 class="govuk-heading-m govuk-!-font-size-27">Academic subjects</h2>
+                <div class="govuk-form-group aca-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading aca-h3-v2">
+                                {{ data['aca-subject'][0] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_0_c1"
+                                    name="aca-reason-group-0" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_0_c1">
+                                    No applicants
+                                </label> 
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_0_c2"
+                                    name="aca-reason-group-0" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_0_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_0_c3"
+                                    name="aca-reason-group-0" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_0_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_0_c4"
+                                    name="aca-reason-group-0" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_0_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_0_c5"
+                                    name="aca-reason-group-0" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_0_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_0_c6"
+                                    name="aca-reason-group-0" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_0_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group aca-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading aca-h3-v2">
+                                {{ data['aca-subject'][1] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_1_c1"
+                                    name="aca-reason-group-1" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_1_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_1_c2"
+                                    name="aca-reason-group-1" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_1_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_1_c3"
+                                    name="aca-reason-group-1" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_1_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_1_c4"
+                                    name="aca-reason-group-1" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_1_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_1_c5"
+                                    name="aca-reason-group-1" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_1_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_1_c6"
+                                    name="aca-reason-group-1" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="saca-ubject_1_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group aca-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading aca-h3-v2">
+                                {{ data['aca-subject'][2] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_2_c1"
+                                    name="aca-reason-group-2" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_2_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_2_c2"
+                                    name="aca-reason-group-2" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_2_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_2_c3"
+                                    name="aca-reason-group-2" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_2_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_2_c4"
+                                    name="aca-reason-group-2" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_2_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_2_c5"
+                                    name="aca-reason-group-2" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_2_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="aca-subject_2_c6"
+                                    name="aca-reason-group-2" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="aca-subject_2_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="voc-reasons-group">
+                <h2 class="govuk-heading-m govuk-!-font-size-27">Vocational programmes</h2>
+                <div class="govuk-form-group voc-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading voc-h3-v2">
+                                {{ data['voc-subject'][0] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_0_c1"
+                                    name="voc-reason-group-0" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_0_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_0_c2"
+                                    name="voc-reason-group-0" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_0_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_0_c3"
+                                    name="voc-reason-group-0" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_0_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_0_c4"
+                                    name="voc-reason-group-0" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_0_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_0_c5"
+                                    name="voc-reason-group-0" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_0_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_0_c6"
+                                    name="voc-reason-group-0" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_0_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group voc-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading voc-h3-v2">
+                                {{ data['voc-subject'][1] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_1_c1"
+                                    name="voc-reason-group-1" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_1_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_1_c2"
+                                    name="voc-reason-group-1" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_1_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_1_c3"
+                                    name="voc-reason-group-1" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_1_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_1_c4"
+                                    name="voc-reason-group-1" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_1_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_1_c5"
+                                    name="voc-reason-group-1" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_1_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_1_c6"
+                                    name="voc-reason-group-1" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_1_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group voc-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading voc-h3-v2">
+                                {{ data['voc-subject'][2] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_2_c1"
+                                    name="voc-reason-group-2" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_2_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_2_c2"
+                                    name="voc-reason-group-2" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_2_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_2_c3"
+                                    name="voc-reason-group-2" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_2_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_2_c4"
+                                    name="voc-reason-group-2" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_2_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_2_c5"
+                                    name="voc-reason-group-2" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_2_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="voc-subject_2_c6"
+                                    name="voc-reason-group-2" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="voc-subject_2_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="other-reasons-group">
+                <h2 class="govuk-heading-m govuk-!-font-size-27">Other programmes</h2>
+                <div class="govuk-form-group other-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading other-h3-v2">
+                                {{ data['other-subject'][0] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_0_c1"
+                                    name="other-reason-group-0" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_0_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_0_c2"
+                                    name="other-reason-group-0" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_0_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_0_c3"
+                                    name="other-reason-group-0" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_0_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_0_c4"
+                                    name="other-reason-group-0" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_0_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_0_c5"
+                                    name="other-reason-group-0" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_0_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_0_c6"
+                                    name="other-reason-group-0" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_0_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group other-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading other-h3-v2">
+                                {{ data['other-subject'][1] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_1_c1"
+                                    name="other-reason-group-1" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_1_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_1_c2"
+                                    name="other-reason-group-1" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_1_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_1_c3"
+                                    name="other-reason-group-1" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_1_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_1_c4"
+                                    name="other-reason-group-1" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_1_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_1_c5"
+                                    name="other-reason-group-1" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_1_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_1_c6"
+                                    name="other-reason-group-1" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_1_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group other-reasons">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading other-h3-v2">
+                                {{ data['other-subject'][2] }}
+                            </h3>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select at least 1 reason for each subject
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_2_c1"
+                                    name="other-reason-group-2" value="No applicants">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_2_c1">
+                                    No applicants
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_2_c2"
+                                    name="other-reason-group-2" value="A lack of teaching experience or skills">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_2_c2">
+                                    A lack of teaching experience or skills
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_2_c3"
+                                    name="other-reason-group-2" value="A lack of relevant industry experience">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_2_c3">
+                                    A lack of relevant industry experience
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_2_c4"
+                                    name="other-reason-group-2" value="Did not have the right qualifications">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_2_c4">
+                                    Did not have the right qualifications
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_2_c5"
+                                    name="other-reason-group-2" value="Looking for more pay than we could offer">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_2_c5">
+                                    Looking for more pay than we could offer
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" type="Checkbox" id="other-subject_2_c6"
+                                    name="other-reason-group-2" value="Another reason">
+                                <label class="govuk-label govuk-checkboxes__label" type="Checkbox" for="other-subject_2_c6">
+                                    Another reason
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+            <button class="govuk-button" type="submit" id="submitAction" name="action" value="Submit">
+                Save and continue
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

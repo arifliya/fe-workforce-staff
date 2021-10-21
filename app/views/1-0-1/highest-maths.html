@@ -1,0 +1,112 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Highest maths
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <form method="post" action="highest-english">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                    <span class="govuk-caption-m">Jo Bloggs</span>
+                    <h1 class="govuk-fieldset__heading">
+                        What is their highest Maths qualification? </h1>
+                </legend>
+                <div class="govuk-hint">
+                    You can select 'not known' for this year. You will need to provide an alternative answer next year.
+                </div>
+
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId120" name="SingleOption.Selection" value="120"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId120" class="govuk-label govuk-radios__label">
+                            Level 2 GCSE grade A* to C or equivalent
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId121" name="SingleOption.Selection" value="121"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId121" class="govuk-label govuk-radios__label">
+                            Level 3 A Level or equivalent
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId122" name="SingleOption.Selection" value="122"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId122" class="govuk-label govuk-radios__label">
+                            Level 4 Certificate of higher education
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId123" name="SingleOption.Selection" value="123"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId123" class="govuk-label govuk-radios__label">
+                            Level 5 Foundation degree
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId124" name="SingleOption.Selection" value="124"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId124" class="govuk-label govuk-radios__label">
+                            Level 6 Undergraduate degree or equivalent
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId125" name="SingleOption.Selection" value="125"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId125" class="govuk-label govuk-radios__label">
+                            Level 7 Postgraduate degree or equivalent
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId126" name="SingleOption.Selection" value="126"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId126" class="govuk-label govuk-radios__label">
+                            Level 8 Doctorates, award, certificate diploma in strategic direction
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId127" name="SingleOption.Selection" value="127"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId127" class="govuk-label govuk-radios__label">
+                            Other
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId128" name="SingleOption.Selection" value="128" checked=""
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId128" class="govuk-label govuk-radios__label">
+                            None
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input id="LookupItemId129" name="SingleOption.Selection" value="129"
+                            class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId129" class="govuk-label govuk-radios__label">
+                            Not known
+                        </label>
+                    </div>
+                    <input type="hidden" data-val="true" data-val-required="The StartDate field is required."
+                        id="Collection_StartDate" name="Collection.StartDate" value="">
+                    <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                        id="Collection_EndDate" name="Collection.EndDate" value="">
+                </div>
+                <br>
+            </fieldset>
+        </div>
+        <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

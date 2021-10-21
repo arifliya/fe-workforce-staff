@@ -1,0 +1,109 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Highest qualification
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+                <form method="post" action="teaching-status">
+                    
+                            <span class="govuk-caption-m">Jo Bloggs</span>
+            
+                            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="3033">
+            
+                                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        
+            
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                                <h1 class="govuk-fieldset__heading">
+            What is their highest teaching qualification?                    </h1>
+                            </legend>
+                        <div class="govuk-hint">
+                            You can select 'not known' for this year. You will need to provide an alternative answer next year.
+                        </div>
+            
+                        <div class="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId140" name="SingleOption.Selection" value="140" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId140" class="govuk-label govuk-radios__label">
+                                            Level 3 Award in Education and Training, Level 3 Award in Preparing to Teach in the Lifelong Learning Sector (PTLLS)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId141" name="SingleOption.Selection" value="141" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId141" class="govuk-label govuk-radios__label">
+                                            Level 4 in Education and Training, Level 4 Certificate in Teaching in the Lifelong Learning Sector
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId142" name="SingleOption.Selection" value="142" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId142" class="govuk-label govuk-radios__label">
+                                            Level 5  in Diploma in Education and Training, Level 5 Diploma in Teaching in the Lifelong Learning Sector (DTLLS), Level 5 Cert Ed
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId143" name="SingleOption.Selection" value="143" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId143" class="govuk-label govuk-radios__label">
+                                            Level 6 Bachelors in Education (BEd), Professional certificate in education (PGCE)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId144" name="SingleOption.Selection" value="144" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId144" class="govuk-label govuk-radios__label">
+                                            Level 7 Postgraduate Certificate in Education (PGCE)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId145" name="SingleOption.Selection" value="145" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId145" class="govuk-label govuk-radios__label">
+                                            Level 8 Doctor of Education (EdD)
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId146" name="SingleOption.Selection" value="146" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId146" class="govuk-label govuk-radios__label">
+                                            Working towards a teacher training qualification
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId147" name="SingleOption.Selection" value="147" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId147" class="govuk-label govuk-radios__label">
+                                            Other
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId148" name="SingleOption.Selection" value="148" checked="" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId148" class="govuk-label govuk-radios__label">
+                                            None
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input id="LookupItemId149" name="SingleOption.Selection" value="149" class="govuk-radios__input" type="radio">
+                                        <label for="LookupItemId149" class="govuk-label govuk-radios__label">
+                                            Not known 
+                                        </label>
+                                    </div>
+                            <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+                            <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+                        </div>
+                        <br>
+                    </fieldset>
+                </div>
+            
+                        
+                    
+                    <br>
+                    <button class="govuk-button" type="submit" id="submit">
+                        Save and continue
+                    </button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KK5pQ8LLh1EhGP30JpsGq1Obm_YZQOEBCJ1yaVkkHMGuQwOy9D5ju1kaUfNs3AXtg-BTfBkzoIm6jWyMmDrw_g1xkYzy66NCNPRTg2C7vPDKj2PlhtGOKg0ri1Ea09CseTnJNbeMwfC_-2y6Lq0QaekJyaWI3ZYXI7680OvTDccZCD5b1rIUP2w9ZhWflGRfQ"></form>
+            </div>
+
+</div>
+
+{% endblock %}

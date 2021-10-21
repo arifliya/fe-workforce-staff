@@ -1,0 +1,63 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Apprentices
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="staff-councelling-services">
+            <!-- <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Apprentices
+                        </h1>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">How many apprentices worked for the organisation?</h1>
+                        </legend>
+                        <p>
+                            Include employed apprentices who started before, or during the year, and any who
+                            left.<br>Enter 0 if not applicable.
+                        </p>
+
+                        <input class="govuk-input govuk-input--width-4" id="number" type="text" maxlength="3"
+                            name="apprentices-number" >
+                    </div>
+                    
+                    <button class="govuk-button" type="submit" formaction="staff-councelling-services">
+                        Save and continue
+                    </button>
+                </fieldset>
+            </div> -->
+        
+            <div class="govuk-form-group">
+                    <span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+                    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+                            How many apprentices worked for the organisation?
+                      </label>
+                    </h1>
+                    <div id="account-number-hint" class="govuk-hint">
+                            Include employed apprentices who started before, or during the year, and any who
+                            left. Enter 0 if not applicable.
+                          </div>
+                    <input class="govuk-input govuk-input--width-4" id="apprentices" name="apprentices" type="text">
+                  </div>
+                  <button class="govuk-button" type="submit" >
+                        Save and continue
+                    </button>
+        </form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

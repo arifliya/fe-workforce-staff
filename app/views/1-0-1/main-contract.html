@@ -1,0 +1,90 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Main contract
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="">
+            <span class="govuk-caption-m">Jay Jay</span>
+
+            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                name="StaffId" value="3049">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">
+                            What is their main type of contract? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        The main contract should be the one that is for the most hours
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId178" name="SingleOption.Selection" value="yes~weekly-contracted-hours"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId178" class="govuk-label govuk-radios__label">
+                                Permanent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId179" name="SingleOption.Selection" value="yes~weekly-contracted-hours"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId179" class="govuk-label govuk-radios__label">
+                                Fixed term
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId180" name="SingleOption.Selection" value="yes~salary-details"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId180" class="govuk-label govuk-radios__label">
+                                Variable hours
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId181" name="SingleOption.Selection" value="yes~salary-details"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId181" class="govuk-label govuk-radios__label">
+                                Zero hours
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId182" name="SingleOption.Selection" value="yes~salary-details"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId182" class="govuk-label govuk-radios__label">
+                                Other
+                            </label>
+                        </div>
+                        <input type="hidden" data-val="true" data-val-required="The StartDate field is required."
+                            id="Collection_StartDate" name="Collection.StartDate" value="">
+                        <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                            id="Collection_EndDate" name="Collection.EndDate" value="">
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq34_B-WnMrSImBlCI4o268FjliB_HNpur1Sey9mjxoYTq0APm5mXowm3d6VN98XkXMXnkpc1miEK1STPiCj4LPV5BNDQEBKvBtt6bmrXjd5MIc68vMVdjWmKBEdLyrCm8gq6JxrzsnlMCK8xu_bsH02sj1I9K-pD3-TB52ySLsv6Q">
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

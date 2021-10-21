@@ -1,0 +1,111 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FFEW Staff and vacancy data - Salary details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-m">Jay Jay</span>
+
+        <h1 class="govuk-heading-xl">Salary or hourly rate details</h1>
+
+        <p class="govuk-body">
+            The annual salary or hourly rate should be recorded for the main contract with the most hours.
+        </p>
+
+        <form method="post" id="salaryhourly-form" action="start-of-work">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                    name="StaffId" value="3049">
+                <fieldset class="govuk-fieldset" aria-describedby="isannual-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            How is the staff member paid?
+                        </h1>
+                    </legend>
+                    <div id="isannual-hint" class="govuk-hint">
+                        Select an option to add details
+                    </div>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="is-annual-salary" type="radio" value="true"
+                                name="IsAnnualSalary" aria-controls="conditional-annual" aria-expanded="false">
+                            <label class="govuk-label govuk-radios__label" for="is-annual-salary">
+                                Annual Salary
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                            id="conditional-annual">
+                            <div class="govuk-form-group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+                                    <h2 class="govuk-fieldset__heading">
+                                        What is their annual salary?
+                                    </h2>
+                                </legend>
+                                <div id="annual-salary-hint" class="govuk-hint">
+                                    For example, enter 27420 for a salary of twenty seven thousand four hundred and
+                                    twenty pounds
+                                </div>
+
+
+                                <div class="govuk-input__wrapper">
+                                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                                    <input class="govuk-input govuk-input--width-10" id="annual-salary" type="text"
+                                        spellcheck="false" maxlength="7" aria-describedby="annual-salary-hint"
+                                        name="AnnualSalary.Salary" value="">
+                                    <div class="govuk-input__suffix" aria-hidden="true">per annum</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="is-annual-salary2" type="radio" value="false"
+                                name="IsAnnualSalary" aria-controls="conditional-hourly" aria-expanded="false">
+                            <label class="govuk-label govuk-radios__label" for="is-annual-salary2">
+                                Hourly rate
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                            id="conditional-hourly">
+                            <div class="govuk-form-group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+                                    <h2 class="govuk-fieldset__heading">
+                                        What is their hourly rate?
+                                    </h2>
+                                </legend>
+                                <div id="hourly-rate-hint" class="govuk-hint">
+                                    For example, enter 11.36 for an hourly rate of eleven pounds thirty six pence
+                                </div>
+
+
+                                <div class="govuk-input__wrapper">
+                                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                                    <input class="govuk-input govuk-input--width-10" id="hourly-rate" type="text"
+                                        maxlength="6" aria-describedby="hourly-salary-hint" name="HourlyRate.Rate"
+                                        value="">
+                                    <div class="govuk-input__suffix" aria-hidden="true">per hour</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq3rk_7yOqe_9WN3J2nxY7z2DS6lCqT0Sg2N5296d6AiupWLABi9C6ltEFVrwTMv9L49svvueNrgQsrp0oKuGfbulrcSLOxEL9ZKUOUo-bZFNucxqxTG1dSi6fY2mt-ZjxdMxXkK-XcKsDaXWTCNnItjfbzXfP004OeAF8OdkEcZBw">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

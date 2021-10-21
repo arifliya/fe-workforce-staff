@@ -1,0 +1,276 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Which were difficult to recruit
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" id="form" action="why-was-it-difficult-to-recruit">
+
+            <span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+            <h1 class="govuk-heading-l">Which teaching vacancies were difficult to recruit for?</h1>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+
+                    <h2 class="govuk-heading-m">
+                        Academic subjects
+                        <div class="govuk-hint">
+                            Select subjects that were difficult to recruit for
+                        </div>
+                    </h2>
+                    
+                    <div class="govuk-checkboxes aca-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_0"
+                                name="aca-subject" value="{{ data['academic-subjects'][0] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_0">
+                                {{ data['academic-subjects'][0] }}
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_1"
+                                name="aca-subject" value="{{ data['academic-subjects'][1] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_1">
+                                {{ data['academic-subjects'][1] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_2"
+                                name="aca-subject" value="{{ data['academic-subjects'][2] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_2">
+                                    {{ data['academic-subjects'][2] }}
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_3"
+                            name="aca-subject" value="{{ data['academic-subjects'][3] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_3">
+                                {{ data['academic-subjects'][3] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_4"
+                            name="aca-subject" value="{{ data['academic-subjects'][4] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_4">
+                                    {{ data['academic-subjects'][4] }}
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_5"
+                            name="aca-subject" value="{{ data['academic-subjects'][5] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_5">
+                                {{ data['academic-subjects'][5] }}
+                            </label>
+                        </div>
+                        
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_6"
+                            name="aca-subject" value="{{ data['academic-subjects'][6] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_6">
+                                {{ data['academic-subjects'][6] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_7"
+                            name="aca-subject" value="{{ data['academic-subjects'][7] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_7">
+                                    {{ data['academic-subjects'][7] }}
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_8"
+                            name="aca-subject" value="{{ data['academic-subjects'][8] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_8">
+                                {{ data['academic-subjects'][8] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_9"
+                            name="aca-subject" value="{{ data['academic-subjects'][9] }}">
+                            <label class="govuk-label govuk-checkboxes__label aca-label" for="Subject_9">
+                                    {{ data['academic-subjects'][9] }}
+                            </label>
+                        </div>
+
+                        
+
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <h2 class="govuk-heading-m">
+                        Vocational programmes
+                        <div class="govuk-hint">
+                            Select programmes that were difficult to recruit for
+                        </div>
+                    </h2>
+                    
+                    <div class="govuk-checkboxes voc-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v0" name="voc-subject" value="{{ data['vocational-programmes'][0] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v0">
+                            {{ data['vocational-programmes'][0] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v1" name="voc-subject" value="{{ data['vocational-programmes'][1] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v1">
+                            {{ data['vocational-programmes'][1] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v2" name="voc-subject" value="{{ data['vocational-programmes'][2] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v2">
+                            {{ data['vocational-programmes'][2] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v3" name="voc-subject" value="{{ data['vocational-programmes'][3] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v3">
+                            {{ data['vocational-programmes'][3] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v4" name="voc-subject" value="{{ data['vocational-programmes'][4] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v4">
+                            {{ data['vocational-programmes'][4] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v5" name="voc-subject" value="{{ data['vocational-programmes'][5] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v5">
+                            {{ data['vocational-programmes'][5] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v6" name="voc-subject" value="{{ data['vocational-programmes'][6] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v6">
+                            {{ data['vocational-programmes'][6] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v7" name="voc-subject" value="{{ data['vocational-programmes'][7] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v7">
+                            {{ data['vocational-programmes'][7] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v8" name="voc-subject" value="{{ data['vocational-programmes'][8] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v8">
+                            {{ data['vocational-programmes'][8] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_v9" name="voc-subject" value="{{ data['vocational-programmes'][9] }}">
+                            <label class="govuk-label govuk-checkboxes__label voc-label" for="Subject_v9">
+                            {{ data['vocational-programmes'][9] }}
+                            </label>
+                        </div>
+                        
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <h2 class="govuk-heading-m">
+                        Other learning programmes
+                        <div class="govuk-hint">
+                            Select programmes that were difficult to recruit for
+                        </div>
+                    </h2>
+                    
+                    <div class="govuk-checkboxes other-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol0" name="other-subject" value="{{ data['other-programmes'][0] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol0">
+                            {{ data['other-programmes'][0] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol1" name="other-subject" value="{{ data['other-programmes'][1] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol1">
+                            {{ data['other-programmes'][1] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol2" name="other-subject" value="{{ data['other-programmes'][2] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol2">
+                            {{ data['other-programmes'][2] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol3" name="other-subject" value="{{ data['other-programmes'][3] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol3">
+                            {{ data['other-programmes'][3] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol4" name="other-subject" value="{{ data['other-programmes'][4] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol4">
+                            {{ data['other-programmes'][4] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol5" name="other-subject" value="{{ data['other-programmes'][5] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol5">
+                            {{ data['other-programmes'][5] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol6" name="other-subject" value="{{ data['other-programmes'][6] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol6">
+                            {{ data['other-programmes'][6] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol7" name="other-subject" value="{{ data['other-programmes'][7] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol7">
+                            {{ data['other-programmes'][7] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol8" name="other-subject" value="{{ data['other-programmes'][8] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol8">
+                            {{ data['other-programmes'][8] }}
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" id="Subject_ol9" name="other-subject" value="{{ data['other-programmes'][9] }}">
+                            <label class="govuk-label govuk-checkboxes__label other-label" for="Subject_ol9">
+                            {{ data['other-programmes'][9] }}
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <button class="govuk-button" type="submit" id="submitAction" name="action" value="Submit">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

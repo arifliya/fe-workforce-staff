@@ -1,0 +1,553 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Which were difficult to recruit
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+        <h1 class="govuk-heading-xl">Vacancy information</h1>
+
+        <form method="post" id="form" action="difficulty-recruiting-for-teaching">
+
+            
+
+            <div class="aca-group">
+                    <h2 class="govuk-heading-l aca-subject-title">Academic subjects</h2>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][0] }}</h2>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="aca-vacancy-0">
+                            How many vacancies were there for {{ data['academic-subjects'][0] }}?
+                        </label>
+                        <input class="govuk-input govuk-input--width-5" id="aca-vacancy-0" name="aca-vacancy"
+                            type="text" value="{{ data['aca-vacancy'][0] }}">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="aca-vacancy-filled-0">
+                            How many vacancies were filled for {{ data['academic-subjects'][0] }}?
+                        </label>
+                        <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-0" name="aca-vacancy-filled" type="text">
+                    </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][1] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-1">
+                                How many vacancies were there for {{ data['academic-subjects'][1] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-1" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-1">
+                                How many vacancies were filled for {{ data['academic-subjects'][1] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-1"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][2] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-2">
+                                How many vacancies were there for {{ data['academic-subjects'][2] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-2" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-2">
+                                How many vacancies were filled for {{ data['academic-subjects'][2] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-2"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][3] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-3">
+                                How many vacancies were there for {{ data['academic-subjects'][3] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-3" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-3">
+                                How many vacancies were filled for {{ data['academic-subjects'][3] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-3"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][4] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-4">
+                                How many vacancies were there for {{ data['academic-subjects'][4] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-4" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-4">
+                                How many vacancies were filled for {{ data['academic-subjects'][4] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-4"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][5] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-5">
+                                How many vacancies were there for {{ data['academic-subjects'][5] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-5" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-5">
+                                How many vacancies were filled for {{ data['academic-subjects'][5] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-5"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][6] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-6">
+                                How many vacancies were there for {{ data['academic-subjects'][6] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-6" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-6">
+                                How many vacancies were filled for {{ data['academic-subjects'][6] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-6"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][7] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-7">
+                                How many vacancies were there for {{ data['academic-subjects'][7] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-7" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-7">
+                                How many vacancies were filled for {{ data['academic-subjects'][7] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-7"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][8] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-8">
+                                How many vacancies were there for {{ data['academic-subjects'][8] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-8" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-8">
+                                How many vacancies were filled for {{ data['academic-subjects'][8] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-8"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m aca-h3">{{ data['academic-subjects'][9] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-9">
+                                How many vacancies were there for {{ data['academic-subjects'][9] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-9" name="aca-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="aca-vacancy-filled-9">
+                                How many vacancies were filled for {{ data['academic-subjects'][9] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="aca-vacancy-filled-9"
+                                name="aca-vacancy-filled" type="text">
+                        </div>
+                </div>
+            </div>
+
+            <div class="voc-group">
+                <h2 class="govuk-heading-l voc-subject-title">Vocational programmes</h2>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][0] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-0">
+                                How many vacancies were there for {{ data['vocational-programmes'][0] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-0" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-0">
+                                How many vacancies were filled for {{ data['vocational-programmes'][0] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-0"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][1] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-1">
+                                How many vacancies were there for {{ data['vocational-programmes'][1] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-1" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-1">
+                                How many vacancies were filled for {{ data['vocational-programmes'][1] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-1"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][2] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-2">
+                                How many vacancies were there for {{ data['vocational-programmes'][2] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-2" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-2">
+                                How many vacancies were filled for {{ data['vocational-programmes'][2] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-2"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][3] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-3">
+                                How many vacancies were there for {{ data['vocational-programmes'][3] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-3" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-3">
+                                How many vacancies were filled for {{ data['vocational-programmes'][3] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-3"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][4] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-4">
+                                How many vacancies were there for {{ data['vocational-programmes'][4] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-4" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-4">
+                                How many vacancies were filled for {{ data['vocational-programmes'][4] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-4"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][5] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-5">
+                                How many vacancies were there for {{ data['vocational-programmes'][5] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-5" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-">
+                                How many vacancies were filled for {{ data['vocational-programmes'][5] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-5"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][6] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-6">
+                                How many vacancies were there for {{ data['vocational-programmes'][6] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-6" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-6">
+                                How many vacancies were filled for {{ data['vocational-programmes'][6] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-6"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][7] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-7">
+                                How many vacancies were there for {{ data['vocational-programmes'][7] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-7" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-7">
+                                How many vacancies were filled for {{ data['vocational-programmes'][7] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-7"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][8] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-8">
+                                How many vacancies were there for {{ data['vocational-programmes'][8] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-8" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-8">
+                                How many vacancies were filled for {{ data['vocational-programmes'][8] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-8"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m voc-h3">{{ data['vocational-programmes'][9] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-9">
+                                How many vacancies were there for {{ data['vocational-programmes'][9] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-9" name="voc-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="voc-vacancy-filled-9">
+                                How many vacancies were filled for {{ data['vocational-programmes'][9] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="voc-vacancy-filled-9"
+                                name="voc-vacancy-filled" type="text">
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="other-group">
+                <h2 class="govuk-heading-l voc-subject-title">Other programmes</h2>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][0] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-0">
+                                How many vacancies were there for {{ data['other-programmes'][0] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-0" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-0">
+                                How many vacancies were filled for {{ data['other-programmes'][0] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-0"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][1] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-1">
+                                How many vacancies were there for {{ data['other-programmes'][1] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-1" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-1">
+                                How many vacancies were filled for {{ data['other-programmes'][1] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-1"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][2] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-2">
+                                How many vacancies were there for {{ data['other-programmes'][2] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-2" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-2">
+                                How many vacancies were filled for {{ data['other-programmes'][2] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-2"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][3] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-3">
+                                How many vacancies were there for {{ data['other-programmes'][3] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-3" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-3">
+                                How many vacancies were filled for {{ data['other-programmes'][3] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-3"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][4] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-4">
+                                How many vacancies were there for {{ data['other-programmes'][4] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-4" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-4">
+                                How many vacancies were filled for {{ data['other-programmes'][4] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-4"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][5] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-5">
+                                How many vacancies were there for {{ data['other-programmes'][5] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-5" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-5">
+                                How many vacancies were filled for {{ data['other-programmes'][5] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-5"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][6] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-6">
+                                How many vacancies were there for {{ data['other-programmes'][6] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-6" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-6">
+                                How many vacancies were filled for {{ data['other-programmes'][6] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-6"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][7] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-7">
+                                How many vacancies were there for {{ data['other-programmes'][7] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-7" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-7">
+                                How many vacancies were filled for {{ data['other-programmes'][7] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-7"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][8] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-8">
+                                How many vacancies were there for {{ data['other-programmes'][8] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-8" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-8">
+                                How many vacancies were filled for {{ data['other-programmes'][8] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-8"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+                <div class="question-group">
+                    <h3 class="govuk-heading-m other-h3">{{ data['other-programmes'][9] }}</h2>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-9">
+                                How many vacancies were there for {{ data['other-programmes'][9] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-9" name="other-vacancy"
+                                type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="other-vacancy-filled-9">
+                                How many vacancies were filled for {{ data['other-programmes'][9] }}?
+                            </label>
+                            <input class="govuk-input govuk-input--width-5" id="other-vacancy-filled-9"
+                                name="other-vacancy-filled" type="text">
+                        </div>
+                </div>
+            </div>
+
+            <button class="govuk-button" type="submit" id="submitAction" name="action" value="Submit">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

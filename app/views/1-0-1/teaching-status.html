@@ -1,0 +1,106 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Teaching status
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="job-relevancy">
+            <span class="govuk-caption-m">Jo Bloggs</span>
+
+                    <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                        name="StaffId" value="3033">
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+
+
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                                <h1 class="govuk-fieldset__heading">
+                                    What is their professional teaching status? </h1>
+                            </legend>
+                            <div class="govuk-hint">
+                                You can select 'not known' for this year. You will need to provide an alternative answer
+                                next year.
+                            </div>
+
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId159" name="SingleOption.Selection" value="159"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId159" class="govuk-label govuk-radios__label">
+                                        QTS (Qualified Teacher Status)
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId160" name="SingleOption.Selection" value="160"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId160" class="govuk-label govuk-radios__label">
+                                        QTLS (Qualified Teacher Learning and Skills status)
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId161" name="SingleOption.Selection" value="161"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId161" class="govuk-label govuk-radios__label">
+                                        Advanced teacher status (Society for Education and Training)
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId162" name="SingleOption.Selection" value="162"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId162" class="govuk-label govuk-radios__label">
+                                        Chartered teacher status (College of Teaching)
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId163" name="SingleOption.Selection" value="163"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId163" class="govuk-label govuk-radios__label">
+                                        Other
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId164" name="SingleOption.Selection" value="164"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId164" class="govuk-label govuk-radios__label">
+                                        None
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId165" name="SingleOption.Selection" value="165" 
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId165" class="govuk-label govuk-radios__label">
+                                        Not known
+                                    </label>
+                                </div>
+                                <input type="hidden" data-val="true"
+                                    data-val-required="The StartDate field is required." id="Collection_StartDate"
+                                    name="Collection.StartDate" value="">
+                                <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                                    id="Collection_EndDate" name="Collection.EndDate" value="">
+                            </div>
+                            <br>
+                        </fieldset>
+                    </div>
+
+               
+           
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq1Dx2EWe_D-jvqb2AypbuN_bWlHQTZxNAPZjvKw17wHAnQGyguyp5RapYqfObjXKZ0QGUW830IwBOW3v27IZPxdHOYcxxj4c-24IDYz0Hy-SyNTL4n2H1SaDY2KiK807661w5K74n_Iv38guyegzc2LarXpLWB4Fj7gSzh7jeN6_g">
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

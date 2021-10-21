@@ -27,3 +27,105 @@ $govuk-assets-path: '/govuk/assets/';
 .inline-block {
     display: inline-block
 }
+
+.input-container {
+    position: relative;
+    margin-bottom: 40px;
+    input {
+        padding-left: 35px;
+    }
+    .search-icon svg {
+        position: absolute;
+        width: 20px;
+        padding: 10px;
+        left: 0px;
+        display: block;
+        height: auto;
+    }
+}
+
+
+
+.filter-feedback-container {
+    background-color: govuk-colour("light-grey");
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    display: none;
+    padding-top: 0;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+
+
+.filter-feedback {
+    
+    color: black !important;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 6px;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: white;
+
+    &:visited {
+        color: black;
+    }
+
+    .close {
+        position: absolute;
+        
+    }
+
+    .close:before, .close:after {
+        position: absolute;
+        left: -15px;
+        top: 2px;
+        content: ' ';
+        height: 17px;
+        width: 2px;
+        background-color: #333;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+            color: white !important;
+            background-color: black;
+            
+            .close:before {
+                background-color: white;
+            }
+            .close:after {
+                background-color: white;
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0px #ffdd00, 0 4px #0b0c0c;
+            color: black !important;
+            background-color: $govuk-focus-colour;
+            
+            .close:before {
+                background-color: black;
+            }
+            .close:after {
+                background-color: black;
+            }
+        }
+
+
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+.current-subject-group {
+    display: none
+}

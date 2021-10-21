@@ -1,0 +1,126 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Qualification level
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="highest-maths">
+            <span class="govuk-caption-m">Jo Bloggs</span>
+
+            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                name="StaffId" value="3033">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">
+                            What is the highest qualification they teach? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        Select a qualification
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId110" name="SingleOption.Selection" value="110"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId110" class="govuk-label govuk-radios__label">
+                                Entry level
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId111" name="SingleOption.Selection" value="111"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId111" class="govuk-label govuk-radios__label">
+                                Level 1
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId112" name="SingleOption.Selection" value="112"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId112" class="govuk-label govuk-radios__label">
+                                Level 2 GCSEs/functional skills
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId113" name="SingleOption.Selection" value="113"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId113" class="govuk-label govuk-radios__label">
+                                Level 3 A Levels/OCR nationals
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId114" name="SingleOption.Selection" value="114"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId114" class="govuk-label govuk-radios__label">
+                                Level 4 Certificate of Higher Education, BTEC professional diplomas
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId115" name="SingleOption.Selection" value="115"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId115" class="govuk-label govuk-radios__label">
+                                Level 5 Foundation degree, HNC/HND
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId116" name="SingleOption.Selection" value="116"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId116" class="govuk-label govuk-radios__label">
+                                Level 6 Bachelors degree, BTEC professional diplomas
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId117" name="SingleOption.Selection" value="117"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId117" class="govuk-label govuk-radios__label">
+                                Level 7 Masters degree, NVQ Level 5
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId118" name="SingleOption.Selection" value="118"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId118" class="govuk-label govuk-radios__label">
+                                Level 8 Doctorates, award, certificate diploma in strategic direction
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId119" name="SingleOption.Selection" value="119"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId119" class="govuk-label govuk-radios__label">
+                                Other
+                            </label>
+                        </div>
+                        <input type="hidden" data-val="true" data-val-required="The StartDate field is required."
+                            id="Collection_StartDate" name="Collection.StartDate" value="">
+                        <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                            id="Collection_EndDate" name="Collection.EndDate" value="">
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq3t5sPTl3VfpjCSc2Tqhrf6ayq3E12s6VWAhDtO40hsSeInx0TpMWrzMb-07btWKuhE3r5nb0I1fyv-34_BJIEydeyCiBdQ7e4AnMWJPnj09U2VrnZYJcjPenO2aR_U-p5z9aJ30MoVlZzi96GlwYjF5OZxD8EMYkM2zjR6OJPOPA">
+        </form>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+    FEW Staff and vacancy data - Full time equivalent
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-m">Jay Jay</span>
+
+        <h1 class="govuk-heading-xl">Calculated full time equivalent (FTE)</h1>
+
+        <p class="govuk-body">
+            The proportion of an FTE year for a member of staff for the reporting period calculated for all contracts.
+        </p>
+
+        <form method="post" id="fte-form" action="salary-details">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                    name="StaffId" value="3049">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-form-group" id="fte-Group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                What is their annual calculated full time equivalent (FTE)?
+                            </h2>
+                        </legend>
+                        <div id="weekly-hours-hint" class="govuk-hint">
+                            For example, if a member of staff works full time for the full year, their FTE is 1.0.
+                            If a member of staff works 60% of a full time working week for the full year, their FTE is
+                            0.6
+                        </div>
+
+
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="fte" type="text" inputmode="numeric"
+                                maxlength="4" name="FullTimeEquivalent.FTE" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">FTE</div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq1SoV0SjN4IbGIYU5fG_U7MfO5xxIlYsMwbADPKbKjSrZ_tUoPyuHGtkFgB0g96WtE5gInCO5ck6ayYqs8k6OCG0-gXCg4AHO5ukXgshCmUxcbX27-Wk955__sjHy57cMGIAZCDXrJaiComJLHp0sQDGhxSQPeViVR-X1n96DEH8w">
+        </form>
+
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}
