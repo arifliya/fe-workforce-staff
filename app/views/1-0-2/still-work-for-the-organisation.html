@@ -1,0 +1,65 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Still work for the organisation
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" id="addEmploymentDetails" action="member-data-new">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <span class="govuk-caption-m">Jay Jay</span>
+
+                    <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                        name="StaffId" value="3049">
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+
+
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                                <h1 class="govuk-fieldset__heading">
+                                    Do they still work for the organisation? </h1>
+                            </legend>
+                            <div class="govuk-hint">
+                                Select an option
+                            </div>
+
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId205" name="still-work-for-the-organisation" value="Yes"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId205" class="govuk-label govuk-radios__label">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId206" name="still-work-for-the-organisation" value="No"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId206" class="govuk-label govuk-radios__label">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<div class="govuk-visually-hidden">
+    <div id="journeyPath">{{ data['journeys'] }}</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Main contract
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="">
+            <span class="govuk-caption-m">Jay Jay</span>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">
+                            What is their main type of contract? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        The main contract should be the one that is for the most hours
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId178" name="main-contract" value="Permanent~weekly-contracted-hours"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId178" class="govuk-label govuk-radios__label">
+                                Permanent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId179" name="main-contract" value="Fixed term~weekly-contracted-hours"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId179" class="govuk-label govuk-radios__label">
+                                Fixed term
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId180" name="main-contract" value="Variable hours~salary-details"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId180" class="govuk-label govuk-radios__label">
+                                Variable hours
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId181" name="main-contract" value="Zero hours~salary-details"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId181" class="govuk-label govuk-radios__label">
+                                Zero hours
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId182" name="main-contract" value="Other~salary-details"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId182" class="govuk-label govuk-radios__label">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

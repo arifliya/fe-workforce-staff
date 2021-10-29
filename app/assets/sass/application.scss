@@ -129,3 +129,8 @@ $govuk-assets-path: '/govuk/assets/';
 .current-subject-group {
     display: none
 }
+
+
+#personalDetailsComplete, #personalDetailsNotStarted, #personalDetailsIncomplete, #jobRoleComplete, #jobRoleNotStarted, #employmentComplete, #employmentNotStarted {
+    display: none;
+}

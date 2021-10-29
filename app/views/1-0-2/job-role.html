@@ -1,0 +1,94 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Job role
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="main-role">
+            <span class="govuk-caption-m">Jo Bloggs</span>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            What are their job roles? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        Select one or more options that are relevant to the staff members' job activities within
+                        the organisation.
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input id="LookupItemId35" name="jobRole" value="Senior Leader"
+                                aria-describedby="LookupHintItemId35" class="govuk-checkboxes__input" type="checkbox">
+                            <label for="LookupItemId35" class="govuk-label govuk-checkboxes__label">
+                                Senior Leader
+                            </label>
+                            <div id="LookupHintItemId35" class="govuk-hint govuk-checkboxes__hint">
+                                Principal, vice-principal, director, CEO, head of FE service or training
+                            </div>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input id="LookupItemId36" name="jobRole" value="Manager"
+                                aria-describedby="LookupHintItemId36" class="govuk-checkboxes__input" type="checkbox">
+                            <label for="LookupItemId36" class="govuk-label govuk-checkboxes__label">
+                                Manager
+                            </label>
+                            <div id="LookupHintItemId36" class="govuk-hint govuk-checkboxes__hint">
+                                Functional or people manager. Faculty, department, curriculum, or programme
+                                lead. Advanced practitioner
+                            </div>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input id="LookupItemId37" name="jobRole" value="Teacher"
+                                aria-describedby="LookupHintItemId37" class="govuk-checkboxes__input" type="checkbox">
+                            <label for="LookupItemId37" class="govuk-label govuk-checkboxes__label">
+                                Teacher
+                            </label>
+                            <div id="LookupHintItemId37" class="govuk-hint govuk-checkboxes__hint">
+                                Lecturer, teacher, trainer or tutor
+                            </div>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input id="LookupItemId38" name="jobRole" value="Teaching Support"
+                                aria-describedby="LookupHintItemId38" class="govuk-checkboxes__input" type="checkbox">
+                            <label for="LookupItemId38" class="govuk-label govuk-checkboxes__label">
+                                Teaching Support
+                            </label>
+                            <div id="LookupHintItemId38" class="govuk-hint govuk-checkboxes__hint">
+                                Teaching assistant, mentor, assessor
+                            </div>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input id="LookupItemId39" name="jobRole" value="Administration"
+                                aria-describedby="LookupHintItemId39" class="govuk-checkboxes__input" type="checkbox">
+                            <label for="LookupItemId39" class="govuk-label govuk-checkboxes__label">
+                                Administration
+                            </label>
+                            <div id="LookupHintItemId39" class="govuk-hint govuk-checkboxes__hint">
+                                Technology support staff, human resources (HR), finance roles, admission and
+                                back office staff
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

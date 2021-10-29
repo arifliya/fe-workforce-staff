@@ -1,0 +1,77 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - What do they teach
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="get" action="academic-qualifications">
+            <span class="govuk-caption-m">Jo Bloggs</span>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">What qualifications or programmes do they teach? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        Select an option
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId44" name="whatDoTheyTeach" value="Academic qualifications~academic-qualifications"
+                                aria-describedby="LookupHintItemId44" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId44" class="govuk-label govuk-radios__label">
+                                Academic qualifications
+                            </label>
+                            <div id="LookupHintItemId44" class="govuk-hint govuk-radios__hint">
+                                A levels and GCSEs
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId45" name="whatDoTheyTeach" value="Vocational programmes~vocational-programmes"
+                                aria-describedby="LookupHintItemId45" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId45" class="govuk-label govuk-radios__label">
+                                Vocational programmes
+                            </label>
+                            <div id="LookupHintItemId45" class="govuk-hint govuk-radios__hint">
+                                BTECS, apprenticeships, traineeships, T levels
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId46" name="whatDoTheyTeach" value="Other learning programmes~other-learning"
+                                aria-describedby="LookupHintItemId46" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId46" class="govuk-label govuk-radios__label">
+                                Other learning programmes
+                            </label>
+                            <div id="LookupHintItemId46" class="govuk-hint govuk-radios__hint">
+                                Functional skills English, Maths and IT, ESOL, SEN or supported learning, Preparation
+                                for work and life skills, Community learning and Family
+                            </div>
+                        </div>
+                        <!-- <input type="hidden" data-val="true" data-val-required="The StartDate field is required."
+                            id="Collection_StartDate" name="Collection.StartDate" value="">
+                        <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                            id="Collection_EndDate" name="Collection.EndDate" value=""> -->
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+            <button class="govuk-button" type="submit" id="submit">
+                Continue
+            </button>
+            
+        </form>
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

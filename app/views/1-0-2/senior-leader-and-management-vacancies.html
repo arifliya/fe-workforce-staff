@@ -1,0 +1,75 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Senior leader and management vacancies
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Vacancy and recruitment for senior leader and management roles
+                        </h1>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <p>For example count vacancies for:</p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Principals</li>
+                            <li>Vice-principals</li>
+                            <li>Senior managers</li>
+                            <li>CEOs</li>
+                            <li>Directors</li>
+                            <li>Functional or people manager.</li>
+                            <li>Faculty, department manager</li>
+                            <li>Curriculum, or programme lead</li>
+                            <li>Advanced practitioner</li>
+                            <li>Other types of senior leader or manager</li>
+                        </ul>
+                        <p>Provide answers for both questions. Enter 0 if not applicable.</p>
+
+                        <div class="govuk-form-group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <h1 class="govuk-fieldset__heading">
+                                    How many senior leader or manager vacancies did you have?<span class="govuk-visually-hidden">line 1 of 2</span>
+                                </h1>
+                            </legend>
+                            <input class="govuk-input govuk-input--width-4" id="seniorLeaderVacancies" type="text"
+                                aria-describedby="seniorLeaderVacancies" name="seniorLeaderVacancies"
+                                value="{{ data['seniorLeaderVacancies'] }}">
+                        </div>
+
+
+                        <div class="govuk-form-group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <h1 class="govuk-fieldset__heading">
+                                    How many of these vacancies were filled?<span class="govuk-visually-hidden">line 1 of 2</span>
+                                </h1>
+                            </legend>
+                            <input class="govuk-input govuk-input--width-4" id="filledVacancies" type="text"
+                                aria-describedby="filledVacancies" name="filledVacancies"
+                                value="{{ data['filledVacancies'] }}">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" formaction="teaching-vacancies">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

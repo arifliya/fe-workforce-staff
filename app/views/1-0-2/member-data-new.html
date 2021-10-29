@@ -1,0 +1,389 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Member data
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <span class="govuk-caption-m"> Jo Bloggs </span>
+
+        <h1 class="govuk-heading-l">FE workforce staff data collection</h1>
+        <h2 class="govuk-heading-m">
+            Personal details
+            <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="add-a-member-of-staff">
+                Change<span class="govuk-visually-hidden">personal details</span>
+            </a>
+        </h2>
+
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="personalDetailsComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="personalDetailsNotStarted" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    First name
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric personal-detail 1">
+                    {{ data['firstName'] }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Last name
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric personal-detail 2">
+                    {{ data['lastName'] }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric personal-detail 3">
+                        {{ data['dobDay'] }} <span id="monthReformat">{{ data['dobMonth'] }}</span> {{ data['dobYear'] }}
+                </dd>
+            </div> 
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Gender
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric personal-detail 4">
+                        {{ data['gender'] }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Ethnicity
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric personal-detail 5">
+                    {{ data['ethnicity'] }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Disability
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric personal-detail 6">
+                    {{ data['disability'] }}
+                </dd>
+            </div>
+        </dl>
+
+
+        <h2 class="govuk-heading-m">
+            Job role details
+            
+        </h2>
+
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="jobRoleComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="jobRoleNotStarted" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half ">
+                    What are their job roles?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric">
+                   <p class="job-role-detail 1a">{{ data['jobRole'][0] }}</p>
+                   <p class="job-role-detail 1b">{{ data['jobRole'][1] }}</p>
+                   <p class="job-role-detail 1c">{{ data['jobRole'][2] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="job-role">
+                        Change<span class="govuk-visually-hidden">job role details</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is their main role?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 2">
+                    {{ data['mainRole'] }}
+                    
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="main-role">
+                        Change<span class="govuk-visually-hidden">main role details</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What qualifications or programmes do they teach?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 3">
+                    {{ data['academic-subject'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="what-do-they-teach">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is the main subject area they teach?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 4">
+                    {{ data['academic-subject'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="academic-qualifications">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is the highest qualification they teach?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 5">
+                    {{ data['qualification-level'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="qualification-level">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is their highest Maths qualification?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 6">
+                    {{ data['highest-maths'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="highest-maths">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is their highest English qualification?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 7">
+                    {{ data['highest-english'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="highest-english">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is their highest teaching qualification?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 8">
+                    {{ data['highest-qualification'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="highest-qualification">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    What is their professional teaching status?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 9">
+                    {{ data['teaching-status'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="teaching-status">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    Prior to their FE role, how long did they work in a job relevant to the subject they teach?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 10">
+                    {{ data['job-relevancy'] }}                    
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="job-relevancy">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                    Do they still work in industry as well as your organisation?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric job-role-detail 11">
+                    {{ data['job-outside-fe'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="job-outside-fe">
+                        Change<span class="govuk-visually-hidden">teaching responsibilities</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">
+            Employment details
+            <!-- <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right" href="contracts-with-organisation">
+                Change<span class="govuk-visually-hidden">employment details</span>
+            </a> -->
+        </h2>
+
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="employmentComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="employmentNotStarted" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    How many contracts do they have with the organisation?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 1">
+                    {{ data['contracts-with-organisation'] }}                    
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="contracts-with-organisation">
+                        Change<span class="govuk-visually-hidden">how many contracts</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    What is their main type of contract?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 2">
+                    {{ data['main-contract'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="main-contract">
+                        Change<span class="govuk-visually-hidden">how many contracts</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Weekly contracted hours
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 3">
+                    {{ data['weekly-contracted-hours'] }}                    
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="weekly-contracted-hours">
+                        Change<span class="govuk-visually-hidden">weekly contracted hours</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Calculated full time equivalent (FTE)
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 4">
+                    {{ data['full-time-equivalent'] }}                    
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="full-time-equivalent">
+                        Change<span class="govuk-visually-hidden">calculated full time equivalent</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Salary or hourly rate details
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 5">
+                    {{ data['salary-details'] }}                                        
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="salary-details">
+                        Change<span class="govuk-visually-hidden">salary or hourly rate details</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    When did they start working for the organisation?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 6">
+                        {{ data['employment-start-day'] }} <span id="monthReformatEmp">{{ data['employment-start-month'] }}</span> {{ data['employment-start-year'] }}                                                                            
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="start-of-work">
+                        Change<span class="govuk-visually-hidden">when did they start working for the organisation</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    How long have they worked in their current role in the organisation?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 7">
+                    {{ data['length-of-work'] }}                                                           
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="length-of-work">
+                        Change<span class="govuk-visually-hidden">how long have they worked in their current role in the organisation</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    How long have they worked in Further Education?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 8">
+                        {{ data['length-in-fe'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="length-in-fe">
+                        Change<span class="govuk-visually-hidden">how long have they worked in further education</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Do they still work for the organisation?
+                </dt>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-third employment-detail 9">
+                        {{ data['still-work-for-the-organisation'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-table__header--numeric">
+                    <a class="govuk-link govuk-link--no-visited-state" href="still-work-for-the-organisation">
+                        Change<span class="govuk-visually-hidden">do they still work for the organisation</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <a class="govuk-link" href="online-staff-list.html">Staff list</a>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}

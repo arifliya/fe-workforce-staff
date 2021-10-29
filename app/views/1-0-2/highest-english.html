@@ -1,0 +1,115 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Highest english
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="highest-qualification">
+
+            <span class="govuk-caption-m">Jo Bloggs</span>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">
+                            What is their highest English qualification? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                        You can select 'not known' for this year. You will need to provide an alternative answer next
+                        year.
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId130" name="highest-english" value="Level 2 GCSE grade A* to C or equivalent"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId130" class="govuk-label govuk-radios__label">
+                                Level 2 GCSE grade A* to C or equivalent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId131" name="highest-english" value="Level 3 A Level or equivalent"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId131" class="govuk-label govuk-radios__label">
+                                Level 3 A Level or equivalent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId132" name="highest-english" value="Level 4 Certificate of higher education"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId132" class="govuk-label govuk-radios__label">
+                                Level 4 Certificate of higher education
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId133" name="highest-english" value="Level 5 Foundation degree"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId133" class="govuk-label govuk-radios__label">
+                                Level 5 Foundation degree
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId134" name="highest-english" value="Level 6 Undergraduate degree or equivalent"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId134" class="govuk-label govuk-radios__label">
+                                Level 6 Undergraduate degree or equivalent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId135" name="highest-english" value="Level 7 Postgraduate degree or equivalent"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId135" class="govuk-label govuk-radios__label">
+                                Level 7 Postgraduate degree or equivalent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId136" name="highest-english" value="Level 8 Doctorates, award, certificate diploma in strategic direction"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId136" class="govuk-label govuk-radios__label">
+                                Level 8 Doctorates, award, certificate diploma in strategic direction
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId137" name="highest-english" value="Other"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId137" class="govuk-label govuk-radios__label">
+                                Other
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId138" name="highest-english" value="None"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId138" class="govuk-label govuk-radios__label">
+                                None
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId139" name="highest-english" value="Not known"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId139" class="govuk-label govuk-radios__label">
+                                Not known
+                            </label>
+                        </div>
+
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+         </form>
+    </div>
+</div>
+
+{% endblock %}

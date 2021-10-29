@@ -1,0 +1,50 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Member data
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        Choose a journey
+                    </h1>
+                </legend>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="newUser" name="journeys" type="radio" value="new~dashboard">
+                      <label class="govuk-label govuk-radios__label" for="newUser">
+                        New user
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="returningUser" name="journeys" type="radio" value="returning~dashboard">
+                      <label class="govuk-label govuk-radios__label" for="returningUser">
+                        Returning user
+                      </label>
+                    </div>
+                    </div>
+        </div>
+
+        </fieldset>
+            <button class="govuk-button" data-module="govuk-button">Start now</button>
+        </form>
+    </div>
+
+
+
+
+    
+
+</div>
+</div>
+
+
+{% endblock %}

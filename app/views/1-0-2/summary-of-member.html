@@ -1,0 +1,106 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Summary of member
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-m">Jay Jay</span>
+        <h1 class="govuk-heading-l">Summary of personal details</h1>
+
+        <dl class="govuk-summary-list dl-override">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    Jay Jay
+                </dd>
+                <dd class="govuk-summary-list__actions dd-override">
+                    <a class="govuk-link" href="add-a-member-of-staff">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Date of Birth
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    01 January 1990
+                </dd>
+                <dd class="govuk-summary-list__actions dd-override">
+                    <a class="govuk-link" href="add-a-member-of-staff">
+                        Change<span class="govuk-visually-hidden"> date of birth</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Gender
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    Male
+                </dd>
+                <dd class="govuk-summary-list__actions dd-override">
+                    <a class="govuk-link" href="add-a-member-of-staff">
+                        Change<span class="govuk-visually-hidden"> gender</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Ethnicity
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    Prefer not to say
+                </dd>
+                <dd class="govuk-summary-list__actions dd-override">
+                    <a class="govuk-link" href="add-a-member-of-staff">
+                        Change<span class="govuk-visually-hidden"> ethnicity</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Disability
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    Yes
+                </dd>
+                <dd class="govuk-summary-list__actions dd-override">
+                    <a class="govuk-link" href="add-a-member-of-staff">
+                        Change<span class="govuk-visually-hidden"> disability</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <p class="govuk-body">
+            <a class="govuk-button govuk-button--secondary" href="member-data-incomplete">
+                Choose another section
+            </a>
+
+            <label class="govuk-visually-hidden" id="staffchange">Review staff list</label>
+            <a class="govuk-link govuk-!-margin-left-6 " aria-labelledby="staffchange" href="online-staff-list">
+                Staff list
+            </a>
+
+            <span id="waste-hint" class="govuk-hint">
+                Check or complete job role and employment contract data for Jay Jay
+            </span>
+
+        </p>
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

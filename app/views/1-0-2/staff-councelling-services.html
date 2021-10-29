@@ -1,0 +1,62 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Staff councelling services
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <form action="when-is-councelling-available">
+            <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">Does the organisation provide staff counselling services? </h1>
+                    </legend>
+                    <div class="govuk-hint">
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId211" name="staffCouncelling" value="Yes~when-is-councelling-available"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId211" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId212" name="staffCouncelling" value="No~vacancy-recruitment-answers"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId212" class="govuk-label govuk-radios__label">
+                                No
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId213" name="staffCouncelling" value="Not known~vacancy-recruitment-answers"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId213" class="govuk-label govuk-radios__label">
+                                Not known
+                            </label>
+                        </div>
+                        <input type="hidden" data-val="true" data-val-required="The StartDate field is required."
+                            id="Collection_StartDate" name="Collection.StartDate" value="8/1/2020 12:00:00 AM">
+                        <input type="hidden" data-val="true" data-val-required="The EndDate field is required."
+                            id="Collection_EndDate" name="Collection.EndDate" value="7/31/2021 12:00:00 AM">
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+            <button class="govuk-button" type="submit">Save and continue</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

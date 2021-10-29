@@ -1,0 +1,192 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Dashboard
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    
+      <div class="govuk-grid-column-three-quarters">
+            
+   
+          <!-- <div class="information-banner" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+               data-module="error-summary">
+            
+              <p class="govuk-body"><span id="bannerText" class="govuk-!-font-weight-bold"></span> 
+              <span id="bannerCont">View your apprenticeship earnings, based on your learner data submissions, through a new part of the service.
+                      <a href="historical-in-period"> View and download your apprenticeship breakdown</a>.</span></p>
+          </div> -->
+  
+          <h2 id="makeSubmission" class="govuk-heading-l">Make a submission
+              <span id="returnPeriodStatus" class="govuk-caption-l"></span>
+          </h2>
+  
+          <div class="govuk-grid-row tile-group">
+  
+              <div id="ilrTile" class="govuk-grid-column-one-third tile ">
+                  <a class="min-height" href="record-fe-data.html">
+                      <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">FEW</span>
+                      <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">Staff and vacancy data collections</span>
+                  </a>
+                  <div class="govuk-body govuk-!-font-size-19 warning-info period-status period-status-2">20/21 Open</div>
+  
+              </div>
+          </div>
+      
+          <!-- <div class="govuk-grid-row tile-group">
+  
+                  <div id="ilrTile" class="govuk-grid-column-one-third tile ">
+                      <a class="min-height" href="#">
+                          <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">ILR</span>
+                          <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">Individualised Learner Record</span>
+                      </a>
+                      <div class="govuk-body govuk-!-font-size-19 warning-info period-status period-status-2">Open</div>
+      
+                  </div>
+       
+                  <div id="easTile" class="govuk-grid-column-one-third tile ">
+                      <a class="min-height" href="#">
+                          <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">EAS</span>
+                          <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">Earnings Adjustment Statement</span>
+                      </a>
+                      <div class="govuk-body govuk-!-font-size-19 warning-info period-status">Open</div>
+                  </div>
+  
+                  <div id="esfTile" class="govuk-grid-column-one-third tile ">
+                      <a class="min-height" href="#">
+                          <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">ESF</span>
+                          <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">European Social Fund Supplementary Data</span>
+                      </a>
+                      <div class="govuk-body govuk-!-font-size-19 warning-info">Open</div>
+                  </div>
+  
+      
+                  <div id="fcTile" class="govuk-grid-column-one-third tile ">
+                      <a class="min-height" href="#">
+                          <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">FC</span>
+                          <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">Funding Claims</span>
+                      </a>
+                      <div class="govuk-body govuk-!-font-size-19 warning-info fc-status">4 days left to submit</div>
+      
+                  </div>
+                  
+                  <div id="esfrTile" class="govuk-grid-column-one-third tile ">
+                      <a class="min-height" href="#">
+                          <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">ESFR</span>
+                          <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">European Social Fund Reprofiling</span>
+                      </a>
+                      <div class="govuk-body govuk-!-font-size-19 warning-info fc-status">Open</div>
+      
+                  </div>
+                  
+                  <div id="devolvedCon" class="govuk-grid-column-one-third tile ">
+                      <a class="min-height" href="esf-reprofiling">
+                          <span class="govuk-heading-m govuk-!-margin-bottom-0 heading">DC</span>
+                          <span class="govuk-heading-s govuk-!-margin-bottom-0 heading">Devolved Contracts</span>
+                      </a>
+                      <div class="govuk-body govuk-!-font-size-19 warning-info fc-status">Open</div>
+      
+                  </div>
+              
+              </div> -->
+  
+              <h2 class="govuk-heading-l">Reports and data</h2>
+  
+          
+  
+          <div class="govuk-grid-row tile-group">
+  
+                  <div id="reportsTile" class="govuk-grid-column-one-third tile ">
+                          <a class="grey min-height-small" href="#">
+                              <span class="govuk-!-font-size-19 govuk-!-font-weight-bold">Reports</span>
+                            <!-- <br>  <span class="govuk-body govuk-!-font-size-16">1 New FRM report</span>  
+                            <br>  <span class="govuk-body govuk-!-font-size-16">1 New Submission report</span>                             -->
+                          </a>
+                          <div class="govuk-body warning-info-2">View reports</div>
+                          <span id="ob1" class="govuk-body onboarding-info">
+                              <div class="arrow-up"></div>
+                              <a class="close" href="#">Close</a>
+                              View reports for submissions you’ve made during R05 (19/20) 
+                               <br>
+                              <a href="#" class="govuk-button govuk-!-margin-top-2 next">Next</a> 
+                          </span>
+                      </div>
+  
+      
+                  
+  
+                  <div id="fcTileView" class="govuk-grid-column-one-third tile ">
+                          <a class="grey min-height-small" href="#">
+                              <span class="govuk-!-font-size-19 govuk-!-font-weight-bold">Funding Claims</span> <br>
+                              <!-- <span class="govuk-body govuk-!-font-size-16">Funding Claims</span> -->
+                          </a>
+                          <div class="govuk-body warning-info-2">View submissions</div>
+                          <span id="ob6" class="govuk-body onboarding-info">
+                                  <div class="arrow-up"></div>
+                                  <a class="close" href="#">Close</a>
+                                  View your submission history for Funding Claims.
+                                   <br>
+                                  <a href="#" class="govuk-button govuk-!-margin-top-2 next6">Next</a> 
+                              </span>
+                      </div>
+                  
+                  
+                      <div id="esfrTileView" class="govuk-grid-column-one-third tile ">
+                          <a class="grey min-height-small" href="#">
+                              <span class="govuk-!-font-size-19 govuk-!-font-weight-bold">European Social Fund Reprofiling</span> <br>
+                              <!-- <span class="govuk-body govuk-!-font-size-16">Funding Claims</span> -->
+                          </a>
+                          <div class="govuk-body warning-info-2">View reports</div>
+                          <span id="#" class="govuk-body onboarding-info">
+                                  <div class="arrow-up"></div>
+                                  <a class="close" href="#">Close</a>
+                                  View history for ......
+                                   <br>
+                                  <a href="#" class="govuk-button govuk-!-margin-top-2 next6">Next</a> 
+                              </span>
+                      </div>
+  
+  
+                  <!-- <div class="govuk-grid-column-one-third tile">
+                      <a class="grey min-height-small" href="qar">
+                          <span class="govuk-!-font-size-19 govuk-!-font-weight-bold">QAR</span> <br>
+                          <span class="govuk-body govuk-!-font-size-16">Qualification Achievement Rates </span>
+                      </a>
+                      <div class="govuk-body warning-info-2">View reports</div>
+                      <span id="ob4" class="govuk-body onboarding-info">
+                              <div class="arrow-up"></div>
+                              <a class="close" href="#">Close</a>
+                              View your qualification achievement rates. Reports for R01 are available now.
+                               <br>
+                              <a href="#" class="govuk-button govuk-!-margin-top-2 next4">Next</a> 
+                          </span>
+                  </div> -->
+      
+                  <!-- <div class="govuk-grid-column-one-third tile">
+                      <a class="grey min-height-small" href="frm">
+                          <span class="govuk-!-font-size-19 govuk-!-font-weight-bold">FRM</span> <br>
+                          <span class="govuk-body govuk-!-font-size-16">Funding Rules Monitoring</span> 
+                          
+                      </a>
+                      <div class="govuk-body warning-info-2">R04 available</div>
+                      <span id="ob5" class="govuk-body onboarding-info">
+                              <div class="arrow-up"></div>
+                              <a class="close" href="#">Close</a>
+                              Funding Rules Monitoring give you an idea of any issues with your data you might need to address. Reports from R12 are available now.
+                               <br>
+                              <a href="#" class="govuk-button govuk-!-margin-top-2 next5">Next</a> 
+                          </span>
+                  </div> -->
+  
+                  
+      
+          </div>
+      </div>
+
+  </div>
+
+{% endblock %}

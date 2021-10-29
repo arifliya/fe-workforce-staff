@@ -1,0 +1,265 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Academic qualifications
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="qualification-level">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <span class="govuk-caption-m">Jo Bloggs</span>
+
+                    <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                        name="StaffId" value="3033">
+                    <input type="hidden" value="15" id="PreviousScreenNumber" name="PreviousScreenNumber">
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+
+
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                                <h1 class="govuk-fieldset__heading">
+                                    What is the main academic subject area they teach? </h1>
+                            </legend>
+                            <div class="govuk-hint">
+                                Select a main subject area. Can be A level or GCSE
+                            </div>
+
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId47" name="academic-subject" value="Ancient Languages"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId47" class="govuk-label govuk-radios__label">
+                                        Ancient Languages
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId48" name="academic-subject" value="Archaeology"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId48" class="govuk-label govuk-radios__label">
+                                        Archaeology
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId49" name="academic-subject" value="Astronomy"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId49" class="govuk-label govuk-radios__label">
+                                        Astronomy
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId50" name="academic-subject" value="Art and Design, History of Art"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId50" class="govuk-label govuk-radios__label">
+                                        Art and Design, History of Art
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId51" name="academic-subject" value="Biology"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId51" class="govuk-label govuk-radios__label">
+                                        Biology
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId52" name="academic-subject" value="Chemistry"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId52" class="govuk-label govuk-radios__label">
+                                        Chemistry
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId53" name="academic-subject" value="Citizenship studies"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId53" class="govuk-label govuk-radios__label">
+                                        Citizenship studies
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId54" name="academic-subject" value="Classical studies"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId54" class="govuk-label govuk-radios__label">
+                                        Classical studies
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId55" name="SingleOption.Selection" value="Computer science"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId55" class="govuk-label govuk-radios__label">
+                                        Computer science
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId56" name="academic-subject" value="Dance, drama and theatre"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId56" class="govuk-label govuk-radios__label">
+                                        Dance, drama and theatre
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId57" name="academic-subject" value="Design, technology and engineering"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId57" class="govuk-label govuk-radios__label">
+                                        Design, technology and engineering
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId58" name="academic-subject" value="Electronics"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId58" class="govuk-label govuk-radios__label">
+                                        Electronics
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId59" name="academic-subject" value="English"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId59" class="govuk-label govuk-radios__label">
+                                        English
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId60" name="academic-subject" value="Environmental science"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId60" class="govuk-label govuk-radios__label">
+                                        Environmental science
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId61" name="academic-subject" value="Film and media studies"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId61" class="govuk-label govuk-radios__label">
+                                        Film and media studies
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId62" name="academic-subject" value="Food preparation and nutrition"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId62" class="govuk-label govuk-radios__label">
+                                        Food preparation and nutrition
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId63" name="academic-subject" value="Geography"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId63" class="govuk-label govuk-radios__label">
+                                        Geography
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId64" name="academic-subject" value="Geology"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId64" class="govuk-label govuk-radios__label">
+                                        Geology
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId65" name="academic-subject" value="History"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId65" class="govuk-label govuk-radios__label">
+                                        History
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId66" name="academic-subject" value="Mathematics"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId66" class="govuk-label govuk-radios__label">
+                                        Mathematics
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId67" name="academic-subject" value="Modern foreign languages"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId67" class="govuk-label govuk-radios__label">
+                                        Modern foreign languages
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId68" name="academic-subject" value="Music"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId68" class="govuk-label govuk-radios__label">
+                                        Music
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId69" name="academic-subject" value="Physical education"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId69" class="govuk-label govuk-radios__label">
+                                        Physical education
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId70" name="academic-subject" value="Philosophy"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId70" class="govuk-label govuk-radios__label">
+                                        Philosophy
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId71" name="academic-subject" value="Physics"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId71" class="govuk-label govuk-radios__label">
+                                        Physics
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId72" name="academic-subject" value="Politics"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId72" class="govuk-label govuk-radios__label">
+                                        Politics
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId73" name="academic-subject" value="Psychology"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId73" class="govuk-label govuk-radios__label">
+                                        Psychology
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId74" name="academic-subject" value="Religious studies"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId74" class="govuk-label govuk-radios__label">
+                                        Religious studies
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId75" name="academic-subject" value="Sociology"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId75" class="govuk-label govuk-radios__label">
+                                        Sociology
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId76" name="academic-subject" value="Other"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId76" class="govuk-label govuk-radios__label">
+                                        Other
+                                    </label>
+                                </div>
+                                </div>
+                            <br>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq2WiZve3O7ltdzT5slq0BulEYED9AAhH3Xd5cFIDJlgN1NSnxtFIKtEszfIb3SLRqwgADJ-txsY7YObKKW8Fg_HryFgQpwv3R55p1U15Y2kyTN3yT7FuefrR3W9melNCA2x_tbXxnnDRQdDnjaVQFWctfe_bMKxDBmwOOacr5fZxw">
+        </form>
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

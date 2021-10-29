@@ -1,0 +1,406 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Add a member of staff
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Add a member of staff</h1>
+
+        <p class="govuk-body">
+            Record FE staff data
+        </p>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Help with recording roles
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                Record the following roles:
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Senior Leaders</li>
+                    <li>Manager</li>
+                    <li>Teacher</li>
+                    <li>Teaching Support</li>
+                    <li>Administration</li>
+                </ul>
+            </div>
+        </details>
+
+        <form method="post" id="addMemberOfStaff" action="member-data-new">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId"
+                    name="StaffId" value="0">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Staff name
+                        </h2>
+                    </legend>
+
+                    <div class="govuk-form-group" id="first-Name">
+                        <label class="govuk-label" for="firstName">
+                            First name
+                        </label>
+
+                        <input class="govuk-input govuk-!-width-two-thirds personal-detail 1" id="firstName" maxlength="100" type="text"
+                            aria-describedby="firstNameError" name="firstName" value="{{ data['firstName'] }}">
+                    </div>
+
+                    <div class="govuk-form-group" id="last-Name">
+                        <label class="govuk-label" for="lastName">
+                            Last name
+                        </label>
+
+                        <input class="govuk-input govuk-!-width-two-thirds personal-detail 2" id="lastName" maxlength="100" type="text"
+                            aria-describedby="lastNameError" name="lastName" value="{{ data['lastName'] }}">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Date of birth
+                        </h2>
+                    </legend>
+                    <div id="dob-hint" class="govuk-hint">
+                        For example, 31 3 1980
+                    </div>
+
+                    <div class="govuk-date-input" id="dob">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dobDay">
+                                    Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dobDay"
+                                    type="text" pattern="[0-9]*" inputmode="numeric" name="dobDay" value="{{ data['dobDay'] }}">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dobMonth">
+                                    Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dobMonth"
+                                    type="text" pattern="[0-9]*" inputmode="numeric" name="dobMonth" value="{{ data['dobMonth'] }}">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dobYear">
+                                    Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dobYear"
+                                    type="text" pattern="[0-9]*" inputmode="numeric" name="dobYear" value="{{ data['dobYear'] }}">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                        </h2>
+                    </legend>
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h3 class="govuk-fieldset__heading">
+                            Gender
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId21" name="gender" value="Female" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId21" class="govuk-label govuk-radios__label">
+                                Female
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId20" name="gender" value="Male" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId20" class="govuk-label govuk-radios__label">
+                                Male
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId22" name="gender" value="Identifies in another way"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId22" class="govuk-label govuk-radios__label">
+                                Identifies in another way
+                            </label>
+                        </div>
+                        <div class="govuk-radios__divider">or</div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId24" name="gender" value="Prefer not to say"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId24" class="govuk-label govuk-radios__label">
+                                Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Ethnicity </h2>
+                    </legend>
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                            White
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId1" name="ethnicity"
+                                value="English, Welsh, Scottish, Northern Irish or British" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId1" class="govuk-label govuk-radios__label">
+                                English, Welsh, Scottish, Northern Irish or British
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId2" name="ethnicity" value="Irish" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId2" class="govuk-label govuk-radios__label">
+                                Irish
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId3" name="ethnicity" value="Gypsy or Irish Traveller"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId3" class="govuk-label govuk-radios__label">
+                                Gypsy or Irish Traveller
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId29" name="ethnicity" value="Roma" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId29" class="govuk-label govuk-radios__label">
+                                Roma
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId4" name="ethnicity" value="Any Other White background"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId4" class="govuk-label govuk-radios__label">
+                                Any Other White background
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                            Mixed / Multiple ethnic groups
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId5" name="ethnicity" value="White and Black Caribbean"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId5" class="govuk-label govuk-radios__label">
+                                White and Black Caribbean
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId6" name="ethnicity" value="White and Black African"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId6" class="govuk-label govuk-radios__label">
+                                White and Black African
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId7" name="ethnicity" value="White and Asian"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId7" class="govuk-label govuk-radios__label">
+                                White and Asian
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId8" name="ethnicity" value="Any Other Mixed or Multiple background"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId8" class="govuk-label govuk-radios__label">
+                                Any Other Mixed or Multiple background
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                            Asian / Asian British
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId9" name="ethnicity" value="Indian" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId9" class="govuk-label govuk-radios__label">
+                                Indian
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId10" name="ethnicity" value="Pakistani" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId10" class="govuk-label govuk-radios__label">
+                                Pakistani
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId11" name="ethnicity" value="Bangladeshi" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId11" class="govuk-label govuk-radios__label">
+                                Bangladeshi
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId12" name="ethnicity" value="Chinese" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId12" class="govuk-label govuk-radios__label">
+                                Chinese
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId13" name="ethnicity" value="Any other Asian background"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId13" class="govuk-label govuk-radios__label">
+                                Any other Asian background
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                            Black / African / Caribbean / Black British
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId14" name="ethnicity" value="African background"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId14" class="govuk-label govuk-radios__label">
+                                African background
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId15" name="ethnicity" value="Caribbean" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId15" class="govuk-label govuk-radios__label">
+                                Caribbean
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId16" name="ethnicity"
+                                value="Any other Black, Black British or Caribbean background"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId16" class="govuk-label govuk-radios__label">
+                                Any other Black, Black British or Caribbean background
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                            Other ethnic group
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId17" name="ethnicity" value="Arab" class="govuk-radios__input"
+                                type="radio">
+                            <label for="LookupItemId17" class="govuk-label govuk-radios__label">
+                                Arab
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId18" name="ethnicity" value="Any other ethnic group"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId18" class="govuk-label govuk-radios__label">
+                                Any other ethnic group
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                            Does not wish to declare ethnicity
+                        </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId19" name="ethnicity" value="Prefer not to say"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId19" class="govuk-label govuk-radios__label">
+                                Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">Does the member of staff consider themselves to have a
+                            disability?
+                        </h2>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId25" name="disability" value="Yes"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId25" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId26" name="disability" value="No"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId26" class="govuk-label govuk-radios__label">
+                                No
+                            </label>
+                        </div>
+                        <div class="govuk-radios__divider">or</div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId28" name="disability" value="Prefer not to say"
+                                class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId28" class="govuk-label govuk-radios__label">
+                                Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="govuk-visually-hidden">
+    <div id="journeyPath">{{ data['journeys'] }}</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Length in FE
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="still-work-for-the-organisation">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <span class="govuk-caption-m">Jay Jay</span>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                                <h1 class="govuk-fieldset__heading">
+                                    How long have they worked in Further Education? </h1>
+                            </legend>
+                            <div class="govuk-hint">
+                                Select an option
+                            </div>
+
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId188" name="length-in-fe" value="Less than one year"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId188" class="govuk-label govuk-radios__label">
+                                        Less than one year
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId189" name="length-in-fe" value="1 to 3 years"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId189" class="govuk-label govuk-radios__label">
+                                        1 to 3 years
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId190" name="length-in-fe" value="4 to 10 years"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId190" class="govuk-label govuk-radios__label">
+                                        4 to 10 years
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId191" name="length-in-fe" value="11 to 20 years"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId191" class="govuk-label govuk-radios__label">
+                                        11 to 20 years
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId192" name="length-in-fe" value="Over 20 years"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId192" class="govuk-label govuk-radios__label">
+                                        Over 20 years
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId193" name="length-in-fe" value="Not known"
+                                        class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId193" class="govuk-label govuk-radios__label">
+                                        Not known
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

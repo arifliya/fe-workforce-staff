@@ -38,15 +38,24 @@ $('#backLink').click(function (event) {
 //   });
 
  
- 
 // }
+
+var journeyPath = $('#journeyPath').html();
+
+if (journeyPath == 'new') {
+  $('#onlineFormRadio').val('yes~add-a-member-of-staff')
+  $('#addMemberOfStaff').attr('action','member-data-new-incomplete')
+  $('#addJobDetails').attr('action','member-data-new-incomplete')
+  $('#addEmploymentDetails').attr('action','member-data-new-incomplete')
+}
+
 
 
 $("#searchSubject").on("keyup", function() {
   var value = $(this).val().toLowerCase();
   // var valueChecked = $('input[name="organisation"]:checked').length;
 
-  $(".govuk-checkboxes div").filter(function() {
+  $(".govuk-checkboxes.search-check-boxes div").filter(function() {
     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
   });
 
@@ -89,7 +98,7 @@ $("#searchSubject").on("keyup", function() {
 
 
 
-var $filterCheckboxes = $('.govuk-checkboxes input[type="checkbox"]');
+var $filterCheckboxes = $('.govuk-checkboxes.search-check-boxes input[type="checkbox"]');
 
 $filterCheckboxes.on('change', function() {
 
@@ -127,6 +136,21 @@ $('.filter-feedback.old').click(function(){
       $('label:contains("'+filterValue+'")').trigger('click');
     }
 });
+
+$('#typeFilter :checkbox').click(function () {
+  $('.search-check-boxes').hide()
+  
+  
+  $('#typeFilter :checkbox:checked').each(function () {
+    $('.' + $(this).val()).show()
+  })
+
+  if (!$('#typeFilter :checkbox').is(':checked')) {
+    $('.search-check-boxes').show()
+    
+  }
+});
+
 
 function isEmpty( el ){
   return !$.trim(el.html())
@@ -239,6 +263,17 @@ if($('.other-reasons-group').children('.other-reasons:visible').length == 0) {
   $('.other-reasons-group').hide()
 }
 
+
+if ($(".type-of-vacancy.0").is(':empty')) {
+  $(".type-of-vacancy.0").text('2')
+}
+if ($(".type-of-vacancy.1").is(':empty')) {
+  $(".type-of-vacancy.1").text('7')
+}
+if ($(".type-of-vacancy.2").is(':empty')) {
+  $(".type-of-vacancy.2").text('Yes')
+}
+
 if ($(".subject-header-check-answers.0").is(':empty')) {
     $(".subject-header-check-answers.0").text('Archaeology')
     $(".subject-text-check-answers.0").text('Archaeology')
@@ -247,14 +282,28 @@ if ($(".subject-header-check-answers.0").is(':empty')) {
     $(".difficulty-check-answers.0").text('A lack of teaching experience or skills')
 }
 
-
-
 if ($(".subject-header-check-answers.1").is(':empty')) {
     $(".subject-header-check-answers.1").text('Geography')
     $(".subject-text-check-answers.1").text('Geography')
     $(".subject-answer.1").text('7')
     $(".subject-answer-2.1").text('5')
     $(".difficulty-check-answers.1").text('No applicants')
+}
+
+if ($(".difficulty-recruiting").is(':empty')) {
+  $(".difficulty-recruiting").text('Yes')
+}
+
+if ($(".how-many-apprentices").is(':empty')) {
+  $(".how-many-apprentices").text('2')
+}
+
+if ($(".staff-councelling").is(':empty')) {
+  $(".staff-councelling").text('Yes')
+}
+
+if ($(".councelling-available").is(':empty')) {
+  $(".councelling-available").text('Outside of working hours')
 }
 
 
@@ -284,3 +333,95 @@ if (!$('#aca-vacancy-1').val()) {
 if (!$('#aca-vacancy-filled-1').val()) {
   $('#aca-vacancy-filled-1').val('5')
 }
+
+function getMonthNameDateString(dt){
+  monthNamelist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+ return monthNamelist[dt.getMonth()];
+};
+
+var monthNumber = $('#monthReformat').html()
+var date = new Date(monthNumber); // date object
+var mName = getMonthNameDateString(date); // get month from specific date string
+$('#monthReformat').text(mName);
+
+var monthNumberEmp = $('#monthReformatEmp').html()
+var date = new Date(monthNumberEmp); // date object
+var mName2 = getMonthNameDateString(date); // get month from specific date string
+$('#monthReformatEmp').text(mName2);
+
+
+ if (isEmpty($('.personal-detail'))) {
+  $('.personal-detail.1').text('Johnny')
+  $('.personal-detail.2').text('Custard')
+  $('.personal-detail.3').text('17 March 1990')
+  $('.personal-detail.4').text('Male')
+  $('.personal-detail.5').text('Irish')
+  $('.personal-detail.6').text('Yes')
+}
+
+
+$(".personal-detail").each(function () {
+  if (isEmpty($(this))) {
+    $('#personalDetailsNotStarted').show()
+    $('#personalDetailsComplete').hide()
+  } 
+  if (!isEmpty($(this))) {
+    $('#personalDetailsComplete').show()
+    $('#personalDetailsNotStarted').hide()
+  } 
+});
+
+if (isEmpty($('.job-role-detail'))) {
+  $('.job-role-detail.1a').text('Manager')
+  $('.job-role-detail.1b').text('Teacher')
+  $('.job-role-detail.1c').text('Teaching Support')
+  $('.job-role-detail.2').text('Teacher')
+  $('.job-role-detail.3').text('Academic qualifications')
+  $('.job-role-detail.4').text('Maths')
+  $('.job-role-detail.5').text('Level 6 Bachelors degree, BTEC professional diplomas')
+  $('.job-role-detail.6').text('Level 8 Doctorates, award, certificate diploma in strategic direction')
+  $('.job-role-detail.7').text('Level 3 A Level or equivalent')
+  $('.job-role-detail.8').text('Level 8 Doctor of Education (EdD)')
+  $('.job-role-detail.9').text('Chartered teacher status (College of Teaching)')
+  $('.job-role-detail.10').text('11 to 20 years')
+  $('.job-role-detail.11').text('No')
+}
+
+$(".job-role-detail").each(function () {
+  if (isEmpty($(this))) {
+    $('#jobRoleNotStarted').show()
+    $('#jobRoleComplete').hide()
+  } 
+  if (!isEmpty($(this))) {
+    $('#jobRoleComplete').show()
+    $('#jobRoleNotStarted').hide()
+  } 
+});
+ 
+
+if (isEmpty($('.employment-detail'))) {
+  $('.employment-detail.1').text('More than one')
+  $('.employment-detail.2').text('Permanent')
+  $('.employment-detail.3').text('20')
+  $('.employment-detail.4').text('50%')
+  $('.employment-detail.5').text('Annual salary')
+  $('.employment-detail.6').text('31 August 2015')
+  $('.employment-detail.7').text('4 to 10 years')
+  $('.employment-detail.8').text('11 to 20 years')
+  $('.employment-detail.9').text('Yes')
+}
+
+$(".employment-detail").each(function () {
+  if (isEmpty($(this))) {
+    $('#employmentNotStarted').show()
+    $('#employmentComplete').hide()
+  } 
+  if (!isEmpty($(this))) {
+    $('#employmentComplete').show()
+    $('#employmentNotStarted').hide()
+  } 
+});
+
+
+
+

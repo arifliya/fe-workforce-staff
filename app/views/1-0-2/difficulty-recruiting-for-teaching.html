@@ -1,0 +1,77 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Difficulty recruiting for teaching
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="which-were-difficult-to-recruit">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+                <h1 class="govuk-fieldset__heading">
+                    Recruiting for teaching vacancies
+                </h1>
+            </legend>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" 0="">
+                        <h2 class="govuk-fieldset__heading">
+                            Did you have difficulty recruiting for any teaching vacancies during the academic year?
+                        </h2>
+                    </legend>
+                    <div class="govuk-hint">
+                        You can add further details on the next page if applicable
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="difficulty-recruiting-1" name="difficultyRecruiting"
+                                value="Yes~which-were-difficult-to-recruit" class="govuk-radios__input"
+                                type="radio">
+                            <label for="difficulty-recruiting-1" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="difficulty-recruiting-2" name="difficultyRecruiting" value="No~apprentices"
+                                class="govuk-radios__input" type="radio">
+                            <label for="difficulty-recruiting-2" class="govuk-label govuk-radios__label">
+                                No
+                            </label>
+                        </div>
+                        
+                    </div>
+
+                </fieldset>
+            </div>
+
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            </form>
+            <!-- <p>{{ data['vacancy-0'] }}</p>
+            <p>{{ data['vacancy-filled-0'] }}</p>
+            <p>{{ data['vacancy-1'] }}</p>
+            <p>{{ data['vacancy-filled-1'] }}</p>
+            <p>{{ data['vacancy-2'] }}</p>
+            <p>{{ data['vacancy-filled-2'] }}</p>
+            <p>{{ data['vacancy-3'] }}</p>
+            <p>{{ data['vacancy-filled-3'] }}</p> -->
+            
+    </div>
+</div>
+
+
+
+{% endblock %}

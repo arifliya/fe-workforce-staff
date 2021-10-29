@@ -1,0 +1,415 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Teaching vacancies recruitment
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">Academic year: 1 August 2020 to 31 July 2021</span>
+        <h1 class="govuk-heading-xl">Vacancy and recruitment for teaching</h1>
+    </div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      
+            <!-- <span class="govuk-body govuk-!-font-weight-bold">Filter your submission types</span> -->
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="filterGroup">
+                Filter by subject area
+              </label></h2>
+            <!-- <span id="waste-hint" class="govuk-hint">
+              Choosing a filter will result in the page refreshing automatically
+            </span> -->
+            <div id="typeFilter" class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input id="AS" class="govuk-checkboxes__input" name="waste" type="checkbox" value="academic-subjects">
+                <label class="govuk-label govuk-checkboxes__label" for="AS">
+                  Academic subjects
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input id="VOC" class="govuk-checkboxes__input" name="waste" type="checkbox" value="vocational-programmes">
+                <label class="govuk-label govuk-checkboxes__label" for="VOC">
+                  Vocational programmes
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input id="OTHER" class="govuk-checkboxes__input" name="waste" type="checkbox" value="other-programmes">
+                <label class="govuk-label govuk-checkboxes__label" for="OTHER">
+                  Other programmes
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+  </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="input-container">
+            
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="searchSubject">
+                Search by course title
+              </label></h2>
+            <span class="search-icon"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"><path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path></svg></span>
+            <input type="text" class="govuk-input custom-input" id="searchSubject" name="searchSubject" aria-label="search awarding body" >
+          </div>
+
+          <!-- <div class="filter-feedback-container">  
+            <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Selected </strong>
+              <span id="firstFilter"></span> 
+            </span>
+          </div> -->
+
+          <div class="filter-feedback-container" style="display: block;">  
+              <span id="from" class="govuk-body govuk-!-font-size-16"><strong>Selected </strong>
+                <span id="firstFilter">
+                  <a href="#" class="filter-feedback old"> <span class="filter-name"> <span class="close"></span>Archaeology</span>  </a>
+                <a href="#" class="filter-feedback old"> <span class="filter-name"> <span class="close"></span>Geography</span>  </a>
+              </span> 
+              </span>
+            </div>
+
+          
+        <form method="post" id="form" action="how-many-and-how-many-filled">
+
+            
+           
+            {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+            {{ govukCheckboxes({
+              idPrefix: "academic-subjects",
+              name: "academic-subjects",
+              classes: "govuk-checkboxes--small search-check-boxes academic-subjects",
+              
+              fieldset: {
+                legend: {
+                  text: "Academic subjects",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--m academic-legend search-check-boxes academic-subjects"
+                }
+              },
+              items: [
+                {
+                  value: "Ancient-Languages",
+                  text: "Ancient-Languages"
+                },
+                {
+                  value: "Archaeology",
+                  text: "Archaeology",
+                  checked: "Checked"
+                },
+                {
+                  value: "Astronomy",
+                  text: "Astronomy"
+                },
+                {
+                  value: "Art-and-Design,-History-of-Art",
+                  text: "Art-and-Design,-History-of-Art"
+                },
+                {
+                  value: "Biology",
+                  text: "Biology"
+                },
+                {
+                  value: "Chemistry",
+                  text: "Chemistry"
+                },
+                {
+                  value: "Citizenship-studies",
+                  text: "Citizenship-studies"
+                },
+                {
+                  value: "Classical-studies",
+                  text: "Classical-studies"
+                },
+                {
+                  value: "Computer-science",
+                  text: "Computer-science"
+                },
+                {
+                  value: "Dance,-drama-and-theatre",
+                  text: "Dance,-drama-and-theatre"
+                },
+                {
+                  value: "Design,-technology-and-engineering",
+                  text: "Design,-technology-and-engineering"
+                },
+                {
+                  value: "Electronics",
+                  text: "Electronics"
+                },
+                {
+                  value: "English",
+                  text: "English"
+                },
+                {
+                  value: "Environmental-science",
+                  text: "Environmental-science"
+                },
+                {
+                  value: "Film-and-media-studies",
+                  text: "Film-and-media-studies"
+                },
+                {
+                  value: "Food-preparation-and-nutrition",
+                  text: "Food-preparation-and-nutrition"
+                },
+                {
+                  value: "Geography",
+                  text: "Geography",
+                  checked: "Checked"
+                },
+                {
+                  value: "Geology",
+                  text: "Geology"
+                },
+                {
+                  value: "History",
+                  text: "History"
+                },
+                {
+                  value: "Mathematics",
+                  text: "Mathematics"
+                },
+                {
+                  value: "Modern-foreign-languages",
+                  text: "Modern-foreign-languages"
+                },
+                {
+                  value: "Music",
+                  text: "Music"
+                },
+                {
+                  value: "Physical-education",
+                  text: "Physical-education"
+                },
+                {
+                  value: "Philosophy",
+                  text: "Philosophy"
+                },
+                {
+                  value: "Physics",
+                  text: "Physics"
+                },
+                {
+                  value: "Politics",
+                  text: "Politics"
+                },
+                {
+                  value: "Psychology",
+                  text: "Psychology"
+                },
+                {
+                  value: "Religious-studies",
+                  text: "Religious-studies"
+                },
+                {
+                  value: "Sociology",
+                  text: "Sociology"
+                },
+                {
+                  value: "Other",
+                  text: "Other"
+                }
+                
+              ]
+              
+            }) }}
+            <!-- <p class="no-results-text no-academic-results" style="display: none;">No results found for Academic subjects</p> -->
+
+            {{ govukCheckboxes({
+              idPrefix: "vocational-programmes",
+              name: "vocational-programmes",
+              classes: "govuk-checkboxes--small search-check-boxes vocational-programmes",
+              fieldset: {
+                legend: {
+                  text: "Vocational programmes",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--m vocational-legend search-check-boxes vocational-programmes"
+                }
+              },
+              items: [
+                
+              {
+                value: "Accounting-and-Finance",
+                text: "Accounting-and-Finance"
+              },
+              {
+                value: "Agriculture-and-Horticulture",
+                text: "Agriculture-and-Horticulture"
+              },
+              {
+                value: "Animal Care",
+                text: "Animal Care"
+              },
+              {
+                value: "Business-Management-and-Administration",
+                text: "Business-Management-and-Administration"
+              },
+              {
+                value: "Catering-and-Hospitality",
+                text: "Catering-and-Hospitality"
+              },
+              {
+                value: "Construction,-Planning-and-the-Built-Environment",
+                text: "Construction,-Planning-and-the-Built-Environment"
+              },
+              {
+                value: "Crafts,-Creative-Arts-and-Design",
+                text: "Crafts,-Creative-Arts-and-Design"
+              },
+              {
+                value: "Design,-Engineering-and-Manufacturing",
+                text: "Design,-Engineering-and-Manufacturing"
+              },
+              {
+                value: "Digital-/-ICT",
+                text: "Digital-/-ICT"
+              },
+              {
+                value: "Education-and-Childcare",
+                text: "Education-and-Childcare"
+              },
+              {
+                value: "Education-and-Training",
+                text: "Education-and-Training"
+              },
+              {
+                value: "Environmental",
+                text: "Environmental"
+              },
+              {
+                value: "Hair,-Beauty-and-Aesthetics",
+                text: "Hair,-Beauty-and-Aesthetics"
+              },
+              {
+                value: "Health,-Public-Services-and-Care",
+                text: "Health,-Public-Services-and-Care"
+              },
+              {
+                value: "Law-and-Legal-Services",
+                text: "Law-and-Legal-Services"
+              },
+              {
+                value: "Media,-Broadcast-and-Production",
+                text: "Media,-Broadcast-and-Production"
+              },
+              {
+                value: "Performing-Arts",
+                text: "Performing-Arts"
+              },
+              {
+                value: "Retail-and-Commercial-Enterprise",
+                text: "Retail-and-Commercial-Enterprise"
+              },
+              {
+                value: "Science",
+                text: "Science"
+              },
+              {
+                value: "Sport,-Leisure-and-Recreation",
+                text: "Sport,-Leisure-and-Recreation"
+              },
+              {
+                value: "Transport-and-Logistics",
+                text: "Transport-and-Logistics"
+              },
+              {
+                value: "Travel-and-Tourism",
+                text: "Travel-and-Tourism"
+              },
+              {
+                value: "Other",
+                text: "Other"
+              }
+              ]
+            }) }}
+            <!-- <p class="no-results-text no-vocational-results" style="display: none;">No results found for Vocational programmes</p> -->
+
+
+            {{ govukCheckboxes({
+              idPrefix: "other-programmes",
+              name: "other-programmes",
+              classes: "govuk-checkboxes--small search-check-boxes other-programmes",
+              fieldset: {
+                legend: {
+                  text: "Other learning programmes",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--m other-legend search-check-boxes other-programmes"
+                }
+              },
+              items: [
+                
+              
+              {
+                value: "Functional-Skills-Maths",
+                text: "Functional-Skills-Maths"
+              },
+              {
+                value: "Functional-Skills-IT",
+                text: "Functional-Skills-IT"
+              },
+              {
+                value: "Life-Skills",
+                text: "Life-Skills"
+              },
+              {
+                value: "Preparation-for-Work",
+                text: "Preparation-for-Work"
+              },
+              {
+                value: "Supported-Learning-or-Special-Educational-Needs-learning-provision",
+                text: "Supported-Learning-or-Special-Educational-Needs-learning-provision"
+              },
+              {
+                value: "ESOL",
+                text: "ESOL"
+              },
+              {
+                value: "Community-Learning",
+                text: "Community-Learning"
+              },
+              {
+                value: "Family-Learning",
+                text: "Family-Learning"
+              },
+              {
+                value: "Other",
+                text: "Other"
+              }
+              
+              ]
+            }) }}
+            <p class="govuk-!-font-weight-bold no-results-text" style="display: none;">There are no results that match your search.</p>
+
+            <button class="govuk-button" type="submit" id="submitAction" name="action" value="Submit">
+                Save and continue
+            </button>
+        </form>
+    </div>
+  <!-- <ul id="subjectListHidden">
+    <li>{{ data['academic-subjects'][0] }}</li>
+    <li>{{ data['academic-subjects'][1] }}</li> 
+    <li>{{ data['academic-subjects'][2] }}</li>
+    
+    
+    <li>{{ data['vocational-programmes'][0] }}</li>
+    <li>{{ data['vocational-programmes'][1] }}</li>
+    <li>{{ data['vocational-programmes'][2] }}</li>
+  </ul> -->
+</div>
+</div>
+
+
+
+{% endblock %}

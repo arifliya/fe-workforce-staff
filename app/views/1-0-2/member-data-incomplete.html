@@ -1,0 +1,91 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Member data incomplete
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-m"> Jo Bloggs</span>
+
+        <h1 class="govuk-heading-l">FE workforce staff data collection</h1>
+        <h2 class="govuk-heading-s">
+            Staff member data
+        </h2>
+        <p class="govuk-body">
+            You have completed 1 of 3 sections
+        </p>
+
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header"></th>
+                    <th scope="col" class="govuk-table__header"></th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                        <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+                            <a class="govuk-link govuk-link--no-visited-state" href="summary-of-member">
+                                Personal information
+                            </a>
+                        </h3>
+                    </td>
+                    <td class="govuk-table__cell">
+
+
+                        <strong class="govuk-tag" id="eligibility-completed">COMPLETED</strong>
+
+
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                        <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+                            <a class="govuk-link govuk-link--no-visited-state" href="job-role">
+                                Job role
+                            </a>
+                        </h3>
+                    </td>
+                    <td class="govuk-table__cell">
+
+
+                        <strong class="govuk-tag govuk-tag--grey" id="eligibility-no">NOT STARTED</strong>
+
+
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                        <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+                            <a class="govuk-link govuk-link--no-visited-state" href="contracts-with-organisation">
+                                Employment contract
+                            </a>
+                        </h3>
+                    </td>
+                    <td class="govuk-table__cell">
+
+
+                        <strong class="govuk-tag govuk-tag--grey" id="eligibility-no">NOT STARTED</strong>
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="govuk-link" href="online-staff-list.html">Staff list</a>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}

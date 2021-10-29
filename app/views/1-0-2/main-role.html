@@ -1,0 +1,64 @@
+{% extends "layout-back.html" %}
+
+{% block pageTitle %}
+FEW Staff and vacancy data - Main contract
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="what-do-they-teach">
+            <span class="govuk-caption-m">Jay Jay</span>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                        <h1 class="govuk-fieldset__heading">What is their main role?</h1>
+                        </legend>
+                    <div class="govuk-hint">
+                        Select the role where the member of staff spends most of their time
+                    </div>
+        
+                    <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId31" name="mainRole" value="Manager" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                        Manager
+                                    </label>
+                                        <div id="LookupHintItemId31" class="govuk-hint govuk-radios__hint">
+                                            Functional or people manager. Faculty, department, curriculum, or programme lead. Advanced practitioner
+                                        </div>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input id="LookupItemId32" name="mainRole" value="Teacher" aria-describedby="LookupHintItemId32" class="govuk-radios__input" type="radio">
+                                    <label for="LookupItemId32" class="govuk-label govuk-radios__label">
+                                        Teacher
+                                    </label>
+                                        <div id="LookupHintItemId32" class="govuk-hint govuk-radios__hint">
+                                            Lecturer, teacher, trainer or tutor
+                                        </div>
+                                </div>
+                       
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+
+
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">
+                Save and continue
+            </button>
+            <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8KK5pQ8LLh1EhGP30JpsGq34_B-WnMrSImBlCI4o268FjliB_HNpur1Sey9mjxoYTq0APm5mXowm3d6VN98XkXMXnkpc1miEK1STPiCj4LPV5BNDQEBKvBtt6bmrXjd5MIc68vMVdjWmKBEdLyrCm8gq6JxrzsnlMCK8xu_bsH02sj1I9K-pD3-TB52ySLsv6Q">
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
