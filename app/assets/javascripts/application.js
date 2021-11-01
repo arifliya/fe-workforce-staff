@@ -23,7 +23,7 @@ $('#backLink').click(function (event) {
 //   var value = $(element).val().toLowerCase();
 
 
-  
+
 
 //   $(".govuk-checkboxes > div").each(function() {
 
@@ -37,29 +37,46 @@ $('#backLink').click(function (event) {
 
 //   });
 
- 
+
 // }
 
 var journeyPath = $('#journeyPath').html();
 
 if (journeyPath == 'new') {
+  // alert('new journey')
   $('#onlineFormRadio').val('yes~add-a-member-of-staff')
-  $('#addMemberOfStaff').attr('action','member-data-new-incomplete')
-  $('#addJobDetails').attr('action','member-data-new-incomplete')
-  $('#addEmploymentDetails').attr('action','member-data-new-incomplete')
+  $('#addMemberOfStaff').attr('action', 'member-data-new-incomplete')
+  $('#addJobDetails').attr('action', 'member-data-new-incomplete')
+  $('#addEmploymentDetails').attr('action', 'member-data-new-incomplete')
+  $('#startVacancyJourney').attr('href', 'senior-leader-and-management-vacancies')
+
+  // $('.search-check-boxes input[type="checkbox"]').trigger('click')
+
+  $('.search-check-boxes input[type="checkbox"]').each(function () {
+    if ($(this).is(":checked")) {
+      $(this).trigger('click')
+    }
+  });
+  
+  $('.filter-feedback.old').each(function () {
+    if ($(this).is(":visible")) {
+      $('.filter-feedback.old').remove()
+      $('.filter-feedback-container').hide()
+    }
+  });
 }
 
 
 
-$("#searchSubject").on("keyup", function() {
+$("#searchSubject").on("keyup", function () {
   var value = $(this).val().toLowerCase();
   // var valueChecked = $('input[name="organisation"]:checked').length;
 
-  $(".govuk-checkboxes.search-check-boxes div").filter(function() {
+  $(".govuk-checkboxes.search-check-boxes div").filter(function () {
     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
   });
 
-  if ($('.academic-subjects .govuk-checkboxes__item:visible').length===0){
+  if ($('.academic-subjects .govuk-checkboxes__item:visible').length === 0) {
     $('.academic-legend').hide();
     $('.academic-legend').parent().parent().css('margin-bottom', 0);
   }
@@ -67,8 +84,8 @@ $("#searchSubject").on("keyup", function() {
     $('.academic-legend').show();
     $('.academic-legend').parent().parent().css('margin-bottom', '30px');
   }
-  
-  if ($('.vocational-programmes .govuk-checkboxes__item:visible').length===0){
+
+  if ($('.vocational-programmes .govuk-checkboxes__item:visible').length === 0) {
     $('.vocational-legend').hide();
     $('.vocational-legend').parent().parent().css('margin-bottom', 0);
   }
@@ -76,8 +93,8 @@ $("#searchSubject").on("keyup", function() {
     $('.vocational-legend').show();
     $('.vocational-legend').parent().parent().css('margin-bottom', '30px');
   }
-  
-  if ($('.other-programmes .govuk-checkboxes__item:visible').length===0){
+
+  if ($('.other-programmes .govuk-checkboxes__item:visible').length === 0) {
     $('.other-legend').hide();
     $('.other-legend').parent().parent().css('margin-bottom', 0);
   }
@@ -85,14 +102,14 @@ $("#searchSubject").on("keyup", function() {
     $('.other-legend').show();
     $('.other-legend').parent().parent().css('margin-bottom', '30px');
   }
-  
-  if ($('.academic-subjects .govuk-checkboxes__item:visible').length===0 && $('.vocational-programmes .govuk-checkboxes__item:visible').length===0 && $('.other-programmes .govuk-checkboxes__item:visible').length===0) {
+
+  if ($('.academic-subjects .govuk-checkboxes__item:visible').length === 0 && $('.vocational-programmes .govuk-checkboxes__item:visible').length === 0 && $('.other-programmes .govuk-checkboxes__item:visible').length === 0) {
     $('.no-results-text').show();
   }
   else {
     $('.no-results-text').hide();
   }
-   
+
 });
 
 
@@ -100,26 +117,26 @@ $("#searchSubject").on("keyup", function() {
 
 var $filterCheckboxes = $('.govuk-checkboxes.search-check-boxes input[type="checkbox"]');
 
-$filterCheckboxes.on('change', function() {
+$filterCheckboxes.on('change', function () {
 
   if ($(this).is(':checked')) {
     var checkboxValue = $(this).val();
     $('.filter-feedback-container').show();
     $('.filter-feedback').show();
-    $('<a href="#" class="filter-feedback"> <span class="filter-name"> <span class="close"></span>'+ checkboxValue +'</span>  </a>').appendTo('#firstFilter');
+    $('<a href="#" class="filter-feedback"> <span class="filter-name"> <span class="close"></span>' + checkboxValue + '</span>  </a>').appendTo('#firstFilter');
   }
   else {
     var value = $(this).val();
-    if ($('#firstFilter').has('.filter-name:contains("'+value+'")')) {
-      $('.filter-name:contains("'+value+'")').parent().remove();
+    if ($('#firstFilter').has('.filter-name:contains("' + value + '")')) {
+      $('.filter-name:contains("' + value + '")').parent().remove();
     }
   }
 
-  $('.filter-feedback').on('click', function() {
+  $('.filter-feedback').on('click', function () {
     var filterValue = $(this).children().text();
     $(this).remove(); // remove the button
-    if ($('.govuk-checkboxes :checkbox').has('label:contains("'+filterValue+'")')) {
-      $('label:contains("'+filterValue+'")').trigger('click');
+    if ($('.govuk-checkboxes :checkbox').has('label:contains("' + filterValue + '")')) {
+      $('label:contains("' + filterValue + '")').trigger('click');
     }
   });
 
@@ -129,30 +146,30 @@ $filterCheckboxes.on('change', function() {
 
 });
 
-$('.filter-feedback.old').click(function(){
+$('.filter-feedback.old').click(function () {
   var filterValue = $(this).children().text();
-    $(this).remove(); // remove the button
-    if ($('.govuk-checkboxes :checkbox').has('label:contains("'+filterValue+'")')) {
-      $('label:contains("'+filterValue+'")').trigger('click');
-    }
+  $(this).remove(); // remove the button
+  if ($('.govuk-checkboxes :checkbox').has('label:contains("' + filterValue + '")')) {
+    $('label:contains("' + filterValue + '")').trigger('click');
+  }
 });
 
 $('#typeFilter :checkbox').click(function () {
   $('.search-check-boxes').hide()
-  
-  
+
+
   $('#typeFilter :checkbox:checked').each(function () {
     $('.' + $(this).val()).show()
   })
 
   if (!$('#typeFilter :checkbox').is(':checked')) {
     $('.search-check-boxes').show()
-    
+
   }
 });
 
 
-function isEmpty( el ){
+function isEmpty(el) {
   return !$.trim(el.html())
 }
 
@@ -166,41 +183,41 @@ function isEmpty( el ){
 //   // //   $('input[value=Archaeology]').attr('checked', true);
 //   // //   $('input[value=Geography]').attr('checked', true);
 //   // }
-  
+
 //   if ($('.govuk-checkboxes :checkbox').has('label:contains("'+listText+'")')) {
 //     $('label:contains("'+listText+'")').trigger('click');
-    
+
 //   }
 
-  
-   
+
+
 // });
 
 
 $(".aca-label").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
-if($('.aca-checkboxes').children(':visible').length == 0) {
+if ($('.aca-checkboxes').children(':visible').length == 0) {
   $('.aca-checkboxes').parent().parent().hide()
 }
 
 $(".voc-label").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
-if($('.voc-checkboxes').children(':visible').length == 0) {
+if ($('.voc-checkboxes').children(':visible').length == 0) {
   $('.voc-checkboxes').parent().parent().hide()
 }
 
 $(".other-label").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
-if($('.other-checkboxes').children(':visible').length == 0) {
+if ($('.other-checkboxes').children(':visible').length == 0) {
   $('.other-checkboxes').parent().parent().hide()
 }
 
@@ -210,27 +227,27 @@ if($('.other-checkboxes').children(':visible').length == 0) {
 $(".aca-h3").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
-if($('.aca-group').children('.question-group:visible').length == 0) {
+if ($('.aca-group').children('.question-group:visible').length == 0) {
   $('.aca-group').hide()
 }
 
 $(".voc-h3").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
-if($('.voc-group').children('.question-group:visible').length == 0) {
+if ($('.voc-group').children('.question-group:visible').length == 0) {
   $('.voc-group').hide()
 }
 
 $(".other-h3").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
-if($('.other-group').children('.question-group:visible').length == 0) {
+if ($('.other-group').children('.question-group:visible').length == 0) {
   $('.other-group').hide()
 }
 
@@ -239,27 +256,27 @@ if($('.other-group').children('.question-group:visible').length == 0) {
 $(".aca-h3-v2").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().parent().parent().hide()
-  } 
+  }
 });
-if($('.aca-reasons-group').children('.aca-reasons:visible').length == 0) {
+if ($('.aca-reasons-group').children('.aca-reasons:visible').length == 0) {
   $('.aca-reasons-group').hide()
 }
 
 $(".voc-h3-v2").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().parent().parent().hide()
-  } 
+  }
 });
-if($('.voc-reasons-group').children('.voc-reasons:visible').length == 0) {
+if ($('.voc-reasons-group').children('.voc-reasons:visible').length == 0) {
   $('.voc-reasons-group').hide()
 }
 
 $(".other-h3-v2").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().parent().parent().hide()
-  } 
+  }
 });
-if($('.other-reasons-group').children('.other-reasons:visible').length == 0) {
+if ($('.other-reasons-group').children('.other-reasons:visible').length == 0) {
   $('.other-reasons-group').hide()
 }
 
@@ -275,19 +292,19 @@ if ($(".type-of-vacancy.2").is(':empty')) {
 }
 
 if ($(".subject-header-check-answers.0").is(':empty')) {
-    $(".subject-header-check-answers.0").text('Archaeology')
-    $(".subject-text-check-answers.0").text('Archaeology')
-    $(".subject-answer.0").text('10')
-    $(".subject-answer-2.0").text('9')
-    $(".difficulty-check-answers.0").text('A lack of teaching experience or skills')
+  $(".subject-header-check-answers.0").text('Archaeology')
+  $(".subject-text-check-answers.0").text('Archaeology')
+  $(".subject-answer.0").text('10')
+  $(".subject-answer-2.0").text('9')
+  $(".difficulty-check-answers.0").text('A lack of teaching experience or skills')
 }
 
 if ($(".subject-header-check-answers.1").is(':empty')) {
-    $(".subject-header-check-answers.1").text('Geography')
-    $(".subject-text-check-answers.1").text('Geography')
-    $(".subject-answer.1").text('7')
-    $(".subject-answer-2.1").text('5')
-    $(".difficulty-check-answers.1").text('No applicants')
+  $(".subject-header-check-answers.1").text('Geography')
+  $(".subject-text-check-answers.1").text('Geography')
+  $(".subject-answer.1").text('7')
+  $(".subject-answer-2.1").text('5')
+  $(".difficulty-check-answers.1").text('No applicants')
 }
 
 if ($(".difficulty-recruiting").is(':empty')) {
@@ -310,7 +327,7 @@ if ($(".councelling-available").is(':empty')) {
 $(".subject-header-check-answers").each(function () {
   if (isEmpty($(this))) {
     $(this).parent().hide()
-  } 
+  }
 });
 
 // if ($("#aca-vacancy-0").val(' ')) {
@@ -334,9 +351,9 @@ if (!$('#aca-vacancy-filled-1').val()) {
   $('#aca-vacancy-filled-1').val('5')
 }
 
-function getMonthNameDateString(dt){
-  monthNamelist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
- return monthNamelist[dt.getMonth()];
+function getMonthNameDateString(dt) {
+  monthNamelist = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return monthNamelist[dt.getMonth()];
 };
 
 var monthNumber = $('#monthReformat').html()
@@ -350,7 +367,7 @@ var mName2 = getMonthNameDateString(date); // get month from specific date strin
 $('#monthReformatEmp').text(mName2);
 
 
- if (isEmpty($('.personal-detail'))) {
+if (isEmpty($('.personal-detail'))) {
   $('.personal-detail.1').text('Johnny')
   $('.personal-detail.2').text('Custard')
   $('.personal-detail.3').text('17 March 1990')
@@ -364,11 +381,11 @@ $(".personal-detail").each(function () {
   if (isEmpty($(this))) {
     $('#personalDetailsNotStarted').show()
     $('#personalDetailsComplete').hide()
-  } 
+  }
   if (!isEmpty($(this))) {
     $('#personalDetailsComplete').show()
     $('#personalDetailsNotStarted').hide()
-  } 
+  }
 });
 
 if (isEmpty($('.job-role-detail'))) {
@@ -391,13 +408,13 @@ $(".job-role-detail").each(function () {
   if (isEmpty($(this))) {
     $('#jobRoleNotStarted').show()
     $('#jobRoleComplete').hide()
-  } 
+  }
   if (!isEmpty($(this))) {
     $('#jobRoleComplete').show()
     $('#jobRoleNotStarted').hide()
-  } 
+  }
 });
- 
+
 
 if (isEmpty($('.employment-detail'))) {
   $('.employment-detail.1').text('More than one')
@@ -415,11 +432,11 @@ $(".employment-detail").each(function () {
   if (isEmpty($(this))) {
     $('#employmentNotStarted').show()
     $('#employmentComplete').hide()
-  } 
+  }
   if (!isEmpty($(this))) {
     $('#employmentComplete').show()
     $('#employmentNotStarted').hide()
-  } 
+  }
 });
 
 

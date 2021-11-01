@@ -1,4 +1,3 @@
-
 {% extends "layout-back.html" %}
 
 {% block pageTitle %}
@@ -11,42 +10,45 @@ FEW Staff and vacancy data - Record vacancy data
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
-                <h1 class="govuk-heading-xl">Further education vacancy and recruitment data collection</h1>
-        
-                <p>FE vacancy data collected for:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>
-                        senior leaders
-                    </li>
-                    <li>
-                        senior managers
-                    </li>
-                    <li>
-                        staff that have a teaching responsibility
-                    </li>
-                </ul>
-                <p>Further education (FE) Colleges, local councils and independent training providers that receive funding from ESFA must return vacancy and recruitment data from 2022 academic year.</p>
-                <a class="govuk-button govuk-button--start" href="vacancy-recruitment-answers">
-                    Start now
-                </a>
-                <h3 class="govuk-heading-m">Before you start</h3>
-                <p>This service uses an online form.</p>
-                <p>You will need details about:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>
-                        staff vacancy and recruitment numbers for the reporting period
-                    </li>
-                    <li>
-                        subjects, vocational programmes or other learning programmes that had vacancies
-                    </li>
-                    <li>
-                        number of apprentices employed
-                    </li>
-                </ul>
-            </div>
+        <span class="govuk-caption-xl">Academic year: 1 August 2020 to 31 July 2021</span>
+        <h1 class="govuk-heading-xl">Further education vacancy and recruitment data collection</h1>
+
+        <p>FE vacancy data collected for:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                senior leaders
+            </li>
+            <li>
+                senior managers
+            </li>
+            <li>
+                staff that have a teaching responsibility
+            </li>
+        </ul>
+        <p>Further education (FE) Colleges, local councils and independent training providers that receive funding from
+            ESFA must return vacancy and recruitment data from 2022 academic year.</p>
+        <a id="startVacancyJourney" class="govuk-button govuk-button--start" href="vacancy-recruitment-answers">
+            Start now
+        </a>
+        <h3 class="govuk-heading-m">Before you start</h3>
+        <p>This service uses an online form.</p>
+        <p>You will need details about:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                staff vacancy and recruitment numbers for the reporting period
+            </li>
+            <li>
+                subjects, vocational programmes or other learning programmes that had vacancies
+            </li>
+            <li>
+                number of apprentices employed
+            </li>
+        </ul>
+    </div>
 </div>
 
-    
+<div class="govuk-visually-hidden">
+    <div id="journeyPath">{{ data['journeys'] }}</div>
+</div>
 
 {% endblock %}
