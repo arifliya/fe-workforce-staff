@@ -40,6 +40,10 @@ $('#backLink').click(function (event) {
 
 // }
 
+function isEmpty(el) {
+  return !$.trim(el.html())
+}
+
 var journeyPath = $('#journeyPath').html();
 
 if (journeyPath == 'new') {
@@ -57,15 +61,63 @@ if (journeyPath == 'new') {
       $(this).trigger('click')
     }
   });
-  
+
   $('.filter-feedback.old').each(function () {
     if ($(this).is(":visible")) {
       $('.filter-feedback.old').remove()
       $('.filter-feedback-container').hide()
     }
   });
+
 }
 
+
+if (journeyPath == 'returning') {
+
+  if ($(".type-of-vacancy.0").is(':empty')) {
+    $(".type-of-vacancy.0").text('2')
+  }
+  if ($(".type-of-vacancy.1").is(':empty')) {
+    $(".type-of-vacancy.1").text('7')
+  }
+  if ($(".type-of-vacancy.2").is(':empty')) {
+    $(".type-of-vacancy.2").text('Yes')
+  }
+
+
+  if ($(".subject-header-check-answers.0").is(':empty')) {
+    $(".subject-header-check-answers.0").text('Archaeology')
+    $(".subject-text-check-answers.0").text('Archaeology')
+    $(".subject-answer.0").text('10')
+    $(".subject-answer-2.0").text('9')
+    $(".difficulty-check-answers.0").text('A lack of teaching experience or skills')
+  }
+
+  if ($(".subject-header-check-answers.1").is(':empty')) {
+    $(".subject-header-check-answers.1").text('Geography')
+    $(".subject-text-check-answers.1").text('Geography')
+    $(".subject-answer.1").text('7')
+    $(".subject-answer-2.1").text('5')
+    $(".difficulty-check-answers.1").text('No applicants')
+  }
+
+  if ($(".difficulty-recruiting").is(':empty')) {
+    $(".difficulty-recruiting").text('Yes')
+  }
+
+  if ($(".how-many-apprentices").is(':empty')) {
+    $(".how-many-apprentices").text('2')
+  }
+
+  if ($(".staff-councelling").is(':empty')) {
+    $(".staff-councelling").text('Yes')
+  }
+
+  if ($(".councelling-available").is(':empty')) {
+    $(".councelling-available").text('Outside of working hours')
+  }
+
+}
 
 
 $("#searchSubject").on("keyup", function () {
@@ -155,23 +207,20 @@ $('.filter-feedback.old').click(function () {
 });
 
 $('#typeFilter :checkbox').click(function () {
-  $('.search-check-boxes').hide()
+  $('.search-check-boxes').parent().parent().hide()
 
 
   $('#typeFilter :checkbox:checked').each(function () {
-    $('.' + $(this).val()).show()
+    $('.' + $(this).val()).parent().parent().show()
   })
 
   if (!$('#typeFilter :checkbox').is(':checked')) {
-    $('.search-check-boxes').show()
-
+    $('.search-check-boxes').parent().parent().show()
   }
 });
 
 
-function isEmpty(el) {
-  return !$.trim(el.html())
-}
+
 
 // $('#subjectListHidden li').each(function(){
 
@@ -281,47 +330,21 @@ if ($('.other-reasons-group').children('.other-reasons:visible').length == 0) {
 }
 
 
-if ($(".type-of-vacancy.0").is(':empty')) {
-  $(".type-of-vacancy.0").text('2')
-}
-if ($(".type-of-vacancy.1").is(':empty')) {
-  $(".type-of-vacancy.1").text('7')
-}
-if ($(".type-of-vacancy.2").is(':empty')) {
-  $(".type-of-vacancy.2").text('Yes')
-}
 
-if ($(".subject-header-check-answers.0").is(':empty')) {
-  $(".subject-header-check-answers.0").text('Archaeology')
-  $(".subject-text-check-answers.0").text('Archaeology')
-  $(".subject-answer.0").text('10')
-  $(".subject-answer-2.0").text('9')
-  $(".difficulty-check-answers.0").text('A lack of teaching experience or skills')
-}
+// $(".type-of-vacancy").each(function () {
+//   if (!isEmpty($(this))) {
+//     $('#typesOfVacancyIncomplete').show()
+//     $('#typesOfVacancyComplete').hide()
+//   }
+// });
 
-if ($(".subject-header-check-answers.1").is(':empty')) {
-  $(".subject-header-check-answers.1").text('Geography')
-  $(".subject-text-check-answers.1").text('Geography')
-  $(".subject-answer.1").text('7')
-  $(".subject-answer-2.1").text('5')
-  $(".difficulty-check-answers.1").text('No applicants')
-}
+// if ($('.type-of-vacancy-group dd').length == 0) {
+//   $('#typesOfVacancyIncomplete').show()
+//   $('#typesOfVacancyComplete').hide()
+// } 
 
-if ($(".difficulty-recruiting").is(':empty')) {
-  $(".difficulty-recruiting").text('Yes')
-}
 
-if ($(".how-many-apprentices").is(':empty')) {
-  $(".how-many-apprentices").text('2')
-}
 
-if ($(".staff-councelling").is(':empty')) {
-  $(".staff-councelling").text('Yes')
-}
-
-if ($(".councelling-available").is(':empty')) {
-  $(".councelling-available").text('Outside of working hours')
-}
 
 
 $(".subject-header-check-answers").each(function () {
@@ -439,6 +462,91 @@ $(".employment-detail").each(function () {
   }
 });
 
+////////**********************************///////////
+
+$(".type-of-vacancy").each(function () {
+  if (isEmpty($(this))) {
+    $('#typesOfVacancyIncomplete').show()
+    $('#typesOfVacancyComplete').hide()
+  }
+});
+if (!$(".type-of-vacancy-group dd").is(':empty')) {
+  $('#typesOfVacancyIncomplete').hide()
+  $('#typesOfVacancyComplete').show()
+}
 
 
 
+$('#varDetailsIncomplete').show()
+// $('#varDetailsIncomplete').css('margin-bottom', '30px')
+$('#varDetailsComplete').hide()
+
+$(".var-details-group").each(function () {
+  if ($(this).is(":visible")) {
+
+    $(".subject-answer").each(function () {
+      if (!isEmpty($(this))) {
+
+        $('#varDetailsIncomplete').hide()
+        $('#varDetailsComplete').show()
+
+      }
+    });
+
+  }
+});
+
+
+if (!isEmpty($('.difficulty-recruiting'))) {
+  $('#difficultiesIncomplete').hide()
+  $('#difficultiesComplete').show()
+}
+
+if (isEmpty($('.difficulty-recruiting'))) {
+  $('#difficultiesIncomplete').show()
+  $('#difficultiesComplete').hide()
+}
+
+
+$('#whyWasItDifficultComplete').hide()
+$('#whyWasItDifficultIncomplete').show()
+
+$(".why-was-it-difficult-group dd").each(function () {
+  if ($(this).is(":visible")) {
+
+    $("dd p").each(function () {
+      if (!isEmpty($(this))) {
+
+        $('#whyWasItDifficultComplete').show()
+        $('#whyWasItDifficultIncomplete').hide()
+
+      }
+    });
+
+  }
+});
+
+
+if (!isEmpty($('.how-many-apprentices'))) {
+  $('#apprenticesIncomplete').hide()
+  $('#apprenticesComplete').show()
+}
+
+if (isEmpty($('.how-many-apprentices'))) {
+  $('#apprenticesIncomplete').show()
+  $('#apprenticesComplete').hide()
+}
+
+
+$('#staffCounsellingComplete').hide()
+$('#staffCounsellingIncomplete').show()
+
+
+$('.staff-councelling-group dd').each(function () {
+  if (!isEmpty($(this))) {
+
+    $('#staffCounsellingComplete').show()
+    $('#staffCounsellingIncomplete').hide()
+
+  }
+});

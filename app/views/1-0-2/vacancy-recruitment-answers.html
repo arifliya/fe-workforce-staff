@@ -22,8 +22,14 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                 Change<span class="govuk-visually-hidden"> Vacancies</span>
             </a>
         </h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="typesOfVacancyComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="typesOfVacancyIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9 type-of-vacancy-group">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                     Senior leader or manager vacancies
@@ -51,18 +57,23 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                 Change<span class="govuk-visually-hidden"> Vacancies</span>
             </a>
         </h2>
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="varDetailsComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="varDetailsIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers 0">{{ data['academic-subjects'][0] }}</h3>
 
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for <span class="subject-text-check-answers 0">
                             {{ data['academic-subjects'][0] }}?</span>
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer 0">
-                        {{ data['aca-vacancy'][0] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer 0">{{ data['aca-vacancy'][0] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
@@ -70,9 +81,7 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                         How many vacancies were filled for <span class="subject-text-check-answers 0">
                             {{ data['academic-subjects'][0] }}?</span>
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer-2 0">
-                        {{ data['aca-vacancy-filled'][0] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer subject-answer-2 0">{{ data['aca-vacancy-filled'][0] }}</dd>
 
                 </div>
             </dl>
@@ -81,15 +90,13 @@ FEW Staff and vacancy data - Vacancy recruitment answers
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers 1">{{ data['academic-subjects'][1] }}</h3>
 
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for <span
                             class="subject-text-check-answers 1">{{ data['academic-subjects'][1] }}?</span>
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer 1">
-                        {{ data['aca-vacancy'][1] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer 1">{{ data['aca-vacancy'][1] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
@@ -97,9 +104,7 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                         How many vacancies were filled for <span
                             class="subject-text-check-answers 1">{{ data['academic-subjects'][1] }}?</span>
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer-2 1">
-                        {{ data['aca-vacancy-filled'][1] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer subject-answer-2 1">{{ data['aca-vacancy-filled'][1] }}</dd>
 
                 </div>
             </dl>
@@ -107,21 +112,19 @@ FEW Staff and vacancy data - Vacancy recruitment answers
 
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['academic-subjects'][2] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['academic-subjects'][2] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['aca-vacancy'][2] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['aca-vacancy'][2] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['academic-subjects'][2] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">
                         {{ data['aca-vacancy-filled'][2] }}
                     </dd>
 
@@ -132,69 +135,57 @@ FEW Staff and vacancy data - Vacancy recruitment answers
         
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['vocational-programmes'][0] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['vocational-programmes'][0] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['voc-vacancy'][0] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['voc-vacancy'][0] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['vocational-programmes'][0] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['voc-vacancy-filled'][0] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['voc-vacancy-filled'][0] }}</dd>
 
                 </div>
             </dl>
         </div>
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['vocational-programmes'][1] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['vocational-programmes'][1] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['voc-vacancy'][1] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['voc-vacancy'][1] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['vocational-programmes'][1] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['voc-vacancy-filled'][1] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['voc-vacancy-filled'][1] }}</dd>
 
                 </div>
             </dl>
         </div>
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['vocational-programmes'][2] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['vocational-programmes'][2] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['voc-vacancy'][2] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['voc-vacancy'][2] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['vocational-programmes'][2] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['voc-vacancy-filled'][2] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['voc-vacancy-filled'][2] }}</dd>
                 </div>
             </dl>
         </div>
@@ -202,90 +193,80 @@ FEW Staff and vacancy data - Vacancy recruitment answers
 
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['other-programmes'][0] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['other-programmes'][0] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['other-vacancy'][0] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['other-vacancy'][0] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['other-programmes'][0] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['other-vacancy-filled'][0] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['other-vacancy-filled'][0] }}</dd>
                 </div>
             </dl>
         </div>
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['other-programmes'][1] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['other-programmes'][1] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['other-vacancy'][1] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['other-vacancy'][1] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['other-programmes'][1] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['other-vacancy-filled'][1] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['other-vacancy-filled'][1] }}</dd>
                 </div>
             </dl>
         </div>
         <div class="subject-group-check-answers">
             <h3 class="govuk-heading-s subject-header-check-answers">{{ data['other-programmes'][2] }}</h3>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9 var-details-group">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were there for {{ data['other-programmes'][2] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['other-vacancy'][2] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['other-vacancy'][2] }}</dd>
 
                 </div>
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                         How many vacancies were filled for {{ data['other-programmes'][2] }}?
                     </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric">
-                        {{ data['other-vacancy-filled'][2] }}
-                    </dd>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric subject-answer">{{ data['other-vacancy-filled'][2] }}</dd>
                 </div>
             </dl>
         </div>
 
 
-        <h2 class="govuk-heading-m">
+        <h2 id="rdHeader" class="govuk-heading-m">
             Recruitment difficulties
             <a class="govuk-link govuk-link--no-visited-state govuk-heading-s float-right"
                 href="difficulty-recruiting-for-teaching">
                 Change<span class="govuk-visually-hidden"> Vacancies</span>
             </a>
         </h2>
-
-        <!-- <h3 class="govuk-heading-s subject-header-check-answers 0">{{ data['academic-subjects'][0] }}</h3> -->
-
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="difficultiesComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="difficultiesIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                     Did you have difficulty recruiting for any teaching vacancies during the academic year?</span>
                 </dt>
-                <dd class="govuk-summary-list__value govuk-table__header--numeric difficulty-recruiting">
-                    {{ data['difficultyRecruiting'] }}
-                </dd>
+                <dd class="govuk-summary-list__value govuk-table__header--numeric difficulty-recruiting">{{ data['difficultyRecruiting'] }}</dd>
             </div>
         </dl>
 
@@ -295,8 +276,14 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                 Change<span class="govuk-visually-hidden"> Vacancies</span>
             </a>
         </h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="whyWasItDifficultComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="whyWasItDifficultIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9 why-was-it-difficult-group">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key subject-header-check-answers 0">
                     {{ data['aca-subject'][0] }}
@@ -425,6 +412,13 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                 Change<span class="govuk-visually-hidden"> Apprentices</span>
             </a>
         </h2>
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="apprenticesComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="apprenticesIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
@@ -440,7 +434,14 @@ FEW Staff and vacancy data - Vacancy recruitment answers
                 Change<span class="govuk-visually-hidden"> Staff counselling</span>
             </a>
         </h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-heading-s inline-block">Status</div>
+        <strong id="staffCounsellingComplete" class="govuk-tag float-right">
+            Completed
+        </strong>
+        <strong id="staffCounsellingIncomplete" class="govuk-tag govuk-tag--grey float-right">
+            Not started
+        </strong>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9 staff-councelling-group">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
                     Does the organisation provide staff counselling services?
@@ -462,6 +463,8 @@ FEW Staff and vacancy data - Vacancy recruitment answers
             data-module="govuk-button">Edit answers</a> -->
     </div>
 </div>
-
+<div class="govuk-visually-hidden">
+    <div id="journeyPath">{{ data['journeys'] }}</div>
+</div>
 
 {% endblock %}

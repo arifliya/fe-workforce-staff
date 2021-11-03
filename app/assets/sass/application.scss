@@ -134,3 +134,11 @@ $govuk-assets-path: '/govuk/assets/';
 #personalDetailsComplete, #personalDetailsNotStarted, #personalDetailsIncomplete, #jobRoleComplete, #jobRoleNotStarted, #employmentComplete, #employmentNotStarted {
     display: none;
 }
+
+.search-check-boxes.hide {
+    display: none;
+}
+
+#rdHeader {
+    margin-top: 40px;
+}
